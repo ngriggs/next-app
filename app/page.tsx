@@ -3,9 +3,7 @@ import Pricing from "./components/pricing";
 
 export default function HomePage() {
 	return (
-		<div className="">
-			<h1 className="text-3xl font-bold underline">Home Page</h1>
-			<p>Some content</p>
+		<div className="max-w-7xl mx-auto">
 			<Carousel />
 			<Pricing />
 		</div>

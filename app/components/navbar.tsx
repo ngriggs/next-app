@@ -6,7 +6,7 @@ import Headroom from "react-headroom";
 import Link from "next/dist/client/link";
 
 const navigation = [
-	{ name: "Articles", href: "/articles", current: true },
+	{ name: "Articles", href: "/articles", current: false },
 	{ name: "Team", href: "#", current: false },
 	{ name: "Projects", href: "#", current: false },
 	{ name: "Calendar", href: "#", current: false },

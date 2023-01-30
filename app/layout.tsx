@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import Navbar2 from "./components/navbar2";
 
 export default function RootLayout({
 	children,
@@ -11,7 +12,7 @@ export default function RootLayout({
 		<html>
 			<head />
 			<body>
-				<Navbar />
+				<Navbar2 />
 				{children}
 				<Footer />
 			</body>
