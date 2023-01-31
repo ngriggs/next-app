@@ -77,10 +77,8 @@ function Carousel() {
 				{images.map((_, i) => (
 					<button
 						key={i}
-						className={`text-lg leading-none rounded-full p-[7px] transition-all duration-300 ease-out bg-none ${
-							i === index
-								? "outline outline-white outline-3"
-								: "opacity-100 bg-white"
+						className={`rounded-full p-[7px] transition-all duration-300 ease-out bg-none ${
+							i === index ? "ring ring-white" : "opacity-100 bg-white"
 						}`}
 						onClick={() => setIndex(i)}
 					></button>
