@@ -12,10 +12,10 @@ async function getArticles() {
 export default async function ArticlePage({ params }: any) {
 	const articles = await getArticles();
 	return (
-		<div className="bg-gray-200 p-4">
+		<div className="bg-gray-200 p-4 ">
 			<h1 className="text-3xl font-bold">Notes</h1>
 			<div className="text-2xl font-bold">{articles.length}</div>
-			<div className="flex flex-wrap -mx-4">
+			<div className="flex flex-col -mx-4 ">
 				{articles?.map((article) => {
 					return <Article key={article.id} article={article} />;
 				})}
@@ -29,7 +29,7 @@ export function Article({ article }: any) {
 
 	return (
 		<Link href={`/articles/${id}`} className="hover:bg-white">
-			<div className="w-1/3 px-4 mb-4">
+			<div className="w-1/3 px-4 my-4 text-center">
 				<h2 className="text-lg font-bold">{title}</h2>
 				<h5 className="text-sm text-gray-600">{content}</h5>
 				<p className="text-xs text-gray-600">{created}</p>

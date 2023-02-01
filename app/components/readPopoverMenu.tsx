@@ -8,6 +8,7 @@ interface Solution {
 	name: string;
 	description: string;
 	href: string;
+	target: string;
 	icon: any;
 }
 
@@ -33,7 +34,7 @@ export default function popoverMenu({
 							<Popover.Button
 								className={classNames(
 									open ? "text-gray-900" : "text-gray-500",
-									"group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2 hover:scale-105"
+									"group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#99bdbb] focus:ring-offset-2 hover:scale-105"
 								)}
 							>
 								<span>{title}</span>
@@ -69,6 +70,7 @@ export default function popoverMenu({
 														<Link
 															key={item.name}
 															href={item.href}
+															target={item.target}
 															className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
 														>
 															<div className="ml-0">

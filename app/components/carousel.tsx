@@ -4,22 +4,38 @@ import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/20/solid";
 
 function Carousel() {
 	const [index, setIndex] = useState(0);
+	const [startX, setStartX] = useState(0);
+	const [endX, setEndX] = useState(0);
 	const images = [
-		{
-			id: 1,
-			url: "/giggles-render.jpg",
-			title: "Beyond childcare & preschool",
-			description: "A place to learn, connect, create, share & grow",
-		},
-		{
-			id: 2,
-			url: "/giggles-render2.png",
-			title: "The new lifestyle for families",
-			description: "A unique place where family and work-life can thrive",
-		},
+		// {
+		// 	id: 1,
+		// 	url: "/giggles-render.jpg",
+		// 	title: "Beyond childcare & preschool",
+		// 	description: "A place to learn, connect, create, share & grow",
+		// },
+		// {
+		// 	id: 2,
+		// 	url: "/giggles-render2.png",
+		// 	title: "The new lifestyle for families",
+		// 	description: "A unique place where family and work-life can thrive",
+		// },
 		{
 			id: 3,
-			url: "https://mdbootstrap.com/img/Photos/Slides/img%20(125).jpg",
+			url: "yan-krukau.jpg",
+			title: "Education re-invented",
+			description:
+				"Teaching kids how to think for themselves and solve meaningful problems",
+		},
+		{
+			id: 4,
+			url: "cottonbro-studio.jpg",
+			title: "Education re-invented",
+			description:
+				"Teaching kids how to think for themselves and solve meaningful problems",
+		},
+		{
+			id: 4,
+			url: "cottonbro-studio-2.jpg",
 			title: "Education re-invented",
 			description:
 				"Teaching kids how to think for themselves and solve meaningful problems",
@@ -48,16 +64,32 @@ function Carousel() {
 			setIndex(index - 1);
 		}
 	};
+	const handleTouchStart: React.TouchEventHandler<HTMLDivElement> = (e) => {
+		setStartX(e.touches[0].clientX);
+	};
+
+	const handleTouchEnd: React.TouchEventHandler<HTMLDivElement> = (e) => {
+		setEndX(e.changedTouches[0].clientX);
+		if (startX > endX + 50) {
+			nextSlide();
+		} else if (startX < endX - 50) {
+			prevSlide();
+		}
+	};
 
 	return (
-		<div className="relative max-w-7xl mx-auto sm:h-[40rem] h-80">
+		<div
+			onTouchStart={handleTouchStart}
+			onTouchEnd={handleTouchEnd}
+			className="relative max-w-7xl mx-auto sm:h-[40rem] h-80 overflow-hidden flex flex-wrap"
+		>
 			<div className="carousel relative w-full h-full">
 				{images.map(({ url, title, description }, i) => (
 					<div
 						key={i}
-						className={`carousel__slide absolute top-0 left-0 w-full h-full transition-all duration-300 ease-out ${
-							i === index ? "opacity-100" : "opacity-0"
-						}`}
+						className={`carousel__slide absolute top-0 left-0 w-full h-full transition-all duration-300 ease-out 
+						${i === index ? "opacity-100" : "opacity-0"}
+						`}
 						style={{
 							backgroundImage: `url("${url}")`,
 							backgroundSize: "cover",
@@ -85,18 +117,18 @@ function Carousel() {
 				))}
 			</div>
 			<div>
-				<div className="carousel__nav absolute top-1/2 align-middle left-0 w-full flex justify-between px-1">
+				<div className="carousel__nav absolute align-middle z-20 left-0 top-0 w-full h-full flex justify-between px-1">
 					<button
 						onClick={prevSlide}
-						className="text-lg leading-none rounded-full p-1 transition-all duration-300 ease-out "
+						className="text-lg leading-none rounded-full p-1 transition-all duration-300 ease-out w-10!important"
 					>
-						<ChevronLeftIcon className="fill-white opacity-50 hover:opacity-100 h-7 w-7" />
+						<ChevronLeftIcon className="fill-white opacity-75 hover:opacity-100 h-7 w-16" />
 					</button>
 					<button
 						onClick={nextSlide}
 						className="leading-none rounded-full p-1 transition-all duration-300 ease-out"
 					>
-						<ChevronRightIcon className="fill-white opacity-50 hover:opacity-100 h-7 w-7" />
+						<ChevronRightIcon className="fill-white opacity-75 hover:opacity-100 h-7 w-16" />
 					</button>
 				</div>
 			</div>

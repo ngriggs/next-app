@@ -21,25 +21,29 @@ const visit = [
 		name: "admission",
 		description:
 			"Book an upcoming party or check availability on your event date",
-		href: "/booking",
+		href: "/admission",
+		target: "_top",
 		icon: CalendarDaysIcon,
 	},
 	{
 		name: "hours",
 		description: "Send us any feedback or inquiries",
 		href: "/contact",
+		target: "_top",
 		icon: CursorArrowRaysIcon,
 	},
 	{
 		name: "waiver",
 		description: "Sign a waiver for your children in advance",
 		href: "/waiver",
+		target: "_top",
 		icon: ShieldCheckIcon,
 	},
 	{
 		name: "gallery",
 		description: "Learn more about the team.",
-		href: "/about",
+		href: "/gallery",
+		target: "_top",
 		icon: Squares2X2Icon,
 	},
 ];
@@ -48,14 +52,16 @@ const party = [
 		name: "packages",
 		description:
 			"Get all of your questions answered in our forums or contact support.",
-		href: "/newsletter",
+		href: "/packages",
+		target: "_top",
 		icon: NewspaperIcon,
 	},
 	{
 		name: "book",
 		description:
 			"Learn how to maximize our platform to get the most out of it.",
-		href: "/guides",
+		href: "https://squareup.com/appointments/book/89lmsk6jh008w1/LPJGJT0WFHK20/start",
+		target: "_none",
 		icon: BookmarkSquareIcon,
 	},
 ];
@@ -65,28 +71,65 @@ const read = [
 		description:
 			"Book an upcoming party or check availability on your event date",
 		href: "/articles",
+		target: "_top",
 		icon: CalendarDaysIcon,
 	},
 	{
-		name: "shop (affiliate links)",
+		name: "shop",
 		description: "Send us any feedback or inquiries",
 		href: "/shop",
+		target: "_top",
 		icon: CursorArrowRaysIcon,
 	},
 ];
-const mobile = [
+const mobile1 = [
 	{
-		name: "blog",
+		name: "admission",
 		description:
 			"Book an upcoming party or check availability on your event date",
-		href: "/articles",
+		href: "/booking",
+		target: "_none",
 		icon: CalendarDaysIcon,
 	},
 	{
-		name: "shop (affiliate links)",
+		name: "hours",
 		description: "Send us any feedback or inquiries",
-		href: "/shop",
+		href: "/contact",
+		target: "_top",
 		icon: CursorArrowRaysIcon,
+	},
+	{
+		name: "waiver",
+		description: "Sign a waiver for your children in advance",
+		href: "/waiver",
+		target: "_top",
+
+		icon: ShieldCheckIcon,
+	},
+	{
+		name: "gallery",
+		description: "Learn more about the team.",
+		href: "/gallery",
+		target: "_top",
+		icon: Squares2X2Icon,
+	},
+];
+const mobile2 = [
+	{
+		name: "packages",
+		description:
+			"Get all of your questions answered in our forums or contact support.",
+		href: "/packages",
+		target: "_top",
+		icon: NewspaperIcon,
+	},
+	{
+		name: "book",
+		description:
+			"Learn how to maximize our platform to get the most out of it.",
+		href: "/booking",
+		target: "_none",
+		icon: BookmarkSquareIcon,
 	},
 ];
 
@@ -117,7 +160,7 @@ class Navbar3 extends Component<Props, State> {
 	}
 	render() {
 		return (
-			<Headroom style={{ zIndex: 20 }} className="font-poppins ">
+			<Headroom style={{ zIndex: 30 }} className="font-poppins ">
 				<Popover as="nav" className="relative bg-white ">
 					<div className="mx-auto px-1 sm:px-6 ">
 						<div className="flex  max-h-[80px] items-center justify-between border-b-2 border-gray-100 py-3 md:justify-start md:space-x-10 px-3">
@@ -148,7 +191,7 @@ class Navbar3 extends Component<Props, State> {
 								<PopoverMenu solutions={visit} title="visit" />
 								<PopoverMenu solutions={party} title="party" />
 								<Link
-									href="/gallery"
+									href="/about"
 									className="text-base font-medium text-gray-500 hover:text-gray-900 hover:scale-105"
 								>
 									learn
@@ -161,7 +204,7 @@ class Navbar3 extends Component<Props, State> {
 							</Popover.Group>
 							<div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
 								<Link
-									href="/signup"
+									href="/contact"
 									className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-3xl border border-transparent hover:bg-[#f7ae47] px-4 py-2 text-base font-medium text-white shadow-sm bg-[#ec6a52] hover:scale-105"
 								>
 									get in touch
@@ -202,7 +245,7 @@ class Navbar3 extends Component<Props, State> {
 													</Link>
 												</div>
 												<div className="-mr-2">
-													<div className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lime-500">
+													<div className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#99bdbb]">
 														<span className="sr-only">Close menu</span>
 														<XMarkIcon className="h-6 w-6" aria-hidden="true" />
 													</div>
@@ -210,14 +253,15 @@ class Navbar3 extends Component<Props, State> {
 											</div>
 											<div className="mt-6">
 												<nav className="grid gap-y-8">
-													{mobile.map((item) => (
+													{mobile1.map((item) => (
 														<Link
 															key={item.name}
 															href={item.href}
+															target={item.target}
 															className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
 														>
 															<item.icon
-																className="h-6 w-6 flex-shrink-0 text-lime-600"
+																className="h-6 w-6 flex-shrink-0 text-[#435a6c]"
 																aria-hidden="true"
 															/>
 															<span className="ml-3 text-base font-medium text-gray-900">
@@ -231,22 +275,23 @@ class Navbar3 extends Component<Props, State> {
 										<div className="space-y-6 py-6 px-5">
 											<div className="grid grid-cols-2 gap-y-4 gap-x-8">
 												<Link
-													href="/gallery"
+													href="/articles"
 													className="text-base font-medium text-gray-900 hover:text-gray-700"
 												>
-													Gallery
+													blog
 												</Link>
 
 												<Link
-													href="/policies"
+													href="/learn"
 													className="text-base font-medium text-gray-900 hover:text-gray-700"
 												>
-													Policies
+													learn
 												</Link>
-												{party.map((item) => (
+												{mobile2.map((item) => (
 													<Link
 														key={item.name}
 														href={item.href}
+														target={item.target}
 														className="text-base font-medium text-gray-900 hover:text-gray-700"
 													>
 														{item.name}
@@ -255,8 +300,8 @@ class Navbar3 extends Component<Props, State> {
 											</div>
 											<div>
 												<Link
-													href="/signup"
-													className="flex w-full items-center justify-center rounded-md border border-transparent bg-lime-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-lime-700"
+													href="/contact"
+													className="flex w-full items-center justify-center rounded-md border border-transparent bg-[#99bdbb] px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-[#435a6c]"
 												>
 													get in touch
 												</Link>
