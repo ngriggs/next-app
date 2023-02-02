@@ -1,8 +1,9 @@
 import Link from "next/link";
+import BlogCard from "../components/blogCard";
 
 async function getArticles() {
 	const res = await fetch(
-		"http://127.0.0.1:8090/api/collections/articles/records"
+		`${process.env.PB_LOCALHOST}api/collections/articles/records`
 	);
 
 	const data = await res.json();
@@ -13,11 +14,15 @@ export default async function ArticlePage({ params }: any) {
 	const articles = await getArticles();
 	return (
 		<div className="bg-gray-200 p-4 ">
-			<h1 className="text-3xl font-bold">Notes</h1>
-			<div className="text-2xl font-bold">{articles.length}</div>
-			<div className="flex flex-col -mx-4 ">
+			<h1 className="text-3xl font-bold text-center">Newsletter</h1>
+			<div className="my-8" />
+			<div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 				{articles?.map((article) => {
-					return <Article key={article.id} article={article} />;
+					return (
+						<div className="my-4 rounded-xl p-3 hover:transform hover:scale-105 duration-300 ">
+							<Article key={article.id} article={article} />
+						</div>
+					);
 				})}
 			</div>
 		</div>
@@ -25,15 +30,19 @@ export default async function ArticlePage({ params }: any) {
 }
 
 export function Article({ article }: any) {
-	const { id, title, content, created } = article || {};
+	const { id, title, content, created, splash_image } = article || {};
 
 	return (
-		<Link href={`/articles/${id}`} className="hover:bg-white">
-			<div className="w-1/3 px-4 my-4 text-center">
-				<h2 className="text-lg font-bold">{title}</h2>
-				<h5 className="text-sm text-gray-600">{content}</h5>
-				<p className="text-xs text-gray-600">{created}</p>
-			</div>
-		</Link>
+		<div>
+			<Link href={`/articles/${id}`} className="">
+				<BlogCard
+					id={id}
+					title={title}
+					content={content}
+					created={created}
+					image={`${process.env.PB_LOCALHOST}api/files/articles/${id}/${splash_image}`}
+				/>
+			</Link>
+		</div>
 	);
 }

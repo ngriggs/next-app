@@ -1,6 +1,6 @@
 async function getArticle(articleId: string) {
 	const res = await fetch(
-		`http://127.0.0.1:8090/api/collections/articles/records/${articleId}`
+		`http://10.0.0.109:8090/api/collections/articles/records/${articleId}`
 	);
 	const data = await res.json();
 	return data;

@@ -60,7 +60,7 @@ const party = [
 		name: "book",
 		description:
 			"Learn how to maximize our platform to get the most out of it.",
-		href: "https://squareup.com/appointments/book/89lmsk6jh008w1/LPJGJT0WFHK20/start",
+		href: "https://giggles-play.square.site/",
 		target: "_none",
 		icon: BookmarkSquareIcon,
 	},
@@ -135,8 +135,9 @@ const mobile2 = [
 
 async function getArticles() {
 	const res = await fetch(
-		"http://127.0.0.1:8090/api/collections/articles/records"
+		`http://10.0.0.109:8090/api/collections/articles/records`
 	);
+	console.log(res);
 
 	const data = await res.json();
 	return data?.items as any[];
