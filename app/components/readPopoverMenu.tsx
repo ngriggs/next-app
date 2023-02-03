@@ -1,6 +1,6 @@
 "use client";
 import { Popover, Transition } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/20/solid";
 import { Fragment } from "react";
 import Link from "next/link";
 
@@ -34,17 +34,27 @@ export default function popoverMenu({
 							<Popover.Button
 								className={classNames(
 									open ? "text-gray-900" : "text-gray-500",
-									"group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#99bdbb] focus:ring-offset-2 hover:scale-105"
+									"group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#99bdbb] focus:ring-offset-2 hover:underline"
 								)}
 							>
 								<span>{title}</span>
-								<ChevronDownIcon
-									className={classNames(
-										open ? "text-gray-600" : "text-gray-500 stroke-2",
-										"ml-[1px] mt-[3px] h-4 w-4 group-hover:text-gray-700"
-									)}
-									aria-hidden="true"
-								/>
+								{open ? (
+									<ChevronUpIcon
+										className={classNames(
+											open ? "text-gray-600" : "text-gray-500 stroke-2",
+											"ml-[1px] mt-[3px] h-4 w-4 group-hover:text-gray-700"
+										)}
+										aria-hidden="true"
+									/>
+								) : (
+									<ChevronDownIcon
+										className={classNames(
+											open ? "text-gray-600" : "text-gray-500 stroke-2",
+											"ml-[1px] mt-[3px] h-4 w-4 group-hover:text-gray-700"
+										)}
+										aria-hidden="true"
+									/>
+								)}
 							</Popover.Button>
 
 							<Transition
@@ -56,7 +66,7 @@ export default function popoverMenu({
 								leaveFrom="opacity-100 translate-y-0"
 								leaveTo="opacity-0 translate-y-1"
 							>
-								<Popover.Panel className="absolute left-0 mt-3 w-screen max-w-sm transform -translate-x-20">
+								<Popover.Panel className="absolute left-0 mt-3 w-screen max-w-sm transform">
 									{({ close }) => (
 										<button
 											className="text-left"
@@ -71,7 +81,7 @@ export default function popoverMenu({
 															key={item.name}
 															href={item.href}
 															target={item.target}
-															className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
+															className="-m-3 flex items-start rounded-lg p-3"
 														>
 															<div className="ml-0">
 																<p className="text-base font-medium text-gray-900">
@@ -80,38 +90,6 @@ export default function popoverMenu({
 															</div>
 														</Link>
 													))}
-												</div>
-												<div className="bg-gray-50 px-5 py-5 sm:px-8 sm:py-8">
-													<div>
-														<h3 className="text-base font-medium text-gray-500">
-															Recent Posts
-														</h3>
-														<ul role="list" className="mt-4 space-y-4">
-															<li>
-																{articles?.map((article) => {
-																	return (
-																		<li>
-																			<Link
-																				className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-200"
-																				href={`/articles/${article.id}`}
-																			>
-																				{article.title}
-																			</Link>
-																		</li>
-																	);
-																})}
-															</li>
-														</ul>
-													</div>
-													<div className="mt-5 text-sm">
-														<Link
-															href="/articles"
-															className="font-medium text-lime-600 hover:text-lime-500"
-														>
-															View all posts
-															<span aria-hidden="true"> &rarr;</span>
-														</Link>
-													</div>
 												</div>
 											</div>
 										</button>

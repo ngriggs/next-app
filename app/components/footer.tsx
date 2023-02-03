@@ -43,15 +43,13 @@ const Footer = () => {
 		<footer className="p-4 bg-gray-50 md:p-8 lg:p-10">
 			<div className="mx-auto max-w-screen-xl text-center">
 				<nav>
-					<Link
-						href="/"
-						className="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-blue-600"
-					>
+					<Link href="/" className="flex justify-center items-center max-h-20">
 						<Image
+							className="hover:scale-105"
 							width={144}
 							height={144}
 							alt="logo"
-							src="/giggles-header-2.png"
+							src="/giggles.svg"
 						/>
 					</Link>
 				</nav>
@@ -116,20 +114,20 @@ const Footer = () => {
 									alt={social.id}
 									height={21}
 									width={21}
-									className={`w-[21px] h-[21px] object-contain cursor-pointer ${
+									className={`w-[21px] h-[21px] object-contain cursor-pointer hover:scale-105 ${
 										index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
 									}`}
 								/>
 							))}
 						</div>
 						<div className="">
-							<a className="" href="#">
+							<Link className="hover:underline" href="/privacy">
 								Privacy Policy
-							</a>
+							</Link>
 							<span> | </span>
-							<a className="" href="#">
+							<Link className="hover:underline" href="/terms_of_service">
 								Terms of Service
-							</a>
+							</Link>
 						</div>
 					</div>
 				</div>

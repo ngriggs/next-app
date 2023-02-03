@@ -7,8 +7,6 @@ import Gallery2 from "./gallery/page";
 export default async function HomePage() {
 	return (
 		<div className="max-w-7xl mx-auto">
-			<HeroPage />
-			<div className="my-8" />
 			<Carousel />
 			<div className="my-8" />
 			<Pricing />

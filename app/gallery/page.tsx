@@ -33,7 +33,7 @@ export default async function Gallery2() {
 					<div key={image.id} className="pb-1">
 						<a href={image.permalink} target="_blank">
 							<img
-								className="object-cover aspect-square hover:scale-105"
+								className="object-cover aspect-square hover:scale-105 rounded-lg"
 								src={image.media_url}
 								alt={image.caption}
 							/>

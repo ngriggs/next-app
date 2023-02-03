@@ -4,38 +4,32 @@ import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/20/solid";
 
 function Carousel() {
 	const [index, setIndex] = useState(0);
-	const [startX, setStartX] = useState(0);
-	const [endX, setEndX] = useState(0);
+
 	const images = [
-		// {
-		// 	id: 1,
-		// 	url: "/giggles-render.jpg",
-		// 	title: "Beyond childcare & preschool",
-		// 	description: "A place to learn, connect, create, share & grow",
-		// },
-		// {
-		// 	id: 2,
-		// 	url: "/giggles-render2.png",
-		// 	title: "The new lifestyle for families",
-		// 	description: "A unique place where family and work-life can thrive",
-		// },
 		{
-			id: 3,
+			id: 1,
 			url: "yan-krukau.jpg",
 			title: "Education re-invented",
 			description:
 				"Teaching kids how to think for themselves and solve meaningful problems",
 		},
 		{
-			id: 4,
+			id: 2,
 			url: "cottonbro-studio.jpg",
 			title: "Education re-invented",
 			description:
 				"Teaching kids how to think for themselves and solve meaningful problems",
 		},
 		{
-			id: 4,
+			id: 3,
 			url: "cottonbro-studio-2.jpg",
+			title: "Education re-invented",
+			description:
+				"Teaching kids how to think for themselves and solve meaningful problems",
+		},
+		{
+			id: 3,
+			url: "giggles_moodboard.svg",
 			title: "Education re-invented",
 			description:
 				"Teaching kids how to think for themselves and solve meaningful problems",
@@ -64,25 +58,9 @@ function Carousel() {
 			setIndex(index - 1);
 		}
 	};
-	const handleTouchStart: React.TouchEventHandler<HTMLDivElement> = (e) => {
-		setStartX(e.touches[0].clientX);
-	};
-
-	const handleTouchEnd: React.TouchEventHandler<HTMLDivElement> = (e) => {
-		setEndX(e.changedTouches[0].clientX);
-		if (startX > endX + 50) {
-			nextSlide();
-		} else if (startX < endX - 50) {
-			prevSlide();
-		}
-	};
 
 	return (
-		<div
-			onTouchStart={handleTouchStart}
-			onTouchEnd={handleTouchEnd}
-			className="relative max-w-7xl mx-auto sm:h-[40rem] h-80 overflow-hidden flex flex-wrap"
-		>
+		<div className="relative rounded-b-lg max-w-7xl mx-auto sm:h-[40rem] h-80 overflow-hidden flex flex-wrap">
 			<div className="carousel relative w-full h-full">
 				{images.map(({ url, title, description }, i) => (
 					<div
@@ -105,14 +83,14 @@ function Carousel() {
 					</div>
 				))}
 			</div>
-			<div className="carousel__indicator absolute bottom-0 space-x-4 w-full flex justify-center p-2">
+			<div className="carousel__indicator absolute z-30 bottom-0 space-x-4 w-full flex justify-center p-2">
 				{images.map((_, i) => (
 					<button
 						key={i}
+						onClick={() => setIndex(i)}
 						className={`rounded-full p-[7px] transition-all duration-300 ease-out bg-none ${
 							i === index ? "ring ring-white" : "opacity-100 bg-white"
 						}`}
-						onClick={() => setIndex(i)}
 					></button>
 				))}
 			</div>

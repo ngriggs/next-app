@@ -14,7 +14,6 @@ import {
 import Headroom from "react-headroom";
 import Link from "next/dist/client/link";
 import PopoverMenu from "./popoverMenu";
-import ReadPopoverMenu from "./readPopoverMenu";
 
 const visit = [
 	{
@@ -137,7 +136,6 @@ async function getArticles() {
 	const res = await fetch(
 		`http://10.0.0.109:8090/api/collections/articles/records`
 	);
-	console.log(res);
 
 	const data = await res.json();
 	return data?.items as any[];
@@ -161,7 +159,7 @@ class Navbar3 extends Component<Props, State> {
 	}
 	render() {
 		return (
-			<Headroom style={{ zIndex: 30 }} className="font-poppins ">
+			<Headroom style={{ zIndex: 40 }} className="font-poppins ">
 				<Popover as="nav" className="relative bg-white ">
 					<div className="mx-auto px-1 sm:px-6 ">
 						<div className="flex  max-h-[80px] items-center justify-between border-b-2 border-gray-100 py-3 md:justify-start md:space-x-10 px-3">
@@ -176,16 +174,16 @@ class Navbar3 extends Component<Props, State> {
 								</nav>
 							</div>
 							<div className="-my-2 -mr-2 md:hidden">
-								<Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+								<Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset">
 									<span className="sr-only">Open menu</span>
 									<Bars3Icon className="h-6 w-6" aria-hidden="true" />
 								</Popover.Button>
 							</div>
 
-							<Popover.Group as="nav" className="hidden space-x-10 md:flex">
+							<Popover.Group as="nav" className="hidden space-x-10 md:flex ">
 								<Link
 									href="/"
-									className="text-base font-medium text-gray-500 hover:text-gray-900 hover:scale-105"
+									className="text-base font-normal text-gray-500 hover:text-black hover:underline"
 								>
 									home
 								</Link>
@@ -193,15 +191,11 @@ class Navbar3 extends Component<Props, State> {
 								<PopoverMenu solutions={party} title="party" />
 								<Link
 									href="/about"
-									className="text-base font-medium text-gray-500 hover:text-gray-900 hover:scale-105"
+									className="text-base font-normal text-gray-500 hover:text-black hover:underline"
 								>
 									learn
 								</Link>
-								<ReadPopoverMenu
-									solutions={read}
-									title="read"
-									articles={this.state.articles}
-								/>
+								<PopoverMenu solutions={read} title="read" />
 							</Popover.Group>
 							<div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
 								<Link
@@ -241,12 +235,12 @@ class Navbar3 extends Component<Props, State> {
 													<Link href="/">
 														<img
 															className="w-auto h-12"
-															src="giggles-header-2.png"
+															src="giggles-logo-2.svg"
 														/>
 													</Link>
 												</div>
 												<div className="-mr-2">
-													<div className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#99bdbb]">
+													<div className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset">
 														<span className="sr-only">Close menu</span>
 														<XMarkIcon className="h-6 w-6" aria-hidden="true" />
 													</div>
