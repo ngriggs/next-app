@@ -14,26 +14,33 @@ function Carousel() {
 				"Teaching kids how to think for themselves and solve meaningful problems",
 		},
 		{
-			id: 1,
-			url: "yan-krukau.jpg",
+			id: 3,
+			url: "kidsKitchen.svg",
 			title: "Education re-invented",
 			description:
 				"Teaching kids how to think for themselves and solve meaningful problems",
 		},
-		// {
-		// 	id: 2,
-		// 	url: "cottonbro-studio.jpg",
-		// 	title: "Education re-invented",
-		// 	description:
-		// 		"Teaching kids how to think for themselves and solve meaningful problems",
-		// },
-		// {
-		// 	id: 3,
-		// 	url: "cottonbro-studio-2.jpg",
-		// 	title: "Education re-invented",
-		// 	description:
-		// 		"Teaching kids how to think for themselves and solve meaningful problems",
-		// },
+		{
+			id: 3,
+			url: "playLoft.svg",
+			title: "Education re-invented",
+			description:
+				"Teaching kids how to think for themselves and solve meaningful problems",
+		},
+		{
+			id: 3,
+			url: "soundProofing.svg",
+			title: "Education re-invented",
+			description:
+				"Teaching kids how to think for themselves and solve meaningful problems",
+		},
+		{
+			id: 3,
+			url: "play-loft-1.jpg",
+			title: "Education re-invented",
+			description:
+				"Teaching kids how to think for themselves and solve meaningful problems",
+		},
 	];
 
 	useEffect(() => {

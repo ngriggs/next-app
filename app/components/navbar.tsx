@@ -14,6 +14,7 @@ import {
 import Headroom from "react-headroom";
 import Link from "next/dist/client/link";
 import PopoverMenu from "./popoverMenu";
+import Image from "next/image";
 
 const visit = [
 	{
@@ -164,7 +165,14 @@ class Navbar3 extends Component<Props, State> {
 										href="/"
 										className="flex justify-center items-center hover:scale-105"
 									>
-										<img className="object-scale-down w-32" src="giggles.svg" />
+										<Image
+											width={144}
+											height={144}
+											alt="logo"
+											className="object-scale-down w-32"
+											src="giggles.svg"
+											priority={true}
+										/>
 									</Link>
 								</nav>
 							</div>
