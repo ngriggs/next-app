@@ -1,7 +1,5 @@
 import Link from "next/link";
-import { Suspense } from "react";
 import BlogCard from "../components/blogCard";
-import dynamic from "next/dynamic";
 
 async function getArticles() {
 	const res = await (

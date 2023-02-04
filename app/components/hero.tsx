@@ -1,19 +1,17 @@
 import React from "react";
+import NewsLetterSignUpForm from "./subscribeForm";
 
 const HeroPage: React.FC = () => {
 	return (
 		<div
 			className="bg-cover bg-center h-screen"
-			style={{ backgroundImage: "url('/giggles-render.jpg')" }}
+			style={{ backgroundImage: "url('/giggles_moodboard_1.svg')" }}
 		>
-			<div className="flex flex-col items-center justify-center h-full text-white p-10">
-				<h1 className="text-6xl font-bold">Giggles</h1>
+			<div className="flex flex-col items-center justify-top h-full text-black p-10">
 				<p className="text-xl mt-4">
 					Bring joy and imagination to your child's playtime
 				</p>
-				<button className="bg-white px-10 py-3 mt-10 text-gray-800 font-bold rounded-lg hover:bg-gray-100">
-					Get Started
-				</button>
+				<NewsLetterSignUpForm />
 			</div>
 		</div>
 	);

@@ -12,10 +12,11 @@ export default function RootLayout({
 		<html>
 			<head />
 			<body>
-				<Navbar2 />
-				<Navbar3 />
-				<div className="max-w-7xl mx-auto"> {children}</div>
-
+				<div className="max-w-7xl mx-auto">
+					<Navbar3 />
+					<Navbar2 />
+					{children}
+				</div>
 				<Footer />
 			</body>
 		</html>

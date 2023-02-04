@@ -159,7 +159,15 @@ class Navbar3 extends Component<Props, State> {
 	}
 	render() {
 		return (
-			<Headroom style={{ zIndex: 40 }} className="font-poppins ">
+			<Headroom
+				style={{
+					zIndex: 40,
+					maxWidth: "1280px",
+					marginLeft: "auto",
+					marginRight: "auto",
+				}}
+				className="font-poppins"
+			>
 				<Popover as="nav" className="relative bg-white ">
 					<div className="mx-auto px-1 sm:px-6 ">
 						<div className="flex  max-h-[80px] items-center justify-between border-b-2 border-gray-100 py-3 md:justify-start md:space-x-10 px-3">
@@ -187,15 +195,12 @@ class Navbar3 extends Component<Props, State> {
 								>
 									home
 								</Link>
-								<PopoverMenu solutions={visit} title="visit" />
-								<PopoverMenu solutions={party} title="party" />
 								<Link
 									href="/about"
 									className="text-base font-normal text-gray-500 hover:text-black hover:underline"
 								>
-									learn
+									learn more
 								</Link>
-								<PopoverMenu solutions={read} title="read" />
 							</Popover.Group>
 							<div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
 								<Link

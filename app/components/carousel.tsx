@@ -7,33 +7,33 @@ function Carousel() {
 
 	const images = [
 		{
+			id: 3,
+			url: "giggles_moodboard_1.svg",
+			title: "Education re-invented",
+			description:
+				"Teaching kids how to think for themselves and solve meaningful problems",
+		},
+		{
 			id: 1,
 			url: "yan-krukau.jpg",
 			title: "Education re-invented",
 			description:
 				"Teaching kids how to think for themselves and solve meaningful problems",
 		},
-		{
-			id: 2,
-			url: "cottonbro-studio.jpg",
-			title: "Education re-invented",
-			description:
-				"Teaching kids how to think for themselves and solve meaningful problems",
-		},
-		{
-			id: 3,
-			url: "cottonbro-studio-2.jpg",
-			title: "Education re-invented",
-			description:
-				"Teaching kids how to think for themselves and solve meaningful problems",
-		},
-		{
-			id: 3,
-			url: "giggles_moodboard.svg",
-			title: "Education re-invented",
-			description:
-				"Teaching kids how to think for themselves and solve meaningful problems",
-		},
+		// {
+		// 	id: 2,
+		// 	url: "cottonbro-studio.jpg",
+		// 	title: "Education re-invented",
+		// 	description:
+		// 		"Teaching kids how to think for themselves and solve meaningful problems",
+		// },
+		// {
+		// 	id: 3,
+		// 	url: "cottonbro-studio-2.jpg",
+		// 	title: "Education re-invented",
+		// 	description:
+		// 		"Teaching kids how to think for themselves and solve meaningful problems",
+		// },
 	];
 
 	useEffect(() => {
