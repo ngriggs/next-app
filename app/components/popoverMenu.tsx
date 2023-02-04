@@ -30,7 +30,7 @@ export default function popoverMenu({
 						<Popover.Button
 							className={classNames(
 								open ? "text-gray-900 underline" : "text-gray-500",
-								"group inline-flex items-center rounded-md bg-white text-base font-normal hover:text-black font-poppins hover:underline"
+								"group inline-flex items-center rounded-md bg-white text-base font-normal hover:text-black hover:underline"
 							)}
 						>
 							<span>{title}</span>

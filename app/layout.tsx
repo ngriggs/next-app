@@ -1,6 +1,5 @@
 import "./globals.css";
 import Footer from "./components/footer";
-import Navbar2 from "./components/navbar2";
 import Navbar3 from "./components/navbar";
 
 export default function RootLayout({
@@ -12,12 +11,13 @@ export default function RootLayout({
 		<html>
 			<head />
 			<body>
-				<div className="max-w-7xl mx-auto">
+				<div className="max-w-7xl mx-auto font-summerVibesBold">
 					<Navbar3 />
-					<Navbar2 />
-					{children}
+					<div className="font-summerVibesLight">{children}</div>
 				</div>
-				<Footer />
+				<div className="font-summerVibesLight">
+					<Footer />
+				</div>
 			</body>
 		</html>
 	);

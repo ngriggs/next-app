@@ -9,7 +9,15 @@ module.exports = {
 		"./src/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				poppins: ["Poppins", "sans-serif"],
+				summerVibesBold: ["SummerVibesBold", "sans-serif"],
+				summerVibesLight: ["SummerVibesLight"],
+				summerVibesRegular: ["SummerVibesRegular"],
+				summerVibesSolid: ["SummerVibesSolid"],
+			},
+		},
 	},
 	plugins: [require("@tailwindcss/line-clamp")],
 };

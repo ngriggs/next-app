@@ -132,15 +132,6 @@ const mobile2 = [
 	},
 ];
 
-async function getArticles() {
-	const res = await fetch(
-		`http://10.0.0.109:8090/api/collections/articles/records`
-	);
-
-	const data = await res.json();
-	return data?.items as any[];
-}
-
 interface Props {}
 
 interface State {
@@ -152,11 +143,7 @@ class Navbar3 extends Component<Props, State> {
 		super(props);
 		this.state = { articles: [] };
 	}
-	async componentDidMount() {
-		const articles = await getArticles();
-		this.setState({ articles });
-		return Promise.resolve();
-	}
+
 	render() {
 		return (
 			<Headroom
@@ -166,7 +153,7 @@ class Navbar3 extends Component<Props, State> {
 					marginLeft: "auto",
 					marginRight: "auto",
 				}}
-				className="font-poppins"
+				className=""
 			>
 				<Popover as="nav" className="relative bg-white ">
 					<div className="mx-auto px-1 sm:px-0 ">
