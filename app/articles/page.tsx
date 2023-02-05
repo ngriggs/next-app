@@ -3,7 +3,7 @@ import BlogCard from "../components/blogCard";
 
 async function getArticles() {
 	const res = await (
-		await fetch(`http://10.0.0.109:8090/api/collections/articles/records`)
+		await fetch(`https://gigglesplay.fly.dev/api/collections/articles/records`)
 	).json();
 	return res?.items as any[];
 }
@@ -45,7 +45,7 @@ export function Article({ article }: any) {
 				content={content}
 				created={created}
 				author={author}
-				image={`http://10.0.0.109:8090/api/files/articles/${id}/${splash_image}`}
+				image={`https://gigglesplay.fly.dev/api/files/articles/${id}/${splash_image}`}
 			/>
 		</Link>
 	);

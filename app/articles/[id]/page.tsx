@@ -1,6 +1,6 @@
 async function getArticle(articleId: string) {
 	const res = await fetch(
-		`http://10.0.0.109:8090/api/collections/articles/records/${articleId}`
+		`https://gigglesplay.fly.dev/api/collections/articles/records/${articleId}`
 	);
 	const data = await res.json();
 	return data;
@@ -45,7 +45,7 @@ export default async function ArticlePage({ params }: any) {
 									<div>
 										<button
 											type="button"
-											className="py-1.5 px-2.5 sm:py-2 sm:px-3 inline-flex justify-center items-center gap-x-1.5 sm:gap-x-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-xs sm:text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-black dark:hover:text-white dark:focus:ring-offset-gray-800"
+											className="py-1.5 px-2.5 sm:py-2 sm:px-3 inline-flex justify-center items-center gap-x-1.5 sm:gap-x-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-xs sm:text-sm"
 										>
 											<svg
 												className="w-3.5 h-3.5"
@@ -80,12 +80,12 @@ export default async function ArticlePage({ params }: any) {
 			</div>
 
 			<div className="sticky bottom-6 inset-x-0 text-center">
-				<div className="inline-block bg-white shadow-md rounded-full py-3 px-4 dark:bg-gray-800">
+				<div className="inline-block bg-white shadow-md rounded-full py-3 px-4 ">
 					<div className="flex items-center gap-x-1.5">
 						<div className="hs-tooltip inline-block">
 							<button
 								type="button"
-								className="hs-tooltip-toggle flex items-center gap-x-2 text-sm text-gray-500 hover:text-gray-800 dark:text-black dark:hover:text-gray-200"
+								className="hs-tooltip-toggle flex items-center gap-x-2 text-sm text-gray-500 hover:text-gray-800 "
 							>
 								<svg
 									className="w-4 h-4"
@@ -107,12 +107,12 @@ export default async function ArticlePage({ params }: any) {
 							</button>
 						</div>
 
-						<div className="block h-3 border-r border-gray-300 mx-3 dark:border-gray-600"></div>
+						<div className="block h-3 border-r border-gray-300 mx-3 "></div>
 
 						<div className="hs-tooltip inline-block">
 							<button
 								type="button"
-								className="hs-tooltip-toggle flex items-center gap-x-2 text-sm text-gray-500 hover:text-gray-800 dark:text-black dark:hover:text-gray-200"
+								className="hs-tooltip-toggle flex items-center gap-x-2 text-sm text-gray-500 hover:text-gray-800 "
 							>
 								<svg
 									className="w-4 h-4"
