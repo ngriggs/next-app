@@ -15,20 +15,43 @@ import Link from "next/dist/client/link";
 import PopoverMenu from "./popoverMenu";
 import Image from "next/image";
 import Button from "./button";
-
-const visit = [
+const about = [
 	{
-		name: "admission",
+		name: "team",
 		description:
 			"Book an upcoming party or check availability on your event date",
-		href: "/admission",
+		href: "/team",
 		target: "_top",
 		icon: CalendarDaysIcon,
 	},
 	{
-		name: "hours",
+		name: "news",
 		description: "Send us any feedback or inquiries",
+		href: "/news",
+		target: "_top",
+		icon: CursorArrowRaysIcon,
+	},
+	{
+		name: "contact us",
+		description: "Sign a waiver for your children in advance",
 		href: "/contact",
+		target: "_top",
+		icon: ShieldCheckIcon,
+	},
+];
+const play = [
+	{
+		name: "visit",
+		description:
+			"Book an upcoming party or check availability on your event date",
+		href: "/visit",
+		target: "_top",
+		icon: CalendarDaysIcon,
+	},
+	{
+		name: "membership",
+		description: "Send us any feedback or inquiries",
+		href: "/membership",
 		target: "_top",
 		icon: CursorArrowRaysIcon,
 	},
@@ -40,29 +63,35 @@ const visit = [
 		icon: ShieldCheckIcon,
 	},
 	{
-		name: "gallery",
+		name: "FAQ",
 		description: "Learn more about the team.",
-		href: "/gallery",
+		href: "/faq",
 		target: "_top",
 		icon: Squares2X2Icon,
 	},
 ];
-const party = [
+const events = [
 	{
-		name: "packages",
+		name: "parties",
 		description:
-			"Get all of your questions answered in our forums or contact support.",
-		href: "/packages",
+			"Book an upcoming party or check availability on your event date",
+		href: "/parties",
 		target: "_top",
-		icon: NewspaperIcon,
+		icon: CalendarDaysIcon,
 	},
 	{
-		name: "book",
-		description:
-			"Learn how to maximize our platform to get the most out of it.",
-		href: "https://giggles-play.square.site/",
-		target: "_none",
-		icon: BookmarkSquareIcon,
+		name: "community events",
+		description: "Send us any feedback or inquiries",
+		href: "/community",
+		target: "_top",
+		icon: CursorArrowRaysIcon,
+	},
+	{
+		name: "gallery",
+		description: "Sign a waiver for your children in advance",
+		href: "/gallery",
+		target: "_top",
+		icon: ShieldCheckIcon,
 	},
 ];
 const read = [
@@ -175,21 +204,15 @@ class Navbar extends Component<Props, State> {
 						</div>
 
 						<Popover.Group as="nav" className="hidden space-x-8 md:flex ">
+							<PopoverMenu solutions={about} title="about" />
+							<PopoverMenu solutions={play} title="play" />
+							<PopoverMenu solutions={events} title="events" />
 							<Link
-								href="/"
+								href="/shop"
 								className="text-base font-semibold text-gray-500 hover:text-black hover:underline"
 							>
-								home
+								shop
 							</Link>
-							<PopoverMenu solutions={visit} title="visit" />
-							<PopoverMenu solutions={party} title="party" />
-							<Link
-								href="/about"
-								className="text-base font-semibold text-gray-500 hover:text-black hover:underline"
-							>
-								about
-							</Link>
-							<PopoverMenu solutions={read} title="read" />
 						</Popover.Group>
 						<div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
 							<Link
