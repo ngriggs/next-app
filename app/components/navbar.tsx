@@ -167,11 +167,11 @@ class Navbar extends Component<Props, State> {
 									className="flex justify-center items-center hover:scale-105"
 								>
 									<Image
-										width={144}
-										height={10}
+										width={1}
+										height={1}
 										alt="logo"
-										className="object-cover object-center w-32 h-20"
-										src="giggles.svg"
+										className="object-scale-down -ml-12 object-center w-[70%] h-20"
+										src="giggles_horizontal_logo.svg"
 										priority={true}
 									/>
 								</Link>
@@ -197,7 +197,7 @@ class Navbar extends Component<Props, State> {
 								href="/about"
 								className="text-base font-semibold text-gray-500 hover:text-black hover:underline"
 							>
-								learn
+								about
 							</Link>
 							<PopoverMenu solutions={read} title="read" />
 						</Popover.Group>
