@@ -35,7 +35,7 @@ export default async function ArticlePage() {
 	);
 }
 
-export function Article({ article }: any) {
+function Article({ article }: any) {
 	const { id, title, content, created, splash_image } = article || {};
 
 	return (
