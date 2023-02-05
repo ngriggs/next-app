@@ -20,6 +20,13 @@ function Carousel() {
 			description:
 				"Teaching kids how to think for themselves and solve meaningful problems",
 		},
+		{
+			id: 3,
+			url: "card3.svg",
+			title: "Education re-invented",
+			description:
+				"Teaching kids how to think for themselves and solve meaningful problems",
+		},
 	];
 
 	useEffect(() => {

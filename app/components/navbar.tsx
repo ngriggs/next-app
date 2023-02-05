@@ -76,6 +76,14 @@ const read = [
 		icon: CalendarDaysIcon,
 	},
 	{
+		name: "posts",
+		description:
+			"Book an upcoming party or check availability on your event date",
+		href: "/posts",
+		target: "_top",
+		icon: CalendarDaysIcon,
+	},
+	{
 		name: "shop",
 		description: "Send us any feedback or inquiries",
 		href: "/shop",

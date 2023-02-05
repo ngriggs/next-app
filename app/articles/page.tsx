@@ -14,12 +14,14 @@ export default async function ArticlePage() {
 	const sortedArticles = articles.sort(
 		(a, b) => new Date(b.created).getTime() - new Date(a.created).getTime()
 	);
+
 	return (
 		<div className="bg-gray-200 p-4 ">
 			<h1 className="text-3xl font-bold text-center">Newsletter</h1>
 			<div className="my-8" />
 			<div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 				{sortedArticles?.map((article) => {
+					console.log(article);
 					return (
 						<div
 							key={article.id}
