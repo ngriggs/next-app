@@ -1,7 +1,7 @@
 import BlogCard from "../components/blogCard";
 import Link from "next/link";
 
-interface Article {
+interface Article2 {
 	id: string;
 	title: string;
 	_status: string;
@@ -14,7 +14,7 @@ interface Article {
 	_createdAt: string;
 }
 interface PostProps {
-	article: Article;
+	article: Article2;
 }
 
 const getAllPosts = async () => {
@@ -66,7 +66,7 @@ export default async function BlogPage() {
 			<div className="my-8" />
 			<div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 				{postCollection.allArticles && postCollection.allArticles.length
-					? postCollection.allArticles.map((edge: Article) =>
+					? postCollection.allArticles.map((edge: Article2) =>
 							edge ? (
 								<div key={edge.id}>
 									{/* <Post article={edge} /> */}
