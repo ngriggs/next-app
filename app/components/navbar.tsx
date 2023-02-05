@@ -11,7 +11,6 @@ import {
 	CalendarDaysIcon,
 	NewspaperIcon,
 } from "@heroicons/react/24/outline";
-import Headroom from "react-headroom";
 import Link from "next/dist/client/link";
 import PopoverMenu from "./popoverMenu";
 import Image from "next/image";
@@ -148,18 +147,9 @@ class Navbar extends Component<Props, State> {
 
 	render() {
 		return (
-			// <Headroom
-			// 	style={{
-			// 		zIndex: 40,
-			// 		maxWidth: "1280px",
-			// 		marginLeft: "auto",
-			// 		marginRight: "auto",
-			// 	}}
-			// 	className=""
-			// >
-			<Popover as="nav" className="sticky top-0 z-50 bg-white ">
+			<Popover as="nav" className="sticky top-0 z-50 py-[5px] bg-white ">
 				<div className="mx-auto px-1 sm:px-0 ">
-					<div className="flex  max-h-[80px] items-center justify-between border-b-2 border-gray-100 py-3 md:justify-start md:space-x-10 px-0">
+					<div className="flex  max-h-[80px] items-center justify-between py-3 md:justify-start md:space-x-10 px-0">
 						<div className="flex justify-start lg:w-0 lg:flex-1">
 							<nav>
 								<Link
@@ -318,7 +308,6 @@ class Navbar extends Component<Props, State> {
 					</Popover.Panel>
 				</Transition>
 			</Popover>
-			// </Headroom>
 		);
 	}
 }
