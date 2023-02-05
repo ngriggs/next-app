@@ -71,7 +71,9 @@ export default async function ArticlePage({ params }: any) {
 								{article.title}
 							</h2>
 							<h5>{article.content}</h5>
-							<div dangerouslySetInnerHTML={{ __html: article.content2 }} />
+							<div
+								dangerouslySetInnerHTML={{ __html: `${article.content2}` }}
+							/>
 						</div>
 					</div>
 				</div>
