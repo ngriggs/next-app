@@ -16,6 +16,7 @@ module.exports = {
 				summerVibesLight: ["SummerVibesLight"],
 				summerVibesRegular: ["SummerVibesRegular"],
 				summerVibesSolid: ["SummerVibesSolid"],
+				quicksand: ["Quicksand"],
 			},
 		},
 	},

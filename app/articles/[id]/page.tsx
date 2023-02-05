@@ -14,8 +14,7 @@ function getCount(str: string) {
 export default async function ArticlePage({ params }: any) {
 	const article = await getArticle(params.id);
 	const date = new Date(article.created);
-	const blogContent = article.content;
-	console.log(getCount(blogContent));
+	const blogContent = article.content2;
 
 	return (
 		<div>
@@ -37,17 +36,17 @@ export default async function ArticlePage({ params }: any) {
 										<div className="hs-tooltip inline-block [--trigger:hover] [--placement:bottom]">
 											<div className="hs-tooltip-toggle sm:mb-1 block text-left cursor-pointer">
 												<span className="font-semibold text-gray-800 dark:text-gray-200">
-													Jessica Ortega
+													{article.author}
 												</span>
 											</div>
 										</div>
 
 										<ul className="text-xs text-gray-500">
-											<li className="inline-block relative pr-6 last:pr-0 last-of-type:before:hidden before:absolute before:top-1/2 before:right-2 before:-translate-y-1/2 before:w-1 before:h-1 before:bg-gray-300 before:rounded-full dark:text-gray-400 dark:before:bg-gray-600">
+											<li className="inline-block relative pr-6 last:pr-0 last-of-type:before:hidden before:absolute before:top-1/2 before:right-2 before:-translate-y-1/2 before:w-1 before:h-1 before:bg-gray-300 before:rounded-full dark:text-black dark:before:bg-gray-600">
 												{date.toDateString()}
 											</li>
-											<li className="inline-block relative pr-6 last:pr-0 last-of-type:before:hidden before:absolute before:top-1/2 before:right-2 before:-translate-y-1/2 before:w-1 before:h-1 before:bg-gray-300 before:rounded-full dark:text-gray-400 dark:before:bg-gray-600">
-												{Math.ceil(getCount(blogContent) / 200).toFixed(0)} min
+											<li className="inline-block relative pr-6 last:pr-0 last-of-type:before:hidden before:absolute before:top-1/2 before:right-2 before:-translate-y-1/2 before:w-1 before:h-1 before:bg-gray-300 before:rounded-full dark:text-black dark:before:bg-gray-600">
+												{Math.ceil(getCount(blogContent) / 150).toFixed(0)} min
 												read
 											</li>
 										</ul>
@@ -56,7 +55,7 @@ export default async function ArticlePage({ params }: any) {
 									<div>
 										<button
 											type="button"
-											className="py-1.5 px-2.5 sm:py-2 sm:px-3 inline-flex justify-center items-center gap-x-1.5 sm:gap-x-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-xs sm:text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
+											className="py-1.5 px-2.5 sm:py-2 sm:px-3 inline-flex justify-center items-center gap-x-1.5 sm:gap-x-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-xs sm:text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-black dark:hover:text-white dark:focus:ring-offset-gray-800"
 										>
 											<svg
 												className="w-3.5 h-3.5"
@@ -82,6 +81,7 @@ export default async function ArticlePage({ params }: any) {
 								{article.title}
 							</h2>
 							<h5>{article.content}</h5>
+							<div dangerouslySetInnerHTML={{ __html: article.content2 }} />
 						</div>
 					</div>
 				</div>
@@ -93,7 +93,7 @@ export default async function ArticlePage({ params }: any) {
 						<div className="hs-tooltip inline-block">
 							<button
 								type="button"
-								className="hs-tooltip-toggle flex items-center gap-x-2 text-sm text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
+								className="hs-tooltip-toggle flex items-center gap-x-2 text-sm text-gray-500 hover:text-gray-800 dark:text-black dark:hover:text-gray-200"
 							>
 								<svg
 									className="w-4 h-4"
@@ -120,7 +120,7 @@ export default async function ArticlePage({ params }: any) {
 						<div className="hs-tooltip inline-block">
 							<button
 								type="button"
-								className="hs-tooltip-toggle flex items-center gap-x-2 text-sm text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
+								className="hs-tooltip-toggle flex items-center gap-x-2 text-sm text-gray-500 hover:text-gray-800 dark:text-black dark:hover:text-gray-200"
 							>
 								<svg
 									className="w-4 h-4"
@@ -148,7 +148,7 @@ export default async function ArticlePage({ params }: any) {
 							<button
 								type="button"
 								id="blog-article-share-dropdown"
-								className="hs-dropdown-toggle flex items-center gap-x-2 text-sm text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
+								className="hs-dropdown-toggle flex items-center gap-x-2 text-sm text-gray-500 hover:text-gray-800 dark:text-black dark:hover:text-gray-200"
 							>
 								<svg
 									className="w-4 h-4"
@@ -174,7 +174,7 @@ export default async function ArticlePage({ params }: any) {
 								aria-labelledby="blog-article-share-dropdown"
 							>
 								<a
-									className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-400 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-gray-400"
+									className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-black hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-gray-400"
 									href="#"
 								>
 									<svg
@@ -192,7 +192,7 @@ export default async function ArticlePage({ params }: any) {
 								</a>
 								<div className="border-t border-gray-600 my-2"></div>
 								<a
-									className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-400 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-gray-400"
+									className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-black hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-gray-400"
 									href="#"
 								>
 									<svg
@@ -208,7 +208,7 @@ export default async function ArticlePage({ params }: any) {
 									Share on Twitter
 								</a>
 								<a
-									className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-400 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-gray-400"
+									className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-black hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-gray-400"
 									href="#"
 								>
 									<svg
@@ -224,7 +224,7 @@ export default async function ArticlePage({ params }: any) {
 									Share on Facebook
 								</a>
 								<a
-									className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-400 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-gray-400"
+									className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-black hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-gray-400"
 									href="#"
 								>
 									<svg

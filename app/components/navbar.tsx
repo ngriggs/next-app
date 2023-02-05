@@ -15,6 +15,7 @@ import Headroom from "react-headroom";
 import Link from "next/dist/client/link";
 import PopoverMenu from "./popoverMenu";
 import Image from "next/image";
+import Button from "./button";
 
 const visit = [
 	{
@@ -139,7 +140,7 @@ interface State {
 	articles: any[];
 }
 
-class Navbar3 extends Component<Props, State> {
+class Navbar extends Component<Props, State> {
 	constructor(props: Props) {
 		super(props);
 		this.state = { articles: [] };
@@ -177,7 +178,7 @@ class Navbar3 extends Component<Props, State> {
 								</nav>
 							</div>
 							<div className="-my-2 -mr-2 md:hidden">
-								<Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset">
+								<Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset">
 									<span className="sr-only">Open menu</span>
 									<Bars3Icon className="h-6 w-6" aria-hidden="true" />
 								</Popover.Button>
@@ -186,7 +187,7 @@ class Navbar3 extends Component<Props, State> {
 							<Popover.Group as="nav" className="hidden space-x-8 md:flex ">
 								<Link
 									href="/"
-									className="text-base font-normal text-gray-500 hover:text-black hover:underline"
+									className="text-base font-semibold text-gray-500 hover:text-black hover:underline"
 								>
 									home
 								</Link>
@@ -194,7 +195,7 @@ class Navbar3 extends Component<Props, State> {
 								<PopoverMenu solutions={party} title="party" />
 								<Link
 									href="/about"
-									className="text-base font-normal text-gray-500 hover:text-black hover:underline"
+									className="text-base font-semibold text-gray-500 hover:text-black hover:underline"
 								>
 									learn
 								</Link>
@@ -203,9 +204,14 @@ class Navbar3 extends Component<Props, State> {
 							<div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
 								<Link
 									href="/contact"
-									className="ml-8 mr-4 inline-flex items-center justify-center whitespace-nowrap rounded-3xl border border-transparent hover:bg-[#f7ae47] px-4 py-2 text-base font-medium text-white shadow-sm bg-[#ec6a52] hover:scale-105"
+									className="ml-8 mr-4 inline-flex items-center justify-center whitespace-nowrapborder border-transparent  px-4 py-2 text-base"
 								>
-									get in touch
+									<Button
+										label="get in touch"
+										bgColor="[#ec6a52]"
+										hoverColor=""
+										styles="shadow-sm font-medium "
+									/>
 								</Link>
 							</div>
 						</div>
@@ -243,7 +249,7 @@ class Navbar3 extends Component<Props, State> {
 													</Link>
 												</div>
 												<div className="-mr-2">
-													<div className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset">
+													<div className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset">
 														<span className="sr-only">Close menu</span>
 														<XMarkIcon className="h-6 w-6" aria-hidden="true" />
 													</div>
@@ -316,4 +322,4 @@ class Navbar3 extends Component<Props, State> {
 	}
 }
 
-export default Navbar3;
+export default Navbar;

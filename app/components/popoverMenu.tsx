@@ -29,15 +29,15 @@ export default function popoverMenu({
 					<>
 						<Popover.Button
 							className={classNames(
-								open ? "text-gray-900 underline" : "text-gray-500",
-								"group inline-flex items-center rounded-md bg-white text-base font-normal hover:text-black hover:underline"
+								open ? "text-black underline" : "text-gray-500",
+								"group inline-flex items-center rounded-md bg-white text-base font-semibold hover:text-black hover:underline"
 							)}
 						>
 							<span>{title}</span>
 							{open ? (
 								<ChevronUpIcon
 									className={classNames(
-										open ? "text-gray-600" : "text-gray-500 stroke-2",
+										open ? "text-gray-500" : "text-black stroke-2",
 										"ml-3 mt-[3px] h-4 w-4 group-hover:text-black"
 									)}
 									aria-hidden="true"
@@ -45,7 +45,7 @@ export default function popoverMenu({
 							) : (
 								<ChevronDownIcon
 									className={classNames(
-										open ? "text-gray-600" : "text-gray-500 stroke-2",
+										open ? "text-black" : "text-gray-500  stroke-2",
 										"ml-3 mt-[3px] h-4 w-4 group-hover:text-black"
 									)}
 									aria-hidden="true"
@@ -80,7 +80,7 @@ export default function popoverMenu({
 														className="-m-3 flex items-start rounded-lg p-3"
 													>
 														<div className="ml-0">
-															<p className="text-base font-normal text-gray-500 hover:text-black">
+															<p className="text-base font-semibold text-gray-500 hover:text-black">
 																{item.name}
 															</p>
 														</div>

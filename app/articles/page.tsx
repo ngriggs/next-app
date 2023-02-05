@@ -11,12 +11,15 @@ async function getArticles() {
 export default async function ArticlePage() {
 	const articlesData = await getArticles();
 	const articles = await Promise.all(articlesData);
+	const sortedArticles = articles.sort(
+		(a, b) => new Date(b.created).getTime() - new Date(a.created).getTime()
+	);
 	return (
 		<div className="bg-gray-200 p-4 ">
 			<h1 className="text-3xl font-bold text-center">Newsletter</h1>
 			<div className="my-8" />
 			<div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-				{articles?.map((article) => {
+				{sortedArticles?.map((article) => {
 					return (
 						<div
 							key={article.id}
@@ -32,7 +35,7 @@ export default async function ArticlePage() {
 }
 
 export function Article({ article }: any) {
-	const { id, title, content, created, splash_image } = article || {};
+	const { id, title, content, created, splash_image, author } = article || {};
 
 	return (
 		<Link href={`/articles/${id}`}>
@@ -41,6 +44,7 @@ export function Article({ article }: any) {
 				title={title}
 				content={content}
 				created={created}
+				author={author}
 				image={`${process.env.PB_LOCALHOST}api/files/articles/${id}/${splash_image}`}
 			/>
 		</Link>

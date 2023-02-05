@@ -7,36 +7,15 @@ function Carousel() {
 
 	const images = [
 		{
-			id: 3,
+			id: 1,
 			url: "giggles_moodboard_1.svg",
 			title: "Education re-invented",
 			description:
 				"Teaching kids how to think for themselves and solve meaningful problems",
 		},
 		{
-			id: 3,
-			url: "kidsKitchen.svg",
-			title: "Education re-invented",
-			description:
-				"Teaching kids how to think for themselves and solve meaningful problems",
-		},
-		{
-			id: 3,
-			url: "playLoft.svg",
-			title: "Education re-invented",
-			description:
-				"Teaching kids how to think for themselves and solve meaningful problems",
-		},
-		{
-			id: 3,
-			url: "soundProofing.svg",
-			title: "Education re-invented",
-			description:
-				"Teaching kids how to think for themselves and solve meaningful problems",
-		},
-		{
-			id: 3,
-			url: "play-loft-1.jpg",
+			id: 2,
+			url: "card_2.svg",
 			title: "Education re-invented",
 			description:
 				"Teaching kids how to think for themselves and solve meaningful problems",
@@ -90,7 +69,7 @@ function Carousel() {
 					</div>
 				))}
 			</div>
-			<div className="carousel__indicator absolute z-30 bottom-0 space-x-4 w-full flex justify-center p-2">
+			<div className="carousel__indicator absolute z-30 bottom-0 space-x-4 w-full flex justify-center p-2 mb-1">
 				{images.map((_, i) => (
 					<button
 						key={i}
