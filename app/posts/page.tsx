@@ -90,7 +90,6 @@ export function Post({ article }: PostProps) {
 				content={content.value}
 				created={_createdAt}
 				image={""}
-				author={""}
 			/>
 		</Link>
 	);
