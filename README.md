@@ -10,6 +10,9 @@ npm run dev
 yarn dev
 # or
 pnpm dev
+
+
+./pocketbase serve --http="10.0.0.109:8090"
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

@@ -11,9 +11,11 @@ const Pricing = () => {
 					<div className="w-full md:w-1/2 px-4">
 						<div className="bg-white rounded-lg p-6">
 							<h3 className="text-lg font-medium">Hours of Operation</h3>
-							<p className="text-gray-700">Monday - Friday: 9am - 5pm</p>
-							<p className="text-gray-700">Saturday: 10am - 6pm</p>
-							<p className="text-gray-700">Sunday: 12pm - 5pm</p>
+							<p className="text-gray-700">
+								Monday - Friday: 9am - 5pm Open Play
+							</p>
+							<p className="text-gray-700">Saturday: 10am - 6pm Parties</p>
+							<p className="text-gray-700">Sunday: 12pm - 5pm Parties</p>
 						</div>
 					</div>
 					<div className="w-full md:w-1/2 px-4 mt-4 md:mt-0">

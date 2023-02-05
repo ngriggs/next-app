@@ -168,9 +168,9 @@ class Navbar extends Component<Props, State> {
 									>
 										<Image
 											width={144}
-											height={144}
+											height={10}
 											alt="logo"
-											className="object-scale-down w-32"
+											className="object-cover object-center w-32 h-20"
 											src="giggles.svg"
 											priority={true}
 										/>

@@ -5,16 +5,10 @@ async function getArticle(articleId: string) {
 	const data = await res.json();
 	return data;
 }
-function getCount(str: string) {
-	return str.split(" ").filter(function (num: any) {
-		return num != "";
-	}).length;
-}
 
 export default async function ArticlePage({ params }: any) {
 	const article = await getArticle(params.id);
 	const date = new Date(article.created);
-	const blogContent = article.content2;
 
 	return (
 		<div>
@@ -44,10 +38,6 @@ export default async function ArticlePage({ params }: any) {
 										<ul className="text-xs text-gray-500">
 											<li className="inline-block relative pr-6 last:pr-0 last-of-type:before:hidden before:absolute before:top-1/2 before:right-2 before:-translate-y-1/2 before:w-1 before:h-1 before:bg-gray-300 before:rounded-full dark:text-black dark:before:bg-gray-600">
 												{date.toDateString()}
-											</li>
-											<li className="inline-block relative pr-6 last:pr-0 last-of-type:before:hidden before:absolute before:top-1/2 before:right-2 before:-translate-y-1/2 before:w-1 before:h-1 before:bg-gray-300 before:rounded-full dark:text-black dark:before:bg-gray-600">
-												{Math.ceil(getCount(blogContent) / 150).toFixed(0)} min
-												read
 											</li>
 										</ul>
 									</div>
