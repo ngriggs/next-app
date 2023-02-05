@@ -176,7 +176,7 @@ class Navbar extends Component<Props, State> {
 
 	render() {
 		return (
-			<Popover as="nav" className="sticky top-0 z-50 py-[5px] bg-white ">
+			<Popover as="nav" className="sticky top-0 z-50 py-[2.5px] bg-white ">
 				<div className="mx-auto px-1 sm:px-0 ">
 					<div className="flex  max-h-[80px] items-center justify-between py-3 md:justify-start md:space-x-10 px-0">
 						<div className="flex justify-start lg:w-0 lg:flex-1">
