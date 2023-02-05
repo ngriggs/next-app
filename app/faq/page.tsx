@@ -1,3 +1,9 @@
+import Footer from "../components/footer2";
+
 export default function Loading() {
-	return <div>Page is loading...</div>;
+	return (
+		<div>
+			<Footer />
+		</div>
+	);
 }

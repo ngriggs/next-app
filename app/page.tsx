@@ -2,6 +2,7 @@ import Carousel from "./components/carousel";
 import HeroPage from "./components/hero";
 import Gallery2 from "./gallery/page";
 import Link from "next/link";
+import Footer from "./components/footer2";
 
 interface Article {
 	id: string;
@@ -75,6 +76,8 @@ export default async function HomePage() {
 					) : null
 				)}
 			</ul>
+			<div className="my-8" />
+			<Footer />
 
 			<div className="my-8" />
 			{/* @ts-expect-error Server Component */}
