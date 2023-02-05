@@ -36,7 +36,7 @@ export default async function ArticlePage() {
 }
 
 export function Article({ article }: any) {
-	const { id, title, content, created, splash_image, author } = article || {};
+	const { id, title, content, created, splash_image } = article || {};
 
 	return (
 		<Link href={`/articles/${id}`}>
@@ -45,7 +45,6 @@ export function Article({ article }: any) {
 				title={title}
 				content={content}
 				created={created}
-				author={author}
 				image={`https://gigglesplay.fly.dev/api/files/articles/${id}/${splash_image}`}
 			/>
 		</Link>

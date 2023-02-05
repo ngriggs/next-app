@@ -6,7 +6,6 @@ type Props = {
 	content: string;
 	created: string;
 	image: string;
-	author: string;
 };
 
 const BlogCard: React.FC<Props> = ({ title, content, created, image }) => {
