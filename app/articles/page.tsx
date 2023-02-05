@@ -14,7 +14,6 @@ export default async function ArticlePage() {
 	const sortedArticles = articles.sort(
 		(a, b) => new Date(b.created).getTime() - new Date(a.created).getTime()
 	);
-
 	return (
 		<div className="bg-gray-200 p-4 ">
 			<h1 className="text-3xl font-bold text-center">Newsletter</h1>
@@ -35,7 +34,7 @@ export default async function ArticlePage() {
 	);
 }
 
-function Article({ article }: any) {
+export function Article({ article }: any) {
 	const { id, title, content, created, splash_image } = article || {};
 
 	return (
