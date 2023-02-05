@@ -50,7 +50,7 @@ const Footer = () => {
 							height={144}
 							alt="logo"
 							src="/giggles.svg"
-							priority={true}
+							priority={false}
 						/>
 					</Link>
 				</nav>
