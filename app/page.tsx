@@ -66,7 +66,6 @@ export default async function HomePage() {
 			<div className="my-8" />
 			<HeroPage />
 			<div className="my-8" />
-
 			<ul>
 				{postCollection.allArticles?.map((edge: Article) =>
 					edge ? (
@@ -76,8 +75,6 @@ export default async function HomePage() {
 					) : null
 				)}
 			</ul>
-			<div className="my-8" />
-			<Footer />
 
 			<div className="my-8" />
 			{/* @ts-expect-error Server Component */}
