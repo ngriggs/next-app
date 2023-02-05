@@ -60,7 +60,6 @@ const getAllPosts = async () => {
 };
 export default async function BlogPage() {
 	const postCollection = await getAllPosts();
-	console.log();
 	return (
 		<div className="bg-gray-200 p-4 ">
 			<h1 className="text-3xl font-bold text-center">Newsletter</h1>
