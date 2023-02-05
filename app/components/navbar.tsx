@@ -170,7 +170,7 @@ class Navbar extends Component<Props, State> {
 										width={1}
 										height={1}
 										alt="logo"
-										className="object-scale-down -ml-12 object-center w-[70%] h-20"
+										className="object-scale-down -ml-14 object-center w-[60%] h-20"
 										src="giggles_horizontal_logo.svg"
 										priority={true}
 									/>
