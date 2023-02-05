@@ -15,7 +15,7 @@ function Carousel() {
 		},
 		{
 			id: 2,
-			url: "card_2.svg",
+			url: "card_2(1).svg",
 			title: "Education re-invented",
 			description:
 				"Teaching kids how to think for themselves and solve meaningful problems",
