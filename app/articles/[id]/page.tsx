@@ -1,6 +1,7 @@
 async function getArticle(articleId: string) {
 	const res = await fetch(
-		`https://gigglesplay.fly.dev/api/collections/articles/records/${articleId}`
+		`https://gigglesplay.fly.dev/api/collections/articles/records/${articleId}`,
+		{ next: { revalidate: 60 } }
 	);
 	const data = await res.json();
 	return data;
