@@ -186,8 +186,8 @@ class Navbar extends Component<Props, State> {
 									className="flex justify-center items-center hover:scale-105"
 								>
 									<Image
-										width={1}
-										height={1}
+										width={300}
+										height={300}
 										alt="logo"
 										className="object-scale-down -ml-14 object-center max-w-[60%] h-20"
 										src="giggles_horizontal_logo.svg"
