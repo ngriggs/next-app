@@ -8,7 +8,7 @@ type Props = {
 	image: string;
 };
 
-const BlogCard: React.FC<Props> = ({ title, content, created, image }) => {
+const BlogCard: React.FC<Props> = ({ id, title, content, created, image }) => {
 	const date = new Date(created);
 	return (
 		<article className="overflow-hidden max-h-96 rounded-lg shadow transition hover:shadow-lg">
