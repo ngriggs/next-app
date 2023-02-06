@@ -8,7 +8,7 @@ function Carousel() {
 	const images = [
 		{
 			id: 1,
-			url: "giggles_moodboard_1.svg",
+			url: "moodboard.svg",
 			title: "Education re-invented",
 			description:
 				"Teaching kids how to think for themselves and solve meaningful problems",
