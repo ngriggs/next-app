@@ -1,4 +1,9 @@
 @tailwind base;
+@layer base {
+	strong {
+		@apply font-extrabold;
+	}
+}
 @tailwind components;
 @tailwind utilities;
 

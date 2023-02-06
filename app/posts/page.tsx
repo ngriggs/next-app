@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { StructuredText } from "react-datocms";
+import { render } from "datocms-structured-text-to-html-string";
 
 interface Article {
 	id: string;
@@ -10,7 +11,6 @@ interface Article {
 	slug: string;
 	_createdAt: string;
 }
-
 const getAllArticles = async () => {
 	try {
 		const headers = {
@@ -65,9 +65,14 @@ export default async function ArticleList() {
 						<Link href={`/posts/${edge.slug}`}>
 							<div>{edge.title}</div>
 							<div>{new Date(edge._createdAt).toDateString()}</div>
-							<div>{JSON.stringify(edge.content.value)}</div>
-							{/* <StructuredText data={edge.content.value} /> */}
 						</Link>
+						<article className="prose lg:prose-xl">
+							<div
+								dangerouslySetInnerHTML={{
+									__html: render(edge.content.value),
+								}}
+							/>
+						</article>
 					</li>
 				) : null
 			)}
