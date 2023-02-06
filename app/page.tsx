@@ -2,6 +2,7 @@ import Carousel from "./components/carousel";
 import HeroPage from "./components/hero";
 import Gallery2 from "./gallery/page";
 import Link from "next/link";
+import Footer from "./components/footer2";
 
 interface Article {
 	id: string;
@@ -65,7 +66,6 @@ export default async function HomePage() {
 			<div className="my-8" />
 			<HeroPage />
 			<div className="my-8" />
-
 			<ul>
 				{postCollection.allArticles?.map((edge: Article) =>
 					edge ? (

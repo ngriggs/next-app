@@ -52,7 +52,7 @@ export default function MyModal() {
 								leaveFrom="opacity-100 scale-100"
 								leaveTo="opacity-0 scale-95"
 							>
-								<Dialog.Panel className="w-full max-w-screen-lg transform overflow-hidden rounded-2xl bg-white shadow-xl transition-all">
+								<Dialog.Panel className="w-full max-w-[800px] max-h-[300vw] transform overflow-hidden rounded-2xl bg-white shadow-xl transition-all">
 									<button
 										onClick={closeModal}
 										className="absolute z-60 top-2 right-2"
