@@ -69,7 +69,7 @@ export default async function ArticleList() {
 						<article className="prose lg:prose-xl">
 							<div
 								dangerouslySetInnerHTML={{
-									__html: render(edge.content.value),
+									__html: render(edge.content.value) || "",
 								}}
 							/>
 						</article>
