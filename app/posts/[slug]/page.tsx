@@ -1,4 +1,7 @@
-const getArticle = async (articleID: String) => {
+import { render } from "datocms-structured-text-to-html-string";
+import Image from "next/image";
+
+const getArticle = async (slug: String) => {
 	try {
 		const headers = {
 			"content-type": "application/json",
@@ -6,14 +9,12 @@ const getArticle = async (articleID: String) => {
 		};
 		const requestBody = {
 			query: `
-			query MyQuery {
-				allArticles(filter: {slug: {eq: $articleID}}) {
+			query MyQuery($slug: String!) {
+				allArticles(filter: {slug: {eq: $slug}}) {
 				  id
 				  title
 				  _status
 				  content {
-					blocks
-					links
 					value
 				  }
 				  slug
@@ -25,7 +26,7 @@ const getArticle = async (articleID: String) => {
 				}
 			  }
 			`,
-			variables: { articleID },
+			variables: { slug },
 		};
 		const options = {
 			method: "POST",
@@ -43,17 +44,27 @@ const getArticle = async (articleID: String) => {
 };
 
 export default async function ArticlePage({ params }: any) {
-	// const article = await getArticle(params.slug);
-	// console.log(article);
-	// const date = new Date(article._createdAt);
+	const article = await getArticle(params.slug);
+	const date = new Date(article.allArticles[0]._createdAt);
 
-	// const router = useRouter();
-	// const { slug } = router.query;
-
-	// const article = await getArticle(params);
-	// const date = new Date(article._createdAt);
-
-	// console.log(article);
-
-	return <div>loading...</div>;
+	return (
+		<>
+			<article className="prose lg:prose-xl">
+				<div>{article.allArticles[0].title}</div>
+				<div>{article.allArticles[0].author}</div>
+				<Image
+					alt={article.allArticles[0].title}
+					src={article.allArticles[0].images.url}
+					width={1000}
+					height={1000}
+				></Image>
+				<div>{date.toDateString()}</div>
+				<div
+					dangerouslySetInnerHTML={{
+						__html: render(article.allArticles[0].content) || "",
+					}}
+				/>
+			</article>
+		</>
+	);
 }
