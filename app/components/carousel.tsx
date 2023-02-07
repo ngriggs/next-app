@@ -88,7 +88,7 @@ function Carousel() {
 		<div
 			onTouchStart={handleTouchStart}
 			onTouchMove={handleTouchMove}
-			className="relative rounded-b-lg max-w-7xl mx-auto sm:h-[40rem] h-80 overflow-hidden flex flex-wrap"
+			className="relative rounded-b-lg max-w-7xl mx-auto sm:h-[40rem] h-80 overflow-auto touch-pan-x flex flex-wrap"
 		>
 			<div className="carousel relative w-full h-full">
 				{images.map(({ url, title, description }, i) => (
