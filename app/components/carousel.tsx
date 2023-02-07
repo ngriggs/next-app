@@ -1,9 +1,10 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, TouchEvent } from "react";
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/20/solid";
 
 function Carousel() {
 	const [index, setIndex] = useState(0);
+	const [touchPosition, setTouchPosition] = useState(0);
 
 	const images = [
 		{
@@ -58,9 +59,37 @@ function Carousel() {
 			setIndex(index - 1);
 		}
 	};
+	const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {
+		const touchDown = e.touches[0].clientX;
+		setTouchPosition(touchDown);
+	};
+	const handleTouchMove = (e: TouchEvent<HTMLDivElement>) => {
+		const touchDown = touchPosition;
+
+		if (touchDown === 0) {
+			return;
+		}
+
+		const currentTouch = e.touches[0].clientX;
+		const diff = touchDown - currentTouch;
+
+		if (diff > 5) {
+			nextSlide();
+		}
+
+		if (diff < -5) {
+			prevSlide();
+		}
+
+		setTouchPosition(0);
+	};
 
 	return (
-		<div className="relative rounded-b-lg max-w-7xl mx-auto sm:h-[40rem] h-80 overflow-hidden flex flex-wrap">
+		<div
+			onTouchStart={handleTouchStart}
+			onTouchMove={handleTouchMove}
+			className="relative rounded-b-lg max-w-7xl mx-auto sm:h-[40rem] h-80 overflow-hidden flex flex-wrap"
+		>
 			<div className="carousel relative w-full h-full">
 				{images.map(({ url, title, description }, i) => (
 					<div
