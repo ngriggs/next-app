@@ -99,7 +99,7 @@ const read = [
 		name: "blog",
 		description:
 			"Book an upcoming party or check availability on your event date",
-		href: "/articles",
+		href: "/news",
 		target: "_top",
 		icon: CalendarDaysIcon,
 	},
