@@ -6,12 +6,12 @@ const socialMedia = [
 	{
 		id: "social-media-1",
 		icon: "instagram.svg",
-		link: "https://www.instagram.com/",
+		link: "https://www.instagram.com/giggles.play/?fbclid=IwAR0-NhgItCvF9QTFJVUSnTPRaCS12Bv5HfOzghQa2SemmTWXGQpM_EwuGls",
 	},
 	{
 		id: "social-media-2",
 		icon: "facebook.svg",
-		link: "https://www.facebook.com/",
+		link: "https://www.facebook.com/profile.php?id=100089486487628",
 	},
 ];
 const links = [
@@ -109,16 +109,17 @@ const Footer = () => {
 						<div className="">© 2023 Giggles Play | All Rights Reserved</div>
 						<div className="flex flex-row justify-center md:mt-0 mt-6">
 							{socialMedia.map((social, index) => (
-								<Image
-									key={social.id}
-									src={social.icon}
-									alt={social.id}
-									height={21}
-									width={21}
-									className={`w-[21px] h-[21px] object-contain cursor-pointer hover:scale-105 ${
-										index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
-									}`}
-								/>
+								<Link key={social.id} href={social.link} target={"_blank"}>
+									<Image
+										src={social.icon}
+										alt={social.id}
+										height={21}
+										width={21}
+										className={`w-[21px] h-[21px] object-contain cursor-pointer hover:scale-105 ${
+											index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
+										}`}
+									/>
+								</Link>
 							))}
 						</div>
 						<div className="">

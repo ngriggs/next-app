@@ -52,7 +52,7 @@ export default async function ArticlePage({ params }: any) {
 		const date = new Date(article.allArticles[0]._createdAt);
 
 		return (
-			<div className="">
+			<div className="px-4 pt-6 pb-12">
 				<article className="prose prose-slate prose-img:rounded-xl prose-headings:underline mx-auto lg:prose-lg">
 					<div className="text-center text-2xl">
 						{article.allArticles[0].title}

@@ -94,23 +94,7 @@ const events = [
 		icon: ShieldCheckIcon,
 	},
 ];
-const read = [
-	{
-		name: "blog",
-		description:
-			"Book an upcoming party or check availability on your event date",
-		href: "/news",
-		target: "_top",
-		icon: CalendarDaysIcon,
-	},
-	{
-		name: "shop",
-		description: "Send us any feedback or inquiries",
-		href: "/shop",
-		target: "_top",
-		icon: CursorArrowRaysIcon,
-	},
-];
+
 const mobile1 = [
 	{
 		name: "admission",
@@ -293,10 +277,10 @@ class Navbar extends Component<Props, State> {
 									<div className="space-y-6 py-6 px-5">
 										<div className="grid grid-cols-2 gap-y-4 gap-x-8">
 											<Link
-												href="/articles"
+												href="/news"
 												className="text-base font-medium text-gray-900 hover:text-gray-700"
 											>
-												blog
+												news
 											</Link>
 
 											<Link
