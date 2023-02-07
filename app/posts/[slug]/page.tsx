@@ -45,18 +45,20 @@ const getArticle = async (slug: String) => {
 
 export default async function ArticlePage({ params }: any) {
 	const article = await getArticle(params.slug);
-	if (!article.allArticles) {
+	if (!article.allArticles[0]._createdAt) {
 		return <div>Loading...</div>;
 	} else {
-		const date = new Date(article?.allArticles[0]._createdAt);
+		const date = new Date(article?.allArticles[0]?._createdAt);
 
 		return (
 			<div className="">
-				<article className="prose lg:prose-xl">
-					<div>{article?.allArticles[0].title}</div>
-					<div>{article?.allArticles[0].author}</div>
+				<article className="prose prose-slate prose-img:rounded-xl prose-headings:underline mx-auto lg:prose-lg">
+					<div className="text-center text-2xl">
+						{article?.allArticles[0]?.title}
+					</div>
+					<div>{article?.allArticles[0]?.author}</div>
 					<Image
-						alt={article?.allArticles[0].title}
+						alt={article?.allArticles[0]?.title}
 						src={article?.allArticles[0].images.url}
 						width={1000}
 						height={1000}

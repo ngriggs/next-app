@@ -21,9 +21,9 @@ const Pricing = () => {
 					<div className="w-full md:w-1/2 px-4 mt-4 md:mt-0">
 						<div className="bg-white rounded-lg p-6">
 							<h3 className="text-lg font-medium">Pricing</h3>
-							<p className="text-gray-700">General Admission: $10 per person</p>
-							<p className="text-gray-700">Children under 2: Free</p>
-							<p className="text-gray-700">Annual Pass: $200 per person</p>
+							<p className="text-gray-700">General Admission: $XX per person</p>
+							<p className="text-gray-700">Children under X: Free</p>
+							<p className="text-gray-700">Annual Pass: $XXX per person</p>
 						</div>
 					</div>
 				</div>
@@ -31,9 +31,9 @@ const Pricing = () => {
 					<div className="w-full md:w-1/2 px-4">
 						<div className="bg-white rounded-lg p-6">
 							<h3 className="text-lg font-medium">Party Packages</h3>
-							<p className="text-gray-700">Standard Party Package: $300</p>
-							<p className="text-gray-700">Deluxe Party Package: $500</p>
-							<p className="text-gray-700">Premium Party Package: $800</p>
+							<p className="text-gray-700">Standard Party Package: $XXX</p>
+							<p className="text-gray-700">Deluxe Party Package: $XXX</p>
+							<p className="text-gray-700">Premium Party Package: $XXX</p>
 						</div>
 					</div>
 					<div className="w-full md:w-1/2 px-4 mt-4 md:mt-0">
