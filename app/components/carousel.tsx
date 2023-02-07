@@ -73,14 +73,7 @@ function Carousel() {
 							backgroundSize: "cover",
 							backgroundPosition: "center",
 						}}
-					>
-						{/* <div className="carousel__text relative top-3/4 flex justify-center items-center transition-all duration-300 ease-out">
-							<div className="relative mx-auto invisible sm:visible rounded-md text-center text-white px-6 py-1 bg-black bg-opacity-50 inline-block">
-								<h5 className="carousel__title text-xl">{title}</h5>
-								<p className="carousel__description">{description}</p>
-							</div>
-						</div> */}
-					</div>
+					></div>
 				))}
 			</div>
 			<div className="carousel__indicator absolute z-30 bottom-0 space-x-4 w-full flex justify-center p-2 mb-1">
