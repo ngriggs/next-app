@@ -3,14 +3,6 @@ import Link from "next/link";
 import { render } from "datocms-structured-text-to-html-string";
 import PostCard from "../components/postCard";
 
-interface Article {
-	id: string;
-	title: string;
-	_status: string;
-	content: any;
-	slug: string;
-	_createdAt: string;
-}
 const getAllArticles = async () => {
 	try {
 		const headers = {
@@ -78,25 +70,6 @@ export default async function ArticleList() {
 				})}
 			</div>
 		</div>
-		// <ul>
-		// 	{postCollection.allArticles?.map((edge: Article) =>
-		// 		edge ? (
-		// 			<li key={edge.id}>
-		// 				<Link href={`/posts/${edge.slug}`}>
-		// 					<div>{edge.title}</div>
-		// 					<div>{new Date(edge._createdAt).toDateString()}</div>
-		// 				</Link>
-		// 				<article className="prose lg:prose-xl">
-		// 					<div
-		// 						dangerouslySetInnerHTML={{
-		// 							__html: render(edge.content.value) || "",
-		// 						}}
-		// 					/>
-		// 				</article>
-		// 			</li>
-		// 		) : null
-		// 	)}
-		// </ul>
 	);
 }
 
