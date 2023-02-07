@@ -47,27 +47,28 @@ export default async function ArticlePage({ params }: any) {
 	const article = await getArticle(params.slug);
 	if (!article) {
 		return <div>Loading...</div>;
-	}
-	const date = new Date(article?.allArticles[0]._createdAt);
+	} else {
+		const date = new Date(article?.allArticles[0]._createdAt);
 
-	return (
-		<div className="">
-			<article className="prose lg:prose-xl">
-				<div>{article?.allArticles[0].title}</div>
-				<div>{article?.allArticles[0].author}</div>
-				<Image
-					alt={article?.allArticles[0].title}
-					src={article?.allArticles[0].images.url}
-					width={1000}
-					height={1000}
-				></Image>
-				<div>{date.toDateString()}</div>
-				<div
-					dangerouslySetInnerHTML={{
-						__html: render(article?.allArticles[0].content) || "",
-					}}
-				/>
-			</article>
-		</div>
-	);
+		return (
+			<div className="">
+				<article className="prose lg:prose-xl">
+					<div>{article?.allArticles[0].title}</div>
+					<div>{article?.allArticles[0].author}</div>
+					<Image
+						alt={article?.allArticles[0].title}
+						src={article?.allArticles[0].images.url}
+						width={1000}
+						height={1000}
+					></Image>
+					<div>{date.toDateString()}</div>
+					<div
+						dangerouslySetInnerHTML={{
+							__html: render(article?.allArticles[0].content) || "",
+						}}
+					/>
+				</article>
+			</div>
+		);
+	}
 }
