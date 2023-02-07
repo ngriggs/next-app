@@ -38,13 +38,6 @@ const about = [
 		target: "_top",
 		icon: ShieldCheckIcon,
 	},
-	{
-		name: "POSTS TEST",
-		description: "Sign a waiver for your children in advance",
-		href: "/posts",
-		target: "_top",
-		icon: ShieldCheckIcon,
-	},
 ];
 const play = [
 	{
