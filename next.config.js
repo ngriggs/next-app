@@ -4,6 +4,16 @@ const nextConfig = {
 	experimental: {
 		appDir: true,
 	},
+	images: {
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "www.datocms-assets.com",
+				port: "",
+				pathname: "/93822/**",
+			},
+		],
+	},
 };
 
 module.exports = nextConfig;
