@@ -200,7 +200,7 @@ class Navbar extends Component<Props, State> {
 						</Popover.Group>
 						<div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
 							<Link
-								href="https://squareup.com/appointments/book/89lmsk6jh008w1/LPJGJT0WFHK20/start"
+								href="https://giggles-play.square.site/"
 								target={"_blank"}
 								className="ml-8 mr-4 inline-flex items-center justify-center whitespace-nowrapborder border-transparent  px-4 py-2 text-base"
 							>
