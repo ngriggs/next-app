@@ -26,14 +26,12 @@ const PostCard: React.FC<Props> = ({
 					{date.toDateString()}
 				</time>
 				<h3 className="mt-0.5 text-lg text-gray-900">{title}</h3>
-
-				<article className="prose lg:prose-xl">
-					<div
-						dangerouslySetInnerHTML={{
-							__html: render(content) || "",
-						}}
-					/>
-				</article>
+				<div
+					className="line-clamp-3 mt-2 text-sm leading-relaxed"
+					dangerouslySetInnerHTML={{
+						__html: render(content) || "",
+					}}
+				/>
 			</div>
 		</article>
 	);

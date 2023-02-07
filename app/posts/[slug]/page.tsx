@@ -48,7 +48,7 @@ export default async function ArticlePage({ params }: any) {
 	const date = new Date(article?.allArticles[0]._createdAt);
 
 	return (
-		<>
+		<div className="">
 			<article className="prose lg:prose-xl">
 				<div>{article?.allArticles[0].title}</div>
 				<div>{article?.allArticles[0].author}</div>
@@ -65,6 +65,6 @@ export default async function ArticlePage({ params }: any) {
 					}}
 				/>
 			</article>
-		</>
+		</div>
 	);
 }
