@@ -82,8 +82,8 @@ const Footer = () => {
 							</Link>
 						</li>
 						<li>
-							<Link href="/articles" className="mr-4 hover:underline md:mr-6">
-								Blog
+							<Link href="/news" className="mr-4 hover:underline md:mr-6">
+								News
 							</Link>
 						</li>
 						<li>
