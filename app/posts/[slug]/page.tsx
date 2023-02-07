@@ -44,7 +44,7 @@ const getArticle = async (slug: String) => {
 };
 
 export default async function ArticlePage({ params }: any) {
-	const article = await getArticle(params.slug);
+	const article = await getArticle(params?.slug);
 	if (!article.allArticles[0]._createdAt) {
 		return <div>Loading...</div>;
 	} else {
