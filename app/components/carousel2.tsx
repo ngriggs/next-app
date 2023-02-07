@@ -3,9 +3,9 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 const SwipeableImage: React.FC = () => {
+	const [index, setIndex] = useState(0);
 	const [width, setWidth] = useState(0);
 	const carousel = useRef<HTMLDivElement>(null);
-	const maxWidth = "650px";
 
 	useEffect(() => {
 		if (carousel.current) {
@@ -31,7 +31,7 @@ const SwipeableImage: React.FC = () => {
 						return (
 							<motion.div
 								key={image}
-								className="min-h-[40rem] min-w-[60rem] p-[40px] snap-mandatory"
+								className="min-h-[40rem] min-w-[60rem] p-[40px] snap-x snap-mandatory"
 							>
 								<img
 									className="w-[100%] h-[100%] rounded-lg pointer-events-none snap-center"
