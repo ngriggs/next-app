@@ -37,7 +37,7 @@ const getArticle = async (slug: String) => {
 			await fetch(`${process.env.DATOCMS_API_URL}`, options)
 		).json();
 		console.log("RESPONSE FROM FETCH REQUEST", response?.data);
-		return response.data;
+		return await response.data;
 	} catch (err) {
 		console.log("ERROR DURING FETCH REQUEST", err);
 	}
