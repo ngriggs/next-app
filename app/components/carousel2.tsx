@@ -16,7 +16,7 @@ const SwipeableImage: React.FC = () => {
 	const images = ["moodboard.svg", "card2.svg", "card3.svg", "card4.svg"];
 
 	return (
-		<div className="relative h-screen w-full overflow-hidden">
+		<div className="relative w-full overflow-hidden">
 			<motion.div
 				ref={carousel}
 				className="carousel cursor-grab overflow-hidden"
@@ -31,7 +31,7 @@ const SwipeableImage: React.FC = () => {
 						return (
 							<motion.div
 								key={image}
-								className="min-h-[40rem] min-w-[60rem] p-[40px] snap-x snap-mandatory"
+								className="max-h-[60rem] min-w-[30rem] sm:max-h-[150rem] sm:min-w-[60rem] p-[20px] snap-x snap-mandatory"
 							>
 								<img
 									className="w-[100%] h-[100%] rounded-lg pointer-events-none snap-center"
