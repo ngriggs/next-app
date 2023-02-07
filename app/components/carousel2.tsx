@@ -1,14 +1,16 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 const SwipeableImage: React.FC = () => {
 	const [width, setWidth] = useState(0);
-	const carousel = useRef();
+	const carousel = useRef<HTMLDivElement>(null);
 	const maxWidth = "650px";
 
 	useEffect(() => {
-		setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+		if (carousel.current) {
+			setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+		}
 	}, []);
 
 	const images = ["moodboard.svg", "card2.svg", "card3.svg", "card4.svg"];
