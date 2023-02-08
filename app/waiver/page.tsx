@@ -1,13 +1,16 @@
 "use client";
 import React, { useState } from "react";
+import Button from "../components/button";
 
 const WaiverForm = () => {
 	const [fullName, setFullName] = useState("");
 	const [email, setEmail] = useState("");
 	const [signature, setSignature] = useState("");
 
-	const handleSubmit = (event: React.FormEvent) => {
-		event.preventDefault();
+	const handleSubmit = (event?: React.FormEvent<HTMLFormElement>) => {
+		if (event) {
+			event.preventDefault();
+		}
 
 		// Submit form data to server
 		console.log("Full Name:", fullName);
@@ -16,7 +19,7 @@ const WaiverForm = () => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit} className="bg-white p-10 rounded">
+		<form onSubmit={handleSubmit} className="bg-white p-10 rounded-lg">
 			<h1 className="text-2xl font-bold mb-5">Sign Waiver</h1>
 
 			{/* Full Name */}
@@ -28,7 +31,7 @@ const WaiverForm = () => {
 				id="fullName"
 				value={fullName}
 				onChange={(e) => setFullName(e.target.value)}
-				className="border p-2 w-full mb-5"
+				className="border border-gray-400 p-2 w-full mb-5"
 			/>
 
 			{/* Email */}
@@ -40,7 +43,7 @@ const WaiverForm = () => {
 				id="email"
 				value={email}
 				onChange={(e) => setEmail(e.target.value)}
-				className="border p-2 w-full mb-5"
+				className="border border-gray-400 p-2 w-full mb-5"
 			/>
 
 			{/* Signature */}
@@ -51,16 +54,17 @@ const WaiverForm = () => {
 				id="signature"
 				value={signature}
 				onChange={(e) => setSignature(e.target.value)}
-				className="border p-2 w-full mb-5"
+				className="border border-gray-400 p-2 w-full mb-5"
 			/>
 
 			{/* Submit Button */}
-			<button
-				type="submit"
-				className="bg-indigo-500 text-white py-2 px-4 rounded"
-			>
-				Submit
-			</button>
+			<Button
+				label="Submit"
+				bgColor="#ec6a52"
+				hoverColor=""
+				styles="text-white font-medium py-2 px-4 rounded-lg shadow-sm"
+				onClick={handleSubmit}
+			/>
 		</form>
 	);
 };

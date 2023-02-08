@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Link from "next/link";
+import Button from "../components/button";
 
 const Visit = () => {
 	return (
@@ -31,9 +33,14 @@ const Visit = () => {
 				vel velit blandit efficitur. Sed dapibus semper sapien, id consectetur
 				odio consectetur eu.
 			</p>
-			<button className="bg-indigo-500 text-white py-2 px-4 rounded">
-				Sign Waiver
-			</button>
+			<Link href="/waiver">
+				<Button
+					label="Sign Waiver"
+					bgColor=""
+					hoverColor=""
+					styles="text-white font-medium py-2 px-4 rounded-lg shadow-sm"
+				/>
+			</Link>
 		</div>
 	);
 };
