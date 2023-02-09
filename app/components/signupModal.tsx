@@ -1,6 +1,6 @@
 "use client";
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState, Suspense } from "react";
+import { Fragment, useState, useEffect, Suspense } from "react";
 import NewsLetterSignUpForm from "./subscribeForm";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Button from "./button";
@@ -8,12 +8,23 @@ import Button from "./button";
 export default function MyModal() {
 	let [isOpen, setIsOpen] = useState(false);
 
+	useEffect(() => {
+		let modalShown = getCookie("modalShown");
+		if (!modalShown) {
+			setTimeout(() => {
+				setIsOpen(true);
+			}, 5000);
+		}
+	}, []);
+
 	function closeModal() {
 		setIsOpen(false);
+		setCookie("modalShown", "true", 30);
 	}
 
 	function openModal() {
 		setIsOpen(true);
+		setCookie("modalShown", "true", 30);
 	}
 
 	return (
@@ -98,4 +109,24 @@ export default function MyModal() {
 			</Transition>
 		</Suspense>
 	);
+
+	function setCookie(name: string, value: string, days: number) {
+		let expires = "";
+		if (days) {
+			let date = new Date();
+			date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+			expires = "; expires=" + date.toUTCString();
+		}
+		document.cookie = name + "=" + (value || "") + expires + "; path=/";
+	}
+	function getCookie(name: string) {
+		let nameEQ = name + "=";
+		let ca = document.cookie.split(";");
+		for (let i = 0; i < ca.length; i++) {
+			let c = ca[i];
+			while (c.charAt(0) === " ") c = c.substring(1, c.length);
+			if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+		}
+		return null;
+	}
 }
