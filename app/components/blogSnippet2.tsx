@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllArticles } from "../posts/page";
+import { getAllArticles } from "@/lib/getAllArticles";
 import PostCard from "./postCard";
 
 interface Article {

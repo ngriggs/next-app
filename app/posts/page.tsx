@@ -1,56 +1,6 @@
 import React from "react";
-import Link from "next/link";
-import PostCard from "../components/postCard";
-
-export async function getAllArticles() {
-	try {
-		const headers = {
-			"content-type": "application/json",
-			Authorization: `Bearer ${process.env.DATOCMS_READONLY_TOKEN}`,
-		};
-		const requestBody = {
-			query: `
-			query getAllArticles {
-				allArticles {
-				  id
-				  title
-				  _status
-				  content {
-					blocks
-					links
-					value
-				  }
-				  slug
-				  _createdAt
-				  author
-				  images {
-					url
-				  }
-				  authorimage {
-					url
-				  }
-				}
-				_allArticlesMeta {
-				  count
-				}
-			  }
-			  
-			`,
-		};
-		const options = {
-			method: "POST",
-			headers,
-			body: JSON.stringify(requestBody),
-		};
-		const response = await (
-			await fetch(`${process.env.DATOCMS_API_URL}`, options)
-		).json();
-		console.log("RESPONSE FROM FETCH REQUEST", response?.data);
-		return response.data;
-	} catch (err) {
-		console.log("ERROR DURING FETCH REQUEST", err);
-	}
-}
+import { getAllArticles } from "@/lib/getAllArticles";
+import Post from "../components/post";
 
 export default async function ArticleList() {
 	const postCollection = await getAllArticles();
@@ -72,27 +22,5 @@ export default async function ArticleList() {
 				})}
 			</div>
 		</div>
-	);
-}
-
-export function Post({ article }: any) {
-	const slug = article.slug;
-	const title = article.title;
-	const content = article.content.value;
-	const created = article._createdAt;
-	const splash_image = article.images.url;
-	const author = article.author;
-
-	return (
-		<Link href={`/posts/${slug}`}>
-			<PostCard
-				id={slug}
-				title={title}
-				content={content}
-				created={created}
-				author={author}
-				image={splash_image}
-			/>
-		</Link>
 	);
 }
