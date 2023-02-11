@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import Loading from "../loading";
+import InstagramCard from "../components/instagramCard";
 
 interface Image {
 	id: string;
@@ -30,18 +31,12 @@ export default async function Gallery2() {
 		<Suspense fallback={<Loading />}>
 			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 max-w-7xl mt-10 px-6 gap-5 sm:gap-4 mx-auto mb-5 ">
 				{data.data.map((image: Image) => (
-					<div key={image.id} className="pb-1 overflow-hidden rounded-lg">
-						<a href={image.permalink} target="_blank">
-							<img
-								className="object-cover aspect-square hover:scale-110 rounded-lg transition duration-200"
-								src={image.media_url}
-								alt={image.caption}
-							/>
-						</a>
-						{/* <h2 className="text-slate-600 mt-1 text-sm font-semibold">
-							{image.caption}
-						</h2> */}
-					</div>
+					<InstagramCard
+						username={image.id}
+						profileImageUrl={image.media_url}
+						postImageUrl={image.permalink}
+						caption={image.caption}
+					/>
 				))}
 			</div>
 		</Suspense>
