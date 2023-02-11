@@ -3,6 +3,7 @@ import HeroPage from "./components/hero";
 import Gallery2 from "./gallery/page";
 import OurStory from "./components/ourStory";
 import Blog3 from "./components/blogSnippet1";
+import Blog4 from "./components/blogSnippet2";
 
 export default async function HomePage() {
 	return (
@@ -17,7 +18,7 @@ export default async function HomePage() {
 			<OurStory />
 			<div className="my-8" />
 			{/* @ts-expect-error Server Component */}
-			<Blog3 />
+			<Blog4 />
 		</div>
 	);
 }

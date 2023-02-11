@@ -21,13 +21,13 @@ const PostCard: React.FC<Props> = ({
 	return (
 		<article className="overflow-hidden max-h-96 rounded-lg shadow transition hover:shadow-lg">
 			<img alt={title} src={image} className="h-56 w-full object-cover" />
-			<div className="bg-white p-4 sm:p-6">
+			<div className="bg-white p-4 sm:p-6 h-40">
 				<time dateTime={created} className="block text-xs text-gray-500">
 					{date.toDateString()}
 				</time>
 				<h3 className="mt-0.5 text-lg text-gray-900">{title}</h3>
 				<div
-					className="line-clamp-3 mt-2 text-sm leading-relaxed"
+					className="line-clamp-3 mt-2 text-sm leading-relaxed overflow-hidden"
 					dangerouslySetInnerHTML={{
 						__html: render(content) || "",
 					}}

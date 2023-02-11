@@ -20,8 +20,8 @@ async function Blog3() {
 				</div>
 			</div>
 			<div className="grid grid-cols-1 gap-3 p-4 mt-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:max-w-7xl xl:mx-auto">
-				{articles.map((article: any) => (
-					<div>
+				{articles.map((article: any, index: number) => (
+					<div key={index}>
 						<div className="relative">
 							<Image
 								src={article.images.url}

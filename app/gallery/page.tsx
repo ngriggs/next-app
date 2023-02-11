@@ -30,8 +30,9 @@ export default async function Gallery2() {
 	return (
 		<Suspense fallback={<Loading />}>
 			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 max-w-7xl mt-10 px-6 gap-5 sm:gap-4 mx-auto mb-5 ">
-				{data.data.map((image: Image) => (
+				{data.data.map((image: Image, index) => (
 					<InstagramCard
+						id={index}
 						username={image.id}
 						profileImageUrl={image.media_url}
 						postImageUrl={image.permalink}

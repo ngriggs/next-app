@@ -9,36 +9,40 @@ interface InstagramCardProps {
 	profileImageUrl: string;
 	postImageUrl: string;
 	caption: string;
+	id: number;
 }
 
 const InstagramCard: React.FC<InstagramCardProps> = ({
+	id,
 	username,
 	profileImageUrl,
 	postImageUrl,
 	caption,
 }) => {
 	return (
-		<motion.div
-			key={username}
-			className="pb-1 overflow-hidden rounded-lg"
-			initial={{ opacity: 0 }}
-			whileInView={{ opacity: 1 }}
-			viewport={{ once: true }}
-		>
-			<Link href={postImageUrl} target="_blank">
-				<img
-					decoding="async"
-					className="object-cover aspect-square hover:scale-110 rounded-lg transition duration-200"
-					src={profileImageUrl}
-					alt="instagram post"
-					width={600}
-					height={600}
-				/>
-			</Link>
-			{/* <h2 className="text-slate-600 mt-1 text-sm font-semibold">
+		<div key={id}>
+			<motion.div
+				key={id}
+				className="pb-1 overflow-hidden rounded-lg"
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				viewport={{ once: true }}
+			>
+				<Link href={postImageUrl} target="_blank">
+					<img
+						decoding="async"
+						className="object-cover aspect-square hover:scale-110 rounded-lg transition duration-200"
+						src={profileImageUrl}
+						alt="instagram post"
+						width={600}
+						height={600}
+					/>
+				</Link>
+				{/* <h2 className="text-slate-600 mt-1 text-sm font-semibold">
     {image.caption}
 </h2> */}
-		</motion.div>
+			</motion.div>
+		</div>
 	);
 };
 
