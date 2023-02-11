@@ -1,6 +1,6 @@
 "use client";
 import React, { Component, Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
+import { Popover, Transition, Disclosure } from "@headlessui/react";
 import {
 	Bars3Icon,
 	BookmarkSquareIcon,
@@ -10,6 +10,7 @@ import {
 	XMarkIcon,
 	CalendarDaysIcon,
 	NewspaperIcon,
+	ChevronUpIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/dist/client/link";
 import PopoverMenu from "./popoverMenu";
@@ -160,7 +161,10 @@ class Navbar extends Component<Props, State> {
 
 	render() {
 		return (
-			<Popover as="nav" className="sticky top-0 z-50 py-[2.5px] bg-white ">
+			<Popover
+				as="nav"
+				className="fixed w-full top-0 z-50 py-[2.5px] bg-white "
+			>
 				<div className="mx-auto px-1 sm:px-0 ">
 					<div className="flex  max-h-[80px] items-center justify-between py-3 md:justify-start md:space-x-10 px-0">
 						<div className="flex justify-start lg:w-0 lg:flex-1">
@@ -180,11 +184,19 @@ class Navbar extends Component<Props, State> {
 								</Link>
 							</nav>
 						</div>
-						<div className="-my-2 -mr-2 md:hidden">
+						<div className="-my-2 -mr-2 z-50 md:hidden">
 							<Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 mr-5 text-gray-400 hover:bg-gray-100 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset">
 								<span className="sr-only">Open menu</span>
-								<Bars3Icon className="h-6 w-6" aria-hidden="true" />
+								<Bars3Icon
+									className="h-6 w-6 ui-open:hidden  ui-open:transform"
+									aria-hidden="true"
+								/>
+								<XMarkIcon
+									className="h-6 w-6 hidden ui-open:flex ui-open:transform"
+									aria-hidden="true"
+								/>
 							</Popover.Button>
+							<Popover.Overlay className="fixed z-40  bg-black opacity-30" />
 						</div>
 
 						<Popover.Group as="nav" className="hidden space-x-8 md:flex ">
@@ -226,91 +238,152 @@ class Navbar extends Component<Props, State> {
 				>
 					<Popover.Panel
 						focus
-						className="fixed w-full top-0 transform transition md:hidden"
+						className="fixed h-screen top-0 left-0 bottom-0 z-50  transform transition md:hidden"
 					>
 						{({ close }) => (
-							<button
-								className="absolute w-full text-left p-2"
-								onClick={async () => {
-									await close();
-								}}
-							>
-								<div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-									<div className="px-5 pt-2 pb-6">
-										<div className="flex items-center justify-between">
-											<div>
-												<Link href="/">
-													<img
-														className="w-auto h-12"
-														src="giggles-logo-2.svg"
+							<div className="top-0 h-screen overflow-y-auto left-0 bottom-0 px-[1.5rem] bg-white">
+								<button
+									onClick={async () => {
+										close();
+									}}
+								>
+									<Link href="/" className="">
+										<Image
+											width={200}
+											height={200}
+											alt="logo"
+											className="p-[1.5rem]"
+											src="giggles_horizontal_logo.svg"
+											priority={true}
+										/>
+									</Link>
+								</button>
+								<div className="py-[1.5rem] space-y-[1.5rem] w-full flex flex-col">
+									<Disclosure as="div" className="">
+										{({ open }) => (
+											<>
+												<Disclosure.Button className="py-2 flex w-full justify-between">
+													<span>about</span>
+													<ChevronUpIcon
+														className={`${
+															open ? "rotate-180 transform" : ""
+														} h-5 w-5 text-purple-500`}
 													/>
-												</Link>
-											</div>
-											<div className="-mr-2">
-												<div className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset">
-													<span className="sr-only">Close menu</span>
-													<XMarkIcon className="h-6 w-6" aria-hidden="true" />
-												</div>
-											</div>
-										</div>
-										<div className="mt-6">
-											<nav className="grid gap-y-8">
-												{mobile1.map((item) => (
-													<Link
+												</Disclosure.Button>
+												{about.map((item) => (
+													<Disclosure.Panel
 														key={item.name}
-														href={item.href}
-														target={item.target}
-														className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+														className="text-gray-500 mt-[0.5rem]"
 													>
-														<item.icon
-															className="h-6 w-6 flex-shrink-0 text-[#435a6c]"
-															aria-hidden="true"
-														/>
-														<span className="ml-3 text-base font-medium text-gray-900">
-															{item.name}
-														</span>
-													</Link>
+														<Link
+															href={item.href}
+															target={item.target}
+															className="-m-3 flex items-start rounded-lg p-3"
+														>
+															<div className="ml-0">
+																<p className="text-base font-semibold text-gray-500 hover:text-black">
+																	{item.name}
+																</p>
+															</div>
+														</Link>
+													</Disclosure.Panel>
 												))}
-											</nav>
-										</div>
-									</div>
-									<div className="space-y-6 py-6 px-5">
-										<div className="grid grid-cols-2 gap-y-4 gap-x-8">
-											<Link
-												href="/news"
-												className="text-base font-medium text-gray-900 hover:text-gray-700"
-											>
-												news
-											</Link>
-
-											<Link
-												href="/learn"
-												className="text-base font-medium text-gray-900 hover:text-gray-700"
-											>
-												learn
-											</Link>
-											{mobile2.map((item) => (
-												<Link
-													key={item.name}
-													href={item.href}
-													target={item.target}
-													className="text-base font-medium text-gray-900 hover:text-gray-700"
-												>
-													{item.name}
-												</Link>
-											))}
-										</div>
-										<div>
-											<Link
-												href="/contact"
-												className="flex w-full items-center justify-center rounded-md border border-transparent bg-[#99bdbb] px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-[#435a6c]"
-											>
-												get in touch
-											</Link>
-										</div>
-									</div>
+											</>
+										)}
+									</Disclosure>
+									<Disclosure as="div" className="">
+										{({ open }) => (
+											<>
+												<Disclosure.Button className="py-2 flex w-full justify-between">
+													<span>play</span>
+													<ChevronUpIcon
+														className={`${
+															open ? "rotate-180 transform" : ""
+														} h-5 w-5 text-purple-500`}
+													/>
+												</Disclosure.Button>
+												{play.map((item) => (
+													<Disclosure.Panel
+														key={item.name}
+														className="text-gray-500 mt-[0.5rem]"
+													>
+														<Link
+															href={item.href}
+															target={item.target}
+															className="-m-3 flex items-start rounded-lg p-3"
+														>
+															<div className="ml-0">
+																<p className="text-base font-semibold text-gray-500 hover:text-black">
+																	{item.name}
+																</p>
+															</div>
+														</Link>
+													</Disclosure.Panel>
+												))}
+											</>
+										)}
+									</Disclosure>
+									<Disclosure as="div" className="">
+										{({ open }) => (
+											<>
+												<Disclosure.Button className="py-2 flex w-full justify-between">
+													<span>events</span>
+													<ChevronUpIcon
+														className={`${
+															open ? "rotate-180 transform" : ""
+														} h-5 w-5 text-purple-500`}
+													/>
+												</Disclosure.Button>
+												{events.map((item) => (
+													<Disclosure.Panel
+														key={item.name}
+														className="text-gray-500 mt-[0.5rem]"
+													>
+														<Link
+															href={item.href}
+															target={item.target}
+															className="-m-3 flex items-start rounded-lg p-3"
+														>
+															<div className="ml-0">
+																<p className="text-base font-semibold text-gray-500 hover:text-black">
+																	{item.name}
+																</p>
+															</div>
+														</Link>
+													</Disclosure.Panel>
+												))}
+											</>
+										)}
+									</Disclosure>
+									<button
+										onClick={async () => {
+											close();
+										}}
+									>
+										<Link href="/shop" className="py-2">
+											shop
+										</Link>
+									</button>
+									<button
+										onClick={async () => {
+											close();
+										}}
+									>
+										<Link
+											href="https://giggles-play.square.site/"
+											target={"_blank"}
+											className="ml-8 mr-4 inline-flex items-center justify-center whitespace-nowrapborder border-transparent  px-4 py-2 text-base"
+										>
+											<Button
+												label="Book Now"
+												bgColor="[#ec6a52]"
+												hoverColor=""
+												styles="shadow-sm font-medium"
+											/>
+										</Link>
+									</button>
 								</div>
-							</button>
+							</div>
 						)}
 					</Popover.Panel>
 				</Transition>
