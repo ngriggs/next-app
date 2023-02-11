@@ -24,7 +24,7 @@ export default function popoverMenu({
 }) {
 	return (
 		<>
-			<Popover className="">
+			<Popover className="relative">
 				{({ open }) => (
 					<>
 						<Popover.Button
