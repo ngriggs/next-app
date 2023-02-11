@@ -10,7 +10,7 @@ import {
 	XMarkIcon,
 	CalendarDaysIcon,
 	NewspaperIcon,
-	ChevronUpIcon,
+	ChevronDownIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/dist/client/link";
 import PopoverMenu from "./popoverMenu";
@@ -261,7 +261,7 @@ class Navbar extends Component<Props, State> {
 											<>
 												<Disclosure.Button className="py-2 flex w-full justify-between">
 													<span>about</span>
-													<ChevronUpIcon
+													<ChevronDownIcon
 														className={`${
 															open ? "rotate-180 transform" : ""
 														} h-5 w-5 text-purple-500`}
@@ -293,7 +293,7 @@ class Navbar extends Component<Props, State> {
 											<>
 												<Disclosure.Button className="py-2 flex w-full justify-between">
 													<span>play</span>
-													<ChevronUpIcon
+													<ChevronDownIcon
 														className={`${
 															open ? "rotate-180 transform" : ""
 														} h-5 w-5 text-purple-500`}
@@ -325,7 +325,7 @@ class Navbar extends Component<Props, State> {
 											<>
 												<Disclosure.Button className="py-2 flex w-full justify-between">
 													<span>events</span>
-													<ChevronUpIcon
+													<ChevronDownIcon
 														className={`${
 															open ? "rotate-180 transform" : ""
 														} h-5 w-5 text-purple-500`}
@@ -357,7 +357,7 @@ class Navbar extends Component<Props, State> {
 											close();
 										}}
 									>
-										<Link href="/shop" className="py-2">
+										<Link href="/shop" className="py-2 flex items-start">
 											shop
 										</Link>
 									</button>
