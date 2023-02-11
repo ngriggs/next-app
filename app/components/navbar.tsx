@@ -96,54 +96,16 @@ const events = [
 	},
 ];
 
-const mobile1 = [
+const socialMedia = [
 	{
-		name: "admission",
-		description:
-			"Book an upcoming party or check availability on your event date",
-		href: "/booking",
-		target: "_none",
-		icon: CalendarDaysIcon,
+		id: "social-media-1",
+		icon: "instagram.svg",
+		link: "https://www.instagram.com/giggles.play/?fbclid=IwAR0-NhgItCvF9QTFJVUSnTPRaCS12Bv5HfOzghQa2SemmTWXGQpM_EwuGls",
 	},
 	{
-		name: "hours",
-		description: "Send us any feedback or inquiries",
-		href: "/contact",
-		target: "_top",
-		icon: CursorArrowRaysIcon,
-	},
-	{
-		name: "waiver",
-		description: "Sign a waiver for your children in advance",
-		href: "/waiver",
-		target: "_top",
-
-		icon: ShieldCheckIcon,
-	},
-	{
-		name: "gallery",
-		description: "Learn more about the team.",
-		href: "/gallery",
-		target: "_top",
-		icon: Squares2X2Icon,
-	},
-];
-const mobile2 = [
-	{
-		name: "packages",
-		description:
-			"Get all of your questions answered in our forums or contact support.",
-		href: "/packages",
-		target: "_top",
-		icon: NewspaperIcon,
-	},
-	{
-		name: "book",
-		description:
-			"Learn how to maximize our platform to get the most out of it.",
-		href: "/booking",
-		target: "_none",
-		icon: BookmarkSquareIcon,
+		id: "social-media-2",
+		icon: "facebook.svg",
+		link: "https://www.facebook.com/profile.php?id=100089486487628",
 	},
 ];
 
@@ -260,25 +222,25 @@ class Navbar extends Component<Props, State> {
 										{({ open }) => (
 											<>
 												<Disclosure.Button className="py-2 flex w-full justify-between">
-													<span>about</span>
+													<span className="text-base font-semibold">about</span>
 													<ChevronDownIcon
 														className={`${
 															open ? "rotate-180 transform" : ""
-														} h-5 w-5 text-purple-500`}
+														} h-5 w-5 text-[#ec6a52]`}
 													/>
 												</Disclosure.Button>
 												{about.map((item) => (
 													<Disclosure.Panel
 														key={item.name}
-														className="text-gray-500 mt-[0.5rem]"
+														className="mt-[1.5rem]"
 													>
 														<Link
 															href={item.href}
 															target={item.target}
 															className="-m-3 flex items-start rounded-lg p-3"
 														>
-															<div className="ml-0">
-																<p className="text-base font-semibold text-gray-500 hover:text-black">
+															<div className="ml-5">
+																<p className="text-base font-medium text-black hover:text-black">
 																	{item.name}
 																</p>
 															</div>
@@ -292,25 +254,25 @@ class Navbar extends Component<Props, State> {
 										{({ open }) => (
 											<>
 												<Disclosure.Button className="py-2 flex w-full justify-between">
-													<span>play</span>
+													<span className="text-base font-semibold">play</span>
 													<ChevronDownIcon
 														className={`${
 															open ? "rotate-180 transform" : ""
-														} h-5 w-5 text-purple-500`}
+														} h-5 w-5 text-[#ec6a52]`}
 													/>
 												</Disclosure.Button>
 												{play.map((item) => (
 													<Disclosure.Panel
 														key={item.name}
-														className="text-gray-500 mt-[0.5rem]"
+														className="mt-[1.5rem]"
 													>
 														<Link
 															href={item.href}
 															target={item.target}
 															className="-m-3 flex items-start rounded-lg p-3"
 														>
-															<div className="ml-0">
-																<p className="text-base font-semibold text-gray-500 hover:text-black">
+															<div className="ml-5">
+																<p className="text-base font-medium text-black hover:text-black">
 																	{item.name}
 																</p>
 															</div>
@@ -324,25 +286,27 @@ class Navbar extends Component<Props, State> {
 										{({ open }) => (
 											<>
 												<Disclosure.Button className="py-2 flex w-full justify-between">
-													<span>events</span>
+													<span className="text-base font-semibold">
+														events
+													</span>
 													<ChevronDownIcon
 														className={`${
 															open ? "rotate-180 transform" : ""
-														} h-5 w-5 text-purple-500`}
+														} h-5 w-5 text-[#ec6a52]`}
 													/>
 												</Disclosure.Button>
 												{events.map((item) => (
 													<Disclosure.Panel
 														key={item.name}
-														className="text-gray-500 mt-[0.5rem]"
+														className="mt-[1.5rem]"
 													>
 														<Link
 															href={item.href}
 															target={item.target}
 															className="-m-3 flex items-start rounded-lg p-3"
 														>
-															<div className="ml-0">
-																<p className="text-base font-semibold text-gray-500 hover:text-black">
+															<div className="ml-5">
+																<p className="text-base font-medium text-black hover:text-black">
 																	{item.name}
 																</p>
 															</div>
@@ -358,7 +322,7 @@ class Navbar extends Component<Props, State> {
 										}}
 									>
 										<Link href="/shop" className="py-2 flex items-start">
-											shop
+											<span className="text-base font-semibold">shop</span>
 										</Link>
 									</button>
 									<button
@@ -378,6 +342,30 @@ class Navbar extends Component<Props, State> {
 												styles="shadow-sm font-medium"
 											/>
 										</Link>
+									</button>
+									<button
+										className="flex flex-row items-center"
+										onClick={async () => {
+											close();
+										}}
+									>
+										{socialMedia.map((social, index) => (
+											<Link
+												key={social.id}
+												href={social.link}
+												target={"_blank"}
+											>
+												<Image
+													src={social.icon}
+													alt={social.id}
+													height={21}
+													width={21}
+													className={`w-[34px] h-[34px] object-contain cursor-pointer hover:scale-105 ${
+														index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
+													}`}
+												/>
+											</Link>
+										))}
 									</button>
 								</div>
 							</div>

@@ -1,9 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import { render } from "datocms-structured-text-to-html-string";
 import PostCard from "../components/postCard";
 
-const getAllArticles = async () => {
+export async function getAllArticles() {
 	try {
 		const headers = {
 			"content-type": "application/json",
@@ -27,6 +26,9 @@ const getAllArticles = async () => {
 				  images {
 					url
 				  }
+				  authorimage {
+					url
+				  }
 				}
 				_allArticlesMeta {
 				  count
@@ -48,7 +50,7 @@ const getAllArticles = async () => {
 	} catch (err) {
 		console.log("ERROR DURING FETCH REQUEST", err);
 	}
-};
+}
 
 export default async function ArticleList() {
 	const postCollection = await getAllArticles();
