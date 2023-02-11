@@ -2,7 +2,7 @@ export default function Giggles() {
 	return (
 		<div className="flex flex-col items-center justify-center p-10">
 			<div className="container mx-auto p-4">
-				<h1 className="font-summerVibesSolid text-3xl mb-4">all about giggles</h1>
+				<span className="font-summerVibesSolid text-3xl mb-4">about giggles</span>
 
 				<p className="mb-4">
 					At Giggles Play, we believe that play and learning go hand-in-hand.
