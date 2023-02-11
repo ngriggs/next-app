@@ -18,7 +18,7 @@ const Content = () => {
 				</div>
 				<div className="flex flex-col justify-center">
 					<div className="max-w-xl mb-6">
-						<h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl sm:leading-none">
+						<h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl sm:leading-none">
 							<span>Our Story</span>
 						</h2>
 						<p className="text-base md:text-lg">
@@ -29,7 +29,7 @@ const Content = () => {
 					<div className="grid gap-5 row-gap-8 sm:grid-cols-2">
 						<div className="border-l-4">
 							<div className="h-full p-5 border border-l-0 rounded-r">
-								<h6 className="mb-2 font-semibold leading-5 text-slate-900 dark:text-slate-100">
+								<h6 className="mb-2 font-semibold leading-5 text-slate-900 ">
 									Our Vision
 								</h6>
 								<p className="text-sm font-medium">
@@ -42,7 +42,7 @@ const Content = () => {
 						</div>
 						<div className="shadow-sm border-l-4">
 							<div className="h-full p-5 border border-l-0 rounded-r">
-								<h6 className="mb-2 font-semibold leading-5 text-slate-900 dark:text-slate-100">
+								<h6 className="mb-2 font-semibold leading-5 text-slate-900 ">
 									Our Journey
 								</h6>
 								<p className="text-sm font-medium">

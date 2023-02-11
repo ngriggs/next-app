@@ -10,7 +10,7 @@ async function Blog3() {
 		<div className="">
 			<div className="container mx-auto px-4">
 				<div className="md:w-5/6 md:mx-auto md:max-w-2xl">
-					<h1 className="text-black text-3xl text-center font-bold dark:text-white sm:text-4xl">
+					<h1 className="text-black text-3xl text-center font-bold sm:text-4xl">
 						Blog
 					</h1>
 					<p className="text-center text-lg mt-2">
@@ -34,7 +34,7 @@ async function Blog3() {
 								<span className="bg-primary-500 text-white tracking-wide text-sm uppercase px-2 py-1 rounded-md">
 									Trending
 								</span>
-								<div className="left-3 bottom-3 right-3 bg-white p-4 mt-3 rounded-lg dark:bg-black">
+								<div className="left-3 bottom-3 right-3 bg-white p-4 mt-3 rounded-lg ">
 									<div className="flex justify-between">
 										<Image
 											src={article.authorimage.url}
@@ -51,7 +51,7 @@ async function Blog3() {
 											{new Date(article._createdAt).toDateString()}
 										</time>
 									</div>
-									<h1 className="text-xl font-semibold text-black mb-4 mt-2 dark:text-white 2xl:text-2xl min-h-[100px]">
+									<h1 className="text-xl font-semibold text-black mb-4 mt-2 2xl:text-2xl min-h-[100px]">
 										{article.title}
 									</h1>
 									<Link
