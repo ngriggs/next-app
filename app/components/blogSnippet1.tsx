@@ -1,4 +1,4 @@
-import { getAllArticles } from "../posts/page";
+import { getAllArticles } from "@/lib/getAllArticles";
 import Link from "next/link";
 import Image from "next/image";
 
