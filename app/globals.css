@@ -10,26 +10,18 @@
 @font-face {
 	font-family: "SummerVibesBold";
 	src: url("../public/fonts/SummerVibes-Bold.otf");
-	font-weight: 400;
-	font-style: normal;
 }
 @font-face {
 	font-family: "SummerVibesLight";
 	src: url("../public/fonts/SummerVibes-Light.otf");
-	font-weight: 400;
-	font-style: normal;
 }
 @font-face {
 	font-family: "SummerVibesRegular";
 	src: url("../public/fonts/SummerVibes-Regular.otf");
-	font-weight: 400;
-	font-style: normal;
 }
 @font-face {
 	font-family: "SummerVibesSolid";
 	src: url("../public/fonts/SummerVibes-Solid.otf");
-	font-weight: 400;
-	font-style: normal;
 }
 
 @font-face {
