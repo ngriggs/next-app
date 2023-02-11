@@ -161,12 +161,9 @@ class Navbar extends Component<Props, State> {
 
 	render() {
 		return (
-			<Popover
-				as="nav"
-				className="fixed w-full top-0 z-50 py-[2.5px] bg-white "
-			>
+			<Popover as="nav" className="sticky w-full h-[80px] top-0 z-50 bg-white">
 				<div className="mx-auto px-1 sm:px-0 ">
-					<div className="flex  max-h-[80px] items-center justify-between py-3 md:justify-start md:space-x-10 px-0">
+					<div className="flex items-center justify-between md:justify-start md:space-x-10 px-0">
 						<div className="flex justify-start lg:w-0 lg:flex-1">
 							<nav>
 								<Link
@@ -177,7 +174,7 @@ class Navbar extends Component<Props, State> {
 										width={300}
 										height={300}
 										alt="logo"
-										className="object-scale-down -ml-14 object-center max-w-[60%] h-20"
+										className="-ml-14 object-center max-w-[60%] h-20"
 										src="giggles_horizontal_logo.svg"
 										priority={true}
 									/>
