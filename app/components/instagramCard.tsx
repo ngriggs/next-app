@@ -26,7 +26,7 @@ const InstagramCard: React.FC<InstagramCardProps> = ({
 			viewport={{ once: true }}
 		>
 			<Link href={postImageUrl} target="_blank">
-				<Image
+				<img
 					decoding="async"
 					className="object-cover aspect-square hover:scale-110 rounded-lg transition duration-200"
 					src={profileImageUrl}
