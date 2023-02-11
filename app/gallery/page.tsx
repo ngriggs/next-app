@@ -28,12 +28,12 @@ export default async function Gallery2() {
 
 	return (
 		<Suspense fallback={<Loading />}>
-			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 max-w-7xl mt-10 px-6 gap-5 sm:gap-4 mx-auto mb-5">
+			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 max-w-7xl mt-10 px-6 gap-5 sm:gap-4 mx-auto mb-5 ">
 				{data.data.map((image: Image) => (
-					<div key={image.id} className="pb-1">
+					<div key={image.id} className="pb-1 overflow-hidden rounded-lg">
 						<a href={image.permalink} target="_blank">
 							<img
-								className="object-cover aspect-square hover:scale-105 rounded-lg"
+								className="object-cover aspect-square hover:scale-110 rounded-lg "
 								src={image.media_url}
 								alt={image.caption}
 							/>

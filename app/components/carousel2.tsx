@@ -31,10 +31,10 @@ const SwipeableImage: React.FC = () => {
 						return (
 							<motion.div
 								key={image}
-								className="max-h-[60rem] min-w-[30rem] sm:max-h-[150rem] sm:min-w-[60rem] p-[20px] snap-x snap-mandatory"
+								className="max-h-[60rem] min-w-[30rem] sm:max-h-[150rem] sm:min-w-[60rem] p-[20px]"
 							>
 								<img
-									className="w-[100%] h-[100%] rounded-lg pointer-events-none snap-center"
+									className="w-[100%] h-[100%] rounded-lg pointer-events-none"
 									src={image}
 									alt=""
 								/>
