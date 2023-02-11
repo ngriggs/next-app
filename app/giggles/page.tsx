@@ -1,15 +1,57 @@
 export default function Giggles() {
 	return (
-		<div>
-			<p>
-				At Giggles Play, our mission is to provide a dynamic and welcoming
-				environment where parents and caregivers can form meaningful connections
-				with their children through play. Our clean and inviting facility offers
-				thoughtfully designed play areas, activities, and classes that foster
-				independence, creativity, and confidence in children. We strive to be a
-				hub where families can build authentic relationships and create lifelong
-				friendships with one another.
-			</p>
+		<div className="flex flex-col items-center justify-center p-10">
+			<div className="container mx-auto p-4">
+				<h1 className="text-3xl font-bold mb-4">welcome to giggles</h1>
+
+				<p className="mb-4">
+					At Giggles Play, we believe that play and learning go hand-in-hand.
+					Our mission is to provide a dynamic and welcoming environment where
+					families can form meaningful connections through play. We offer a
+					clean and inviting facility with thoughtfully designed play areas,
+					activities, and classes that foster independence, creativity, and
+					confidence in children. Our goal is to be a hub where families can
+					build authentic relationships and create lifelong memories.
+				</p>
+
+				<h2 className="text-xl font-medium mb-4">Our Vision</h2>
+				<p className="mb-4">
+					To be the premier destination for families seeking a safe, nurturing,
+					and engaging environment where they can connect with each other
+					through play and learning.
+				</p>
+
+				<h2 className="text-xl font-medium mb-4">Mission Statement</h2>
+				<p className="mb-4">
+					To provide a dynamic and welcoming environment where families can form
+					meaningful connections through play, foster children's growth and
+					encourage the development of important life skills, and foster a
+					strong sense of community through our innovative programs, thoughtful
+					design, and welcoming atmosphere.
+				</p>
+
+				<h2 className="text-xl font-medium mb-4">Facilities and Programs</h2>
+				<p className="mb-4">
+					In this section, you can include details about your play areas,
+					activities, and classes. You can also highlight what makes Giggles
+					Play unique and different from other playspaces.
+				</p>
+
+				<h2 className="text-xl font-medium mb-4">Why Choose Giggles Play</h2>
+				<p className="mb-4">
+					In this section, you can highlight the benefits of choosing Giggles
+					Play as the destination for families seeking an environment that
+					promotes play and learning. You can include testimonials from
+					satisfied customers and touch upon the safety measures you have in
+					place to provide peace of mind for parents and caregivers.
+				</p>
+
+				<h2 className="text-xl font-medium mb-4">Contact Us</h2>
+				<p className="mb-4">
+					Include details about how families can get in touch with you, such as
+					your address, phone number, email, and any social media handles.
+				</p>
+			</div>
 		</div>
 	);
 }

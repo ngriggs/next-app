@@ -79,22 +79,16 @@ const play = [
 		icon: ShieldCheckIcon,
 	},
 ];
-const events = [
+const parties = [
 	{
-		name: "parties",
+		name: "themes",
 		description:
 			"Book an upcoming party or check availability on your event date",
 		href: "/parties",
 		target: "_top",
 		icon: CalendarDaysIcon,
 	},
-	{
-		name: "community events",
-		description: "Send us any feedback or inquiries",
-		href: "/community",
-		target: "_top",
-		icon: CursorArrowRaysIcon,
-	},
+
 	{
 		name: "gallery",
 		description: "Sign a waiver for your children in advance",
@@ -169,7 +163,7 @@ class Navbar extends Component<Props, State> {
 						<Popover.Group as="nav" className="hidden space-x-8 md:flex ">
 							<PopoverMenu solutions={about} title="about" />
 							<PopoverMenu solutions={play} title="play" />
-							<PopoverMenu solutions={events} title="events" />
+							<PopoverMenu solutions={parties} title="parties" />
 							<Link
 								href="/shop"
 								className="text-base font-semibold text-gray-500 hover:text-black hover:underline"
@@ -295,7 +289,7 @@ class Navbar extends Component<Props, State> {
 											<>
 												<Disclosure.Button className="py-2 flex w-full justify-between">
 													<span className="text-base font-semibold">
-														events
+														parties
 													</span>
 													<ChevronDownIcon
 														className={`${
@@ -303,7 +297,7 @@ class Navbar extends Component<Props, State> {
 														} h-5 w-5 text-[#ec6a52]`}
 													/>
 												</Disclosure.Button>
-												{events.map((item) => (
+												{parties.map((item) => (
 													<Disclosure.Panel
 														key={item.name}
 														className="mt-[1.5rem]"
