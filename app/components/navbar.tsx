@@ -18,6 +18,14 @@ import Image from "next/image";
 import Button from "./button";
 const about = [
 	{
+		name: "giggles",
+		description:
+			"Book an upcoming party or check availability on your event date",
+		href: "/giggles",
+		target: "_top",
+		icon: CalendarDaysIcon,
+	},
+	{
 		name: "team",
 		description:
 			"Book an upcoming party or check availability on your event date",
@@ -38,6 +46,13 @@ const about = [
 		href: "/contact",
 		target: "_top",
 		icon: ShieldCheckIcon,
+	},
+	{
+		name: "FAQs",
+		description: "Learn more about the team.",
+		href: "/faq",
+		target: "_top",
+		icon: Squares2X2Icon,
 	},
 ];
 const play = [
@@ -62,13 +77,6 @@ const play = [
 		href: "/waiver",
 		target: "_top",
 		icon: ShieldCheckIcon,
-	},
-	{
-		name: "FAQ",
-		description: "Learn more about the team.",
-		href: "/faq",
-		target: "_top",
-		icon: Squares2X2Icon,
 	},
 ];
 const events = [
