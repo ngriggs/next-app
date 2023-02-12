@@ -29,16 +29,23 @@ export default async function Gallery2() {
 
 	return (
 		<Suspense fallback={<Loading />}>
-			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 max-w-7xl mt-10 px-6 gap-5 sm:gap-4 mx-auto mb-5 ">
-				{data.data.map((image: Image, index) => (
-					<InstagramCard
-						id={index}
-						username={image.id}
-						profileImageUrl={image.media_url}
-						postImageUrl={image.permalink}
-						caption={image.caption}
-					/>
-				))}
+			<div className="px-4 py-20">
+				<h1 className="text-3xl text-center">Giggles on the Gram</h1>
+				<p className="text-lg text-center max-w-2xl mx-auto mt-2">
+					Check out our latest Instagram posts! Share your moments at Giggles
+					with #gigglesplay or tag @giggles.play for a chance to be seen here!
+				</p>
+				<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 max-w-7xl mt-10 px-6 gap-5 sm:gap-4 mx-auto mb-5 ">
+					{data.data.map((image: Image, index) => (
+						<InstagramCard
+							id={index}
+							username={image.id}
+							profileImageUrl={image.media_url}
+							postImageUrl={image.permalink}
+							caption={image.caption}
+						/>
+					))}
+				</div>
 			</div>
 		</Suspense>
 	);
