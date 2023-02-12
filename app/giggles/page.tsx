@@ -32,7 +32,7 @@ export default function Giggles() {
           <div className="flex flex-col justify-center sm:flex-row place-items-center space-x-10">
             <div className="max-w-xl mb-6">
               <h1 className="mb-2 font-summerVibesSolid font-normal text-4xl text-center sm:text-5xl sm:leading-none">
-                our <span className="text-[#f7ae47]">playful</span> space
+                our <span className="text-[#99bdbb]">playful</span> space
               </h1>
               <p className="text-base text-md  text-center sm:text-lg max-w-sm">
                 We offer a clean and inviting facility with thoughtfully
