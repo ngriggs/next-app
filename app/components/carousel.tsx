@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, TouchEvent } from "react";
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/20/solid";
+import Image from "next/image";
 
 function Carousel() {
 	const [index, setIndex] = useState(0);
@@ -92,17 +93,16 @@ function Carousel() {
 		>
 			<div className="carousel relative w-full h-full">
 				{images.map(({ url, title, description }, i) => (
-					<div
+					<Image
 						key={i}
+						alt="main carousel images"
+						src={url}
+						width={1000}
+						height={1000}
 						className={`carousel__slide absolute top-0 left-0 w-full h-full transition-all duration-300 ease-out 
 						${i === index ? "opacity-100" : "opacity-0"}
 						`}
-						style={{
-							backgroundImage: `url("${url}")`,
-							backgroundSize: "cover",
-							backgroundPosition: "center",
-						}}
-					></div>
+					></Image>
 				))}
 			</div>
 			<div className="carousel__indicator absolute z-30 bottom-0 space-x-4 w-full flex justify-center p-2 mb-1">
