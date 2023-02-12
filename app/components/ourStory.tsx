@@ -27,8 +27,8 @@ const Content = () => {
 						</p>
 					</div>
 					<div className="grid gap-5 row-gap-8 sm:grid-cols-2">
-						<div className="border-l-4">
-							<div className="h-full p-5 border border-l-0 rounded-r">
+						<div className="shadow-sm border-l-4 rounded-lg">
+							<div className="h-full p-5 border border-l-0 rounded-lg">
 								<h6 className="mb-2 font-semibold leading-5 text-[#232323]">
 									Our Vision
 								</h6>
@@ -40,8 +40,8 @@ const Content = () => {
 								</p>
 							</div>
 						</div>
-						<div className="shadow-sm border-l-4">
-							<div className="h-full p-5 border border-l-0 rounded-r">
+						<div className="shadow-sm border-l-4 rounded-lg">
+							<div className="h-full p-5 border border-l-0 rounded-lg">
 								<h6 className="mb-2 font-semibold leading-5 text-[#232323]">
 									Our Journey
 								</h6>
