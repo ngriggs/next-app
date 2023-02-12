@@ -140,6 +140,7 @@ function Navbar() {
 								<Image
 									width={300}
 									height={300}
+									onError={() => window.location.reload()}
 									alt="logo"
 									className="-ml-14 object-center max-w-[60%] h-20"
 									src="giggles_horizontal_logo.svg"

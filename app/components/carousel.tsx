@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect, TouchEvent } from "react";
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/20/solid";
-import Image from "next/image";
 import CarouselImage from "./carouselImage";
 
 function Carousel() {
