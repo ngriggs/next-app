@@ -47,7 +47,7 @@ const HomePage = async () => {
 	const postCollection = await getAllArticles();
 
 	return (
-		<div className="mx-auto py-20">
+		<div className="mx-auto py-16 lg:py-20">
 			<div className="container mx-auto px-4 ">
 				<div className="md:w-5/6 md:mx-auto md:max-w-2xl">
 					<h1 className="text-[#232323] text-3xl text-center font-summerVibesSolid font-normal sm:text-4xl">
