@@ -7,18 +7,18 @@ import Blog4 from "./components/blogSnippet2";
 
 export default async function HomePage() {
 	return (
-		<div className="max-w-7xl mx-auto">
+		<div className="max-w-7xl mx-auto text-[#232323]">
 			<Carousel />
-			<div className="my-8" />
+			<div className="sm:my-8" />
 			<HeroPage />
-			<div className="my-8" />
-			{/* @ts-expect-error Server Component */}
-			<Gallery2 />
-			<div className="my-8" />
+			<div className="sm:my-8" />
 			<OurStory />
-			<div className="my-8" />
+			<div className="sm:my-8" />
 			{/* @ts-expect-error Server Component */}
 			<Blog4 />
+			<div className="sm:my-8" />
+			{/* @ts-expect-error Server Component */}
+			<Gallery2 />
 		</div>
 	);
 }

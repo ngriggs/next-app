@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Content = () => {
 	return (
-		<div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+		<div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20">
 			<div className="grid gap-5 row-gap-8 lg:grid-cols-2">
 				<div>
 					<Link href="/giggles">
@@ -17,19 +17,19 @@ const Content = () => {
 					</Link>
 				</div>
 				<div className="flex flex-col justify-center">
-					<div className="max-w-xl mb-6">
-						<h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl sm:leading-none">
-							<span>Our Story</span>
+					<div className="max-w-xl mb-6 mx-auto">
+						<h2 className="text-center text-3xl font-summerVibesSolid font-normal text-[#232323] sm:text-4xl sm:leading-none">
+							our story
 						</h2>
-						<p className="text-base md:text-lg">
-							Discover the heart and passion behind Giggles Play by reading our
+						<p className="text-base md:text-lg mt-[8px] text-center">
+							Discover the heart and passion behind Giggles by reading our
 							story.
 						</p>
 					</div>
 					<div className="grid gap-5 row-gap-8 sm:grid-cols-2">
 						<div className="border-l-4">
 							<div className="h-full p-5 border border-l-0 rounded-r">
-								<h6 className="mb-2 font-semibold leading-5 text-slate-900 ">
+								<h6 className="mb-2 font-semibold leading-5 text-[#232323]">
 									Our Vision
 								</h6>
 								<p className="text-sm font-medium">
@@ -42,7 +42,7 @@ const Content = () => {
 						</div>
 						<div className="shadow-sm border-l-4">
 							<div className="h-full p-5 border border-l-0 rounded-r">
-								<h6 className="mb-2 font-semibold leading-5 text-slate-900 ">
+								<h6 className="mb-2 font-semibold leading-5 text-[#232323]">
 									Our Journey
 								</h6>
 								<p className="text-sm font-medium">

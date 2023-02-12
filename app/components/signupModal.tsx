@@ -86,7 +86,7 @@ export default function MyModal() {
 												subscribe
 											</Dialog.Title>
 											<div className="mt-2">
-												<p className="text-black text-lg">
+												<p className="text-[#232323] text-lg">
 													Join the Giggles Play family and stay in the loop!
 													Sign up for our newsletter to receive updates on new
 													play areas, special events, and exclusive offers. Let

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getAllArticles } from "@/lib/getAllArticles";
 import PostCard from "./postCard";
+import Button from "./button";
 
 interface Article {
 	id: string;
@@ -46,11 +47,11 @@ const HomePage = async () => {
 	const postCollection = await getAllArticles();
 
 	return (
-		<div className="container mx-auto">
-			<div className="container mx-auto px-4">
+		<div className="mx-auto py-16 lg:py-20">
+			<div className="container mx-auto px-4 ">
 				<div className="md:w-5/6 md:mx-auto md:max-w-2xl">
-					<h1 className="text-black text-3xl text-center font-bold sm:text-4xl">
-						Blog
+					<h1 className="text-[#232323] text-3xl text-center font-summerVibesSolid font-normal sm:text-4xl">
+						insights
 					</h1>
 					<p className="text-center text-lg mt-2">
 						Stay up to date with the latest fun and inspiration at Giggles Play
@@ -58,17 +59,13 @@ const HomePage = async () => {
 					</p>
 				</div>
 			</div>
-			<div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-				{postCollection.allArticles?.map((edge: Article) => {
-					return (
-						<div
-							key={edge.id}
-							className="my-4 min-h-[30vh] rounded-xl p-3 hover:scale-105 duration-300"
-						>
-							<Post article={edge} />
-						</div>
-					);
-				})}
+			<div className="flex place-content-center my-8">
+				<Button
+					label="learn more"
+					bgColor=""
+					hoverColor=""
+					styles="items-center font-normal"
+				/>
 			</div>
 		</div>
 	);

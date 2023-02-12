@@ -51,7 +51,7 @@ const NewsLetterSignUpForm: React.FC<ChildProps> = ({ onClick }) => {
 					type="email"
 					name="email"
 					id="email"
-					className="bg-white border border-[#fadfb4] focus:border-[#f7ae47] text-black placeholder:text-black text-sm rounded-l-3xl block w-full p-2.5 pl-10  focus:outline-none"
+					className="bg-white border border-[#fadfb4] focus:border-[#f7ae47] text-[#232323] placeholder:text-[#232323] text-sm rounded-l-3xl block w-full p-2.5 pl-10  focus:outline-none"
 					placeholder="email"
 					ref={inputRef}
 					required

@@ -10,9 +10,7 @@ async function Blog3() {
 		<div className="">
 			<div className="container mx-auto px-4">
 				<div className="md:w-5/6 md:mx-auto md:max-w-2xl">
-					<h1 className="text-black text-3xl text-center font-bold sm:text-4xl">
-						Blog
-					</h1>
+					<h1 className="text-3xl text-center sm:text-4xl">Blog</h1>
 					<p className="text-center text-lg mt-2">
 						Stay up to date with the latest fun and inspiration at Giggles Play
 						- read our blog!
@@ -51,7 +49,7 @@ async function Blog3() {
 											{new Date(article._createdAt).toDateString()}
 										</time>
 									</div>
-									<h1 className="text-xl font-semibold text-black mb-4 mt-2 2xl:text-2xl min-h-[100px]">
+									<h1 className="text-xl font-semibold text-[#232323] mb-4 mt-2 2xl:text-2xl min-h-[100px]">
 										{article.title}
 									</h1>
 									<Link

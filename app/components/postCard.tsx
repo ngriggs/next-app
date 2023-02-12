@@ -25,7 +25,7 @@ const PostCard: React.FC<Props> = ({
 				<time dateTime={created} className="block text-xs text-gray-500">
 					{date.toDateString()}
 				</time>
-				<h3 className="mt-0.5 text-lg text-gray-900">{title}</h3>
+				<h3 className="mt-0.5 text-lg text-[#232323]">{title}</h3>
 				<div
 					className="line-clamp-3 mt-2 text-sm leading-relaxed overflow-hidden"
 					dangerouslySetInnerHTML={{
