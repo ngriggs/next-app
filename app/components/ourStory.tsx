@@ -17,12 +17,12 @@ const Content = () => {
 					</Link>
 				</div>
 				<div className="flex flex-col justify-center">
-					<div className="max-w-xl mb-6">
-						<h2 className="max-w-lg text-3xl font-bold tracking-tight text-[#232323] sm:text-4xl sm:leading-none">
-							Our Story
+					<div className="max-w-xl mb-6 mx-auto">
+						<h2 className="text-center text-3xl font-summerVibesSolid font-normal text-[#232323] sm:text-4xl sm:leading-none">
+							our story
 						</h2>
-						<p className="text-base md:text-lg mt-[8px]">
-							Discover the heart and passion behind Giggles Play by reading our
+						<p className="text-base md:text-lg mt-[8px] text-center">
+							Discover the heart and passion behind Giggles by reading our
 							story.
 						</p>
 					</div>
