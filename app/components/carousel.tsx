@@ -10,28 +10,28 @@ function Carousel() {
 	const images = [
 		{
 			id: 1,
-			url: "moodboard.svg",
+			url: "moodboard.min.svg",
 			title: "Education re-invented",
 			description:
 				"Teaching kids how to think for themselves and solve meaningful problems",
 		},
 		{
 			id: 2,
-			url: "card2.svg",
+			url: "card2.min.svg",
 			title: "Education re-invented",
 			description:
 				"Teaching kids how to think for themselves and solve meaningful problems",
 		},
 		{
 			id: 3,
-			url: "card3.svg",
+			url: "card3.min.svg",
 			title: "Education re-invented",
 			description:
 				"Teaching kids how to think for themselves and solve meaningful problems",
 		},
 		{
 			id: 4,
-			url: "card4.svg",
+			url: "card4.min.svg",
 			title: "Education re-invented",
 			description:
 				"Teaching kids how to think for themselves and solve meaningful problems",
