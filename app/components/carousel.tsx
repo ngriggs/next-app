@@ -2,11 +2,11 @@
 import React, { useState, useEffect, TouchEvent } from "react";
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
+import CarouselImage from "./carouselImage";
 
 function Carousel() {
 	const [index, setIndex] = useState(0);
 	const [touchPosition, setTouchPosition] = useState(0);
-	const [imageError, setImageError] = useState(false);
 
 	const images = [
 		{
@@ -38,10 +38,6 @@ function Carousel() {
 				"Teaching kids how to think for themselves and solve meaningful problems",
 		},
 	];
-
-	const handleImageError = () => {
-		setImageError(true);
-	};
 
 	useEffect(() => {
 		const intervalId = setInterval(() => {
@@ -96,20 +92,9 @@ function Carousel() {
 			onTouchMove={handleTouchMove}
 			className="relative rounded-b-lg max-w-7xl mx-auto sm:h-[40rem] h-80 overflow-auto touch-pan-x flex flex-wrap"
 		>
-			<div className="carousel relative w-full h-full">
+			<div className="carousel relative w-full h-full overflow-hidden">
 				{images.map(({ url, title, description }, i) => (
-					<Image
-						key={i}
-						priority={true}
-						alt="main carousel images"
-						onError={() => window.location.reload()}
-						src={url}
-						width={1000}
-						height={1000}
-						className={`carousel__slide absolute top-0 left-0 w-full h-full transition-all duration-300 ease-out 
-						${i === index ? "opacity-100" : "opacity-0"}
-						`}
-					></Image>
+					<CarouselImage url={url} i={i} index={index} />
 				))}
 			</div>
 			<div className="carousel__indicator absolute z-30 bottom-0 space-x-4 w-full flex justify-center p-2 mb-1">

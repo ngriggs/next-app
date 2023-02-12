@@ -11,6 +11,7 @@ const Content = () => {
 							src="https://www.datocms-assets.com/93822/1676086278-cottonbro-studio-2.jpg"
 							className="object-cover w-full h-56 sm:h-96 rounded-lg"
 							alt="our story"
+							placeholder={"empty"}
 							height={600}
 							width={400}
 						/>
