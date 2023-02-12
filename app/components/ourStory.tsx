@@ -6,7 +6,7 @@ const Content = () => {
 		<div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20">
 			<div className="grid gap-5 row-gap-8 lg:grid-cols-2">
 				<div>
-					<Link href="/giggles">
+					<Link href="/giggles" target={"_top"}>
 						<Image
 							src="https://www.datocms-assets.com/93822/1676086278-cottonbro-studio-2.jpg"
 							className="object-cover w-full h-56 sm:h-96 rounded-lg"
