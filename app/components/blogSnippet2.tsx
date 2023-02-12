@@ -59,7 +59,7 @@ const HomePage = async () => {
 					</p>
 				</div>
 			</div>
-			<div className="flex place-content-center my-8 mb-16">
+			<div className="flex place-content-center my-8">
 				<Button
 					label="learn more"
 					bgColor=""
