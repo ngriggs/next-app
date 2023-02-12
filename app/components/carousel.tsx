@@ -6,6 +6,7 @@ import Image from "next/image";
 function Carousel() {
 	const [index, setIndex] = useState(0);
 	const [touchPosition, setTouchPosition] = useState(0);
+	const [imageError, setImageError] = useState(false);
 
 	const images = [
 		{
@@ -37,6 +38,10 @@ function Carousel() {
 				"Teaching kids how to think for themselves and solve meaningful problems",
 		},
 	];
+
+	const handleImageError = () => {
+		setImageError(true);
+	};
 
 	useEffect(() => {
 		const intervalId = setInterval(() => {
@@ -97,6 +102,7 @@ function Carousel() {
 						key={i}
 						priority={true}
 						alt="main carousel images"
+						onError={() => window.location.reload()}
 						src={url}
 						width={1000}
 						height={1000}
