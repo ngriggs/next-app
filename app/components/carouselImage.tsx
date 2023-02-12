@@ -17,8 +17,8 @@ const CarouselImage: FC<CarouselImageProps> = ({ url, i, index }) => {
 				placeholder={"blur"}
 				blurDataURL={url}
 				src={url}
-				width={1000}
-				height={1000}
+				width={1280}
+				height={800}
 				className={`carousel__slide absolute top-0 left-0 w-full h-full transition-all duration-300 ease-out 
                 ${i === index ? "opacity-100" : "opacity-0"}
                 `}
