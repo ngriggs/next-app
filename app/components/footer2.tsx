@@ -44,7 +44,7 @@ export default function Footer() {
 				<div className="w-1/2 flex flex-col">
 					<div className="mx-auto">
 						{" "}
-						<div className="flex flex-col items-center justify-center h-full text-black p-10">
+						<div className="flex flex-col items-center justify-center h-full text-[#232323] p-10">
 							<p className="text-xl mt-4 font-extrabold">
 								Bring joy and imagination to your child's playtime
 							</p>
