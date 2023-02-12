@@ -199,11 +199,11 @@ class Navbar extends Component<Props, State> {
 				>
 					<Popover.Panel
 						focus
-						className="fixed h-screen top-0 left-0 bottom-0 z-50  transform transition md:hidden"
+						className="fixed w-screen top-[80px] gap-x-0 bottom-0 z-50  transform transition md:hidden"
 					>
 						{({ close }) => (
 							<div className="top-0 h-screen overflow-y-auto left-0 bottom-0 px-[1.5rem] bg-white">
-								<button
+								{/* <button
 									onClick={async () => {
 										close();
 									}}
@@ -218,7 +218,7 @@ class Navbar extends Component<Props, State> {
 											priority={true}
 										/>
 									</Link>
-								</button>
+								</button> */}
 								<div className="py-[1.5rem] space-y-[1.5rem] w-full flex flex-col">
 									<Disclosure as="div" className="">
 										{({ open }) => (
