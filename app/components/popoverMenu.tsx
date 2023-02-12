@@ -18,9 +18,11 @@ function classNames(classes: string, extra: string) {
 export default function popoverMenu({
 	solutions,
 	title,
+	active,
 }: {
 	solutions: Solution[];
 	title: string;
+	active: boolean;
 }) {
 	return (
 		<>
@@ -29,7 +31,7 @@ export default function popoverMenu({
 					<>
 						<Popover.Button
 							className={classNames(
-								open ? "text-black underline" : "text-gray-500",
+								open || active ? "text-black underline" : "text-gray-500",
 								"group inline-flex items-center rounded-md bg-white text-base font-semibold hover:text-black hover:underline"
 							)}
 						>
