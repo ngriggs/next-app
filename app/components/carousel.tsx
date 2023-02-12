@@ -94,7 +94,7 @@ function Carousel() {
 		>
 			<div className="carousel relative w-full h-full overflow-hidden">
 				{images.map(({ url, title, description }, i) => (
-					<CarouselImage url={url} i={i} index={index} />
+					<CarouselImage key={i} url={url} i={i} index={index} />
 				))}
 			</div>
 			<div className="carousel__indicator absolute z-30 bottom-0 space-x-4 w-full flex justify-center p-2 mb-1">

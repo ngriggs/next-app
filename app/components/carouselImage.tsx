@@ -11,7 +11,6 @@ const CarouselImage: FC<CarouselImageProps> = ({ url, i, index }) => {
 	return (
 		<div className="w-full h-full">
 			<Image
-				key={i}
 				priority={true}
 				alt="Carousel image"
 				onError={() => window.location.reload()}
