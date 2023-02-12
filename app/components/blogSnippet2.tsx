@@ -60,12 +60,14 @@ const HomePage = async () => {
 				</div>
 			</div>
 			<div className="flex place-content-center my-8">
-				<Button
-					label="learn more"
-					bgColor=""
-					hoverColor=""
-					styles="items-center font-normal"
-				/>
+				<Link href="/news" target={"_top"}>
+					<Button
+						label="learn more"
+						bgColor=""
+						hoverColor=""
+						styles="items-center font-normal"
+					/>
+				</Link>
 			</div>
 		</div>
 	);
