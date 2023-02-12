@@ -95,6 +95,7 @@ function Carousel() {
 				{images.map(({ url, title, description }, i) => (
 					<Image
 						key={i}
+						priority={true}
 						alt="main carousel images"
 						src={url}
 						width={1000}
