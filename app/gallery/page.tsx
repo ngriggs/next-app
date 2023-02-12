@@ -30,7 +30,9 @@ export default async function Gallery2() {
 	return (
 		<Suspense fallback={<Loading />}>
 			<div className="px-4 py-20">
-				<h1 className="text-3xl text-center">Giggles on the Gram</h1>
+				<h1 className="text-3xl text-center font-summerVibesSolid font-normal sm:text-4xl">
+					giggles on the gram
+				</h1>
 				<p className="text-lg text-center max-w-2xl mx-auto mt-2">
 					Check out our latest Instagram posts! Share your moments at Giggles
 					with #gigglesplay or tag @giggles.play for a chance to be seen here!
