@@ -64,7 +64,7 @@ export default function popoverMenu({
 							leaveFrom="opacity-100 translate-y-0"
 							leaveTo="opacity-0 translate-y-1"
 						>
-							<Popover.Panel className="fixed mt-3 w-screen max-w-sm transform">
+							<Popover.Panel className="absolute mt-3 w-screen max-w-sm transform">
 								{({ close }) => (
 									<button
 										className="text-left"

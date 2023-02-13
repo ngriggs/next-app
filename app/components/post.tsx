@@ -8,6 +8,7 @@ export default function Post({ article }: any) {
 	const created = article._createdAt;
 	const splash_image = article.images.url;
 	const author = article.author;
+	const description = article.description;
 
 	return (
 		<Link href={`/posts/${slug}`}>
@@ -18,6 +19,7 @@ export default function Post({ article }: any) {
 				created={created}
 				author={author}
 				image={splash_image}
+				description={description}
 			/>
 		</Link>
 	);

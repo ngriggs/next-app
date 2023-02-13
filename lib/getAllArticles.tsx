@@ -25,6 +25,7 @@ export async function getAllArticles() {
 				  authorimage {
 					url
 				  }
+				  description
 				}
 				_allArticlesMeta {
 				  count
