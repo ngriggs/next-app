@@ -1,5 +1,4 @@
 import React from "react";
-import { render } from "datocms-structured-text-to-html-string";
 
 type Props = {
 	id: string;
@@ -11,17 +10,8 @@ type Props = {
 	description: string;
 };
 
-const PostCard: React.FC<Props> = ({
-	author,
-	title,
-	content,
-	created,
-	image,
-	description,
-}) => {
+const PostCard: React.FC<Props> = ({ title, created, image, description }) => {
 	const date = new Date(created);
-	const html = render(content);
-	console.log(html);
 	return (
 		<article className="h-104 rounded-lg shadow transition hover:shadow-lg">
 			<img alt={title} src={image} className="h-56 w-full object-cover" />
