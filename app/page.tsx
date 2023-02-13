@@ -2,7 +2,6 @@ import Carousel from "./components/carousel";
 import HeroPage from "./components/hero";
 import Gallery2 from "./gallery/page";
 import OurStory from "./components/ourStory";
-import Blog3 from "./components/blogSnippet1";
 import Blog4 from "./components/blogSnippet2";
 
 export default async function HomePage() {
