@@ -201,12 +201,12 @@ function Navbar() {
 
 			<Transition
 				as={Fragment}
-				enter="duration-100 ease-out"
-				enterFrom="opacity-0 scale-95"
-				enterTo="opacity-100 scale-100"
-				leave="duration-100 ease-in"
-				leaveFrom="opacity-100 scale-100"
-				leaveTo="opacity-0 scale-95"
+				enter="transition ease-in-out duration-300 transform"
+				enterFrom="-translate-x-full"
+				enterTo="translate-x-0"
+				leave="transition ease-in-out duration-300 transform"
+				leaveFrom="translate-x-0"
+				leaveTo="-translate-x-full"
 			>
 				<Popover.Panel
 					focus
