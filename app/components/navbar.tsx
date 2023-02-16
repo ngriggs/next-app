@@ -161,7 +161,7 @@ function Navbar() {
 								aria-hidden="true"
 							/>
 						</Popover.Button>
-						<Popover.Overlay className="fixed z-40  bg-black opacity-30" />
+						<Popover.Overlay className="fixed inset-0  opacity-30" />
 					</div>
 
 					<Popover.Group as="nav" className="hidden space-x-8 md:flex ">
@@ -175,7 +175,9 @@ function Navbar() {
 						<Link
 							href="/shop"
 							className={classNames(
-								pathname === "/shop" ? "underline text-black" : "text-gray-500",
+								pathname === "/shop"
+									? "underline font-black"
+									: "text-[#232323]",
 								"text-base font-semibold hover:text-black hover:underline"
 							)}
 						>
