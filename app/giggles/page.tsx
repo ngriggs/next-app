@@ -27,7 +27,7 @@ export default function Giggles() {
 			</div>
 			<div className="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
 				<div className="grid gap-5 row-gap-8 lg:grid-cols-2">
-					<div className="max-w-xl mb-6 self-center">
+					<div className="max-w-xl mb-6 self-center order-last lg:-order-1">
 						<h1 className="mb-2 font-summerVibesSolid font-normal text-4xl text-center sm:text-5xl sm:leading-none">
 							our <span className="text-[#99bdbb]">playful</span> space
 						</h1>
