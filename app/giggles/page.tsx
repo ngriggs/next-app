@@ -6,10 +6,6 @@ import { useState } from "react";
 import { Button } from "@/app/components/ui/button";
 import { Textarea } from "@/app/components/ui/textarea";
 
-export function TextareaDemo() {
-	return <Textarea placeholder="Type your message here." />;
-}
-
 export default function Giggles() {
 	const [fullName, setFullName] = useState("");
 	const [email, setEmail] = useState("");
