@@ -23,8 +23,7 @@ const Content = () => {
 							our story
 						</h2>
 						<p className="text-base md:text-lg mt-[8px] text-center">
-							Discover the heart and passion behind Giggles by reading our
-							story.
+							Discover the heart and passion behind Giggles.
 						</p>
 					</div>
 					<div className="grid gap-5 row-gap-8 sm:grid-cols-2">

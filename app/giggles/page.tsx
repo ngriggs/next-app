@@ -1,5 +1,29 @@
+"use client";
 import Image from "next/image";
+import { Icons } from "@/app/components/icons";
+import Link from "next/link";
+import { useState } from "react";
+import { Button } from "@/app/components/ui/button";
+import { Textarea } from "@/app/components/ui/textarea";
+
+export function TextareaDemo() {
+	return <Textarea placeholder="Type your message here." />;
+}
+
 export default function Giggles() {
+	const [fullName, setFullName] = useState("");
+	const [email, setEmail] = useState("");
+	const [message, setMessage] = useState("");
+
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+
+		// Submit form data to server
+		console.log("Full Name:", fullName);
+		console.log("Email:", email);
+		console.log("message:", message);
+	};
+
 	return (
 		<div className="flex flex-col items-center justify-center px-4 pb-4">
 			<Image
@@ -24,13 +48,13 @@ export default function Giggles() {
 					<div className="flex flex-col justify-center">
 						<div className="max-w-xl mb-6 self-center">
 							<h1 className="mb-2 font-summerVibesSolid font-normal text-4xl tracking-tight text-center sm:text-5xl sm:leading-none">
-								about <span className="text-[#f7ae47]">giggles</span>
+								our <span className="text-[#f7ae47]">mission</span>
 							</h1>
 							<p className="text-base text-md font-medium text-center max-w-sm sm:text-lg">
 								At Giggles Play, we believe that play and learning go
-								hand-in-hand. Our mission is to provide a dynamic and welcoming
-								environment where families can form meaningful connections
-								through play.
+								hand-in-hand. Our mission is to provide a welcoming and
+								nurturing environment where families can form meaningful
+								connections through play.
 							</p>
 						</div>
 					</div>
@@ -75,8 +99,7 @@ export default function Giggles() {
 					<div className="flex flex-col justify-center">
 						<div className="max-w-xl mb-6 self-center">
 							<h1 className="mb-2 font-summerVibesSolid font-normal text-4xl tracking-tight text-center sm:text-5xl sm:leading-none">
-								building connections{" "}
-								<span className="text-[#bbb45a]">together</span>
+								our <span className="text-[#bbb45a]">meaningful</span> goal
 							</h1>
 							<p className="text-base mx-auto text-md font-medium text-center max-w-sm sm:text-lg">
 								Our goal is to be a hub where families can build authentic
@@ -87,14 +110,104 @@ export default function Giggles() {
 					</div>
 				</div>
 			</div>
-			<div className="container mx-auto p-4">
-				<h2 className="font-summerVibesSolid font-normal text-3xl mb-2">
-					contact us
-				</h2>
-				<p className="font-quicksand mb-4">
-					Include details about how families can get in touch with you, such as
-					your address, phone number, email, and any social media handles.
-				</p>
+			<div className="w-full mt-4 ">
+				<div className="flex relative flex-col w-full p-4 ">
+					<div className="h-1/2 max-w-lg mx-auto lg:ml-10">
+						<h2 className="font-summerVibesSolid font-normal text-3xl mb-2">
+							lets get in touch
+						</h2>
+						<p className="mb-4">
+							Looking to get in touch with us? We'd love to hear from you! Here
+							are a few ways to reach out:
+						</p>
+						<div className="flex">
+							<Icons.mapPin className="flex-none mx-4 w-[24px] h-[24px] my-auto" />{" "}
+							<p className="mb-4">
+								Come visit us at our location at{" "}
+								<Link
+									className="no-underline hover:underline"
+									href="https://www.google.com/maps/place/328+Green+Bay+Rd,+Highwood,+IL+60040/@42.2028132,-87.8108253,17z/data=!4m6!3m5!1s0x880fc1cc2a1fa805:0x1e906b9d8036e4b7!8m2!3d42.2028132!4d-87.8108253!16s%2Fg%2F11bw40qd9r"
+								>
+									328 Green Bay Road, Highwood, IL.
+								</Link>{" "}
+								We can't wait to see you!
+							</p>
+						</div>
+						<div className="flex">
+							<Icons.email className="flex-none mx-4 my-auto fill-black w-[24px] h-[24px]" />
+							<p className="mb-4">
+								If you have any questions or feedback, feel free to send us an
+								email at info@gigglesplay.com. We'll get back to you as soon as
+								we can!
+							</p>
+						</div>
+					</div>
+					<div className="h-1/2 ">
+						{/* Embed Google map */}
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2955.543972530705!2d-87.81301398426875!3d42.20281715300928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fc1cc2a1fa805%3A0x1e906b9d8036e4b7!2s328%20Green%20Bay%20Rd%2C%20Highwood%2C%20IL%2060040!5e0!3m2!1sen!2sus!4v1674282554891!5m2!1sen!2sus"
+							title="map"
+							width="100%"
+							height="450"
+							className="rounded-lg"
+							loading="lazy"
+						/>
+					</div>
+					<div className="relative lg:absolute sm:flex sm:flex-col top-9 right-9 min-w-[350px] mb-10 mx-auto">
+						<form
+							onSubmit={handleSubmit}
+							className="bg-white p-10 rounded-lg shadow-xl "
+						>
+							<h2 className="font-summerVibesSolid font-normal text-3xl mb-2">
+								contact us
+							</h2>
+							<p></p>
+							{/* Full Name */}
+							<label htmlFor="fullName" className="block font-bold mb-2">
+								Full Name
+							</label>
+							<input
+								type="text"
+								id="fullName"
+								value={fullName}
+								onChange={(e) => setFullName(e.target.value)}
+								className="border rounded-md border-gray-400 p-2 w-full mb-5"
+							/>
+
+							{/* Email */}
+							<label htmlFor="email" className="block font-bold mb-2">
+								Email
+							</label>
+							<input
+								type="email"
+								id="email"
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
+								className="border rounded-md border-gray-400 p-2 w-full mb-5"
+								required
+							/>
+
+							{/* Signature */}
+							<label htmlFor="signature" className="block font-bold mb-2">
+								Message
+							</label>
+							<Textarea
+								id="message"
+								value={message}
+								onChange={(e) => setMessage(e.target.value)}
+								className="border border-gray-400 p-2 w-full mb-5"
+								placeholder="Type your message here."
+								required
+							/>
+
+							{/* Submit Button */}
+
+							<Button type="submit" className="flex justify-center">
+								Send
+							</Button>
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
