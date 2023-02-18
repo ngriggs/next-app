@@ -22,14 +22,14 @@ const info = [
 	{
 		name: "Noah",
 		title: "Manager and Owner",
-		url: "noah.jpeg",
-		imageClassName: "-bottom-[3em] -right-[5em]",
+		url: "noah.png",
+		imageClassName: "-bottom-[1em] -right-[4em]",
 	},
 	{
 		name: "Noah",
 		title: "Manager and Owner",
-		url: "noah.jpeg",
-		imageClassName: "-bottom-[3em] -right-[5em]",
+		url: "noah.png",
+		imageClassName: "-bottom-[1em] -right-[4em]",
 	},
 ];
 
