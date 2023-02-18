@@ -9,21 +9,19 @@ interface CarouselImageProps {
 
 const CarouselImage: FC<CarouselImageProps> = ({ url, i, index }) => {
 	return (
-		<div className="">
-			<Image
-				priority={true}
-				alt="Carousel image"
-				onError={() => window.location.reload()}
-				placeholder={"blur"}
-				blurDataURL={url}
-				src={url}
-				width={1280}
-				height={400}
-				className={`carousel__slide absolute object-center transition-all duration-300 ease-out 
+		<Image
+			priority={true}
+			alt="Carousel image"
+			onError={() => window.location.reload()}
+			placeholder={"blur"}
+			blurDataURL={url}
+			src={url}
+			width={4000}
+			height={4000}
+			className={`carousel__slide absolute  transition-all duration-300 ease-out w-[100%] h-[100%]
                 ${i === index ? "opacity-100" : "opacity-0"}
                 `}
-			/>
-		</div>
+		/>
 	);
 };
 
