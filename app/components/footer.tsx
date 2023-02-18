@@ -40,7 +40,7 @@ const links = [
 
 const Footer = () => {
 	return (
-		<footer className="p-4 bg-gray-50 md:p-8 lg:p-10">
+		<footer className="p-4 bg-[#FAF5F1] md:p-8 lg:p-10 clip4">
 			<div className="mx-auto text-center">
 				<nav>
 					<Link href="/" className="flex justify-center items-center max-h-20">
@@ -104,7 +104,7 @@ const Footer = () => {
 					</ul>
 				</nav>
 
-				<div className="-mb-10 bg-gray-50">
+				<div className="-mb-10 bg-[#FAF5F1]">
 					<div className="mx-auto flex max-w-7xl flex-col gap-y-4 px-4 py-3 text-center text-gray-500 sm:flex-row sm:justify-between sm:text-left">
 						<div className="">© 2023 Giggles Play | All Rights Reserved</div>
 						<div className="flex flex-row justify-center md:mt-0 mt-6">

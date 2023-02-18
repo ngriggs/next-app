@@ -14,14 +14,14 @@ const ContactUs = () => {
 			</section>
 			<div className="my-8" />
 			<section>
-				<div className="relative mx-auto py-10 px-4 w-full max-w-7xl bg-gray-50">
+				<div className="relative mx-auto py-10 px-4 w-full max-w-7xl bg-[#FAF5F1]">
 					<div className="mx-auto max-w-5xl">
 						{/* :DOTS BACKGROUND */}
 						<div>
 							{/* ::Dots 1 */}
-							<span className="absolute top-0 left-0 hidden md:block opacity-10">
+							<span className="absolute top-0 left-0 hidden md:block opacity-20">
 								<svg
-									width={250}
+									width={260}
 									height={600}
 									fill="none"
 									viewBox="0 0 250 600"
@@ -31,21 +31,21 @@ const ContactUs = () => {
 										id="pattern-rectangles"
 										x={0}
 										y={0}
-										width={40}
-										height={40}
+										width={30}
+										height={30}
 										patternUnits="userSpaceOnUse"
+										patternContentUnits="userSpaceOnUse"
 									>
-										<rect
-											x={0}
-											y={0}
-											width={10}
-											height={10}
-											className="text-green-500"
+										<circle
+											cx={10}
+											cy={10}
+											r={5}
+											className=""
 											fill="currentColor"
 										/>
 									</pattern>
 									<rect
-										width={250}
+										width={260}
 										height={600}
 										fill="url(#pattern-rectangles)"
 									/>
@@ -74,7 +74,7 @@ const ContactUs = () => {
 											cx="10"
 											cy="10"
 											r="5"
-											className="fill-current text-green-500"
+											className="fill-current "
 										/>
 									</pattern>
 									<rect
@@ -92,12 +92,10 @@ const ContactUs = () => {
 						{/* :MAIN CONTAINER */}
 						<div className="relative space-y-5">
 							{/* ::Title */}
-							<h2 className="text-center text-5xl text-green-500 font-light">
-								Contact Us
-							</h2>
+							<h2 className="text-center text-5xl font-light">Contact Us</h2>
 
 							{/* ::Some Text */}
-							<p className="mx-auto py-5 max-w-3xl text-center text-base text-gray-600">
+							<p className="mx-auto py-5 max-w-3xl text-center text-base ">
 								Atque sint nemo vero sequi veniam, numquam fugiat aperiam
 								doloremque, itaque officia exercitationem! Excepturi deleniti
 								accusantium minus quibusdam dolores doloremque natus fugit!
@@ -107,22 +105,20 @@ const ContactUs = () => {
 							<div className="flex flex-wrap justify-between items-center text-base">
 								{/* :::Address */}
 								<div className="m-2.5 inline-flex items-center">
-									<MapPinIcon className="mr-2 w-6 h-6 text-green-500" />
-									<p className="text-gray-600 font-semibold">
+									<MapPinIcon className="mr-2 w-6 h-6" />
+									<p className=" font-semibold">
 										328 Green Bay Road, Highwood, IL 60040
 									</p>
 								</div>
 								{/* :::Phone */}
 								<div className="m-2.5 inline-flex items-center">
-									<DevicePhoneMobileIcon className="mr-2 w-6 h-6 text-green-500" />
-									<p className="text-gray-600 font-semibold">357-233-9644</p>
+									<DevicePhoneMobileIcon className="mr-2 w-6 h-6 " />
+									<p className=" font-semibold">357-233-9644</p>
 								</div>
 								{/* :::Address */}
 								<div className="m-2.5 inline-flex items-center">
-									<EnvelopeIcon className="mr-2 w-6 h-6 text-green-500" />
-									<p className="text-gray-600 font-semibold">
-										my-email@fancymail.com
-									</p>
+									<EnvelopeIcon className="mr-2 w-6 h-6 " />
+									<p className=" font-semibold">my-email@fancymail.com</p>
 								</div>
 							</div>
 						</div>
