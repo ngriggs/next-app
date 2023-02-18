@@ -109,7 +109,7 @@ export default function Giggles() {
 			<div className="w-full mt-4 ">
 				<div className="flex relative flex-col w-full p-4 ">
 					<div className="h-1/2 max-w-lg mx-auto lg:ml-10">
-						<h2 className="font-summerVibesSolid font-normal text-3xl mb-2">
+						<h2 className="font-summerVibesSolid font-normal text-3xl mb-2 text-center">
 							lets get in touch
 						</h2>
 						<p className="mb-4">
@@ -133,8 +133,7 @@ export default function Giggles() {
 							<Icons.email className="flex-none mx-4 my-auto fill-black w-[24px] h-[24px]" />
 							<p className="mb-4">
 								If you have any questions or feedback, feel free to send us an
-								email at info@gigglesplay.com. We'll get back to you as soon as
-								we can!
+								email at info@gigglesplay.com.
 							</p>
 						</div>
 					</div>
@@ -149,7 +148,7 @@ export default function Giggles() {
 							loading="lazy"
 						/>
 					</div>
-					<div className="relative lg:absolute sm:flex sm:flex-col top-9 right-9 min-w-[350px] mb-10 mx-auto">
+					<div className="relative lg:absolute sm:flex sm:flex-col mt-4 md:mt-0 lg:top-9 lg:right-9 min-w-[350px] mb-10 mx-auto">
 						<form
 							onSubmit={handleSubmit}
 							className="bg-white p-10 rounded-lg shadow-xl "
@@ -197,10 +196,12 @@ export default function Giggles() {
 							/>
 
 							{/* Submit Button */}
-
-							<Button type="submit" className="flex justify-center">
-								Send
-							</Button>
+							<div className="flex justify-center">
+								{" "}
+								<Button type="submit" className="min-w-[6rem]">
+									Send
+								</Button>
+							</div>
 						</form>
 					</div>
 				</div>

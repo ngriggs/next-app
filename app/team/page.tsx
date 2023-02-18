@@ -8,10 +8,14 @@ const About = () => {
 			<Head>
 				<title>About Us</title>
 			</Head>
-			<h1 className="text-2xl font-bold mb-5 text-gray-900">About Us</h1>
+			<h1 className="mb-2 font-summerVibesSolid font-normal text-4xl tracking-tight text-center sm:text-5xl sm:leading-none">
+				meet the team
+			</h1>
 
 			{/* Meet the Owners */}
-			<h2 className="text-xl font-bold mb-5 text-gray-900">Meet the Owners</h2>
+			<h2 className="text-xl font-bold mb-5 text-gray-900">
+				Having fun is part of the job!
+			</h2>
 			<p className="mb-5 text-gray-700">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum
 				vel velit blandit efficitur. Sed dapibus semper sapien, id consectetur

@@ -17,7 +17,7 @@ export default function RootLayout({
 					<Navbar />
 					{/* <NavigationMenuDemo />
 					<MobileNav /> */}
-					<div className="">{children}</div>
+					<div className="text-[#232323]">{children}</div>
 				</div>
 				<div className="">
 					<Footer />
