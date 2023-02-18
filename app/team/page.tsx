@@ -2,9 +2,23 @@ import Head from "next/head";
 import Link from "next/link";
 import Button from "../components/button";
 import { Icons } from "../components/icons";
+import TeamCard from "../components/teamCard";
 
 const url =
 	"https://images.unsplash.com/photo-1676412952691-5e4a229485a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80";
+
+const info = [
+	{
+		name: "Jess",
+		title: "Manager and Owner",
+		url: "https://images.unsplash.com/photo-1676412952691-5e4a229485a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80",
+	},
+	{
+		name: "Noah",
+		title: "Manager and Owner",
+		url: "https://images.unsplash.com/photo-1676412952691-5e4a229485a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80",
+	},
+];
 
 const About = () => {
 	return (
@@ -51,26 +65,9 @@ const About = () => {
 					/>
 				</Link>
 			</div>
-			<div className="group relative grid grid-cols-1 bg-red-300 rounded-lg shadow-lg max-w-[400px] h-[400px] overflow-hidden m-10">
-				<img
-					src={url}
-					className="absolute max-w-xs rounded-t-lg -bottom-10 -right-10 -rotate-[8deg] group-hover:rotate-0 transition duration-300"
-				/>
-				<div className="p-4">
-					<div className="">
-						<h2>Jess</h2>
-						<h2>Manager and Owner</h2>
-					</div>
-					<div className="flex flex-col max-w-[10rem] space-y-2">
-						<button>
-							<Icons.linkedin className="w-[24px] h-[24px]" />
-						</button>
-						<button className="rounded-full bg-blue-300 text-white px-2 py-1">
-							something
-						</button>
-					</div>
-				</div>
-			</div>
+			{info.map((info) => (
+				<TeamCard {...info} />
+			))}
 		</>
 	);
 };

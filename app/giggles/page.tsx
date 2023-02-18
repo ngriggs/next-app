@@ -148,7 +148,7 @@ export default function Giggles() {
 							loading="lazy"
 						/>
 					</div>
-					<div className="relative lg:absolute sm:flex sm:flex-col mt-4 md:mt-0 lg:top-9 lg:right-9 min-w-[350px] mb-10 mx-auto">
+					<div className="relative lg:absolute sm:flex sm:flex-col mt-4 md:mt-0 lg:top-9 lg:right-9 w-[100%] sm:w-[30%] mb-10 mx-auto">
 						<form
 							onSubmit={handleSubmit}
 							className="bg-white p-10 rounded-lg shadow-xl "
@@ -190,7 +190,7 @@ export default function Giggles() {
 								id="message"
 								value={message}
 								onChange={(e) => setMessage(e.target.value)}
-								className="border border-gray-400 p-2 w-full mb-5"
+								className="border border-gray-400 p-2 w-full mb-5 h-[8rem]"
 								placeholder="Type your message here."
 								required
 							/>
