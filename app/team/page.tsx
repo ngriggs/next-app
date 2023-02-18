@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import Button from "../components/button";
-import { Icons } from "../components/icons";
 import TeamCard from "../components/teamCard";
 
 const url =
@@ -11,12 +10,26 @@ const info = [
 	{
 		name: "Jess",
 		title: "Manager and Owner",
-		url: "https://images.unsplash.com/photo-1676412952691-5e4a229485a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80",
+		url: "jess.png",
+		imageClassName: "-bottom-[10em] -right-[5em]",
+	},
+	{
+		name: "Jess",
+		title: "Manager and Owner",
+		url: "jess.png",
+		imageClassName: "-bottom-[10em] -right-[5em]",
 	},
 	{
 		name: "Noah",
 		title: "Manager and Owner",
-		url: "https://images.unsplash.com/photo-1676412952691-5e4a229485a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80",
+		url: "noah.jpeg",
+		imageClassName: "-bottom-[3em] -right-[5em]",
+	},
+	{
+		name: "Noah",
+		title: "Manager and Owner",
+		url: "noah.jpeg",
+		imageClassName: "-bottom-[3em] -right-[5em]",
 	},
 ];
 
@@ -32,26 +45,26 @@ const About = () => {
 				</h1>
 
 				{/* Meet the Owners */}
-				<h2 className="text-xl font-bold mb-5 text-gray-900">
+				<h2 className="text-xl font-bold mb-5">
 					Having fun is part of the job!
 				</h2>
-				<p className="mb-5 text-gray-700">
+				<p className="mb-5 ">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum
 					vel velit blandit efficitur. Sed dapibus semper sapien, id consectetur
 					odio consectetur eu.
 				</p>
 
 				{/* Our Story */}
-				<h2 className="text-xl font-bold mb-5 text-gray-900">Our Story</h2>
-				<p className="mb-5 text-gray-700">
+				<h2 className="text-xl font-bold mb-5">Our Story</h2>
+				<p className="mb-5 ">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum
 					vel velit blandit efficitur. Sed dapibus semper sapien, id consectetur
 					odio consectetur eu.
 				</p>
 
 				{/* Call to Action */}
-				<h2 className="text-xl font-bold mb-5 text-gray-900">Get in Touch</h2>
-				<p className="mb-5 text-gray-700">
+				<h2 className="text-xl font-bold mb-5">Get in Touch</h2>
+				<p className="mb-5 ">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum
 					vel velit blandit efficitur. Sed dapibus semper sapien, id consectetur
 					odio consectetur eu.
@@ -65,9 +78,11 @@ const About = () => {
 					/>
 				</Link>
 			</div>
-			{info.map((info) => (
-				<TeamCard {...info} />
-			))}
+			<div className="grid grid-cols-fluid gap-4 justify-items-center m-4">
+				{info.map((info) => (
+					<TeamCard {...info} />
+				))}
+			</div>
 		</>
 	);
 };
