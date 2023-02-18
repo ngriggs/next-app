@@ -96,6 +96,23 @@ const parties = [
 		icon: ShieldCheckIcon,
 	},
 ];
+const shop = [
+	{
+		name: "cart",
+		description:
+			"Book an upcoming party or check availability on your event date",
+		href: "/shop/cart",
+		target: "_top",
+		icon: CalendarDaysIcon,
+	},
+	{
+		name: "checkout",
+		description: "Sign a waiver for your children in advance",
+		href: "/shop/checkout",
+		target: "_top",
+		icon: ShieldCheckIcon,
+	},
+];
 
 const socialMedia = [
 	{
@@ -126,6 +143,7 @@ function Navbar() {
 	const activeAbout = match(pathname, about);
 	const activePlay = match(pathname, play);
 	const activeParties = match(pathname, parties);
+	const activeShop = match(pathname, shop);
 
 	return (
 		<Popover as="nav" className="sticky w-full h-[80px] top-0 z-50 bg-white">
@@ -172,17 +190,7 @@ function Navbar() {
 							title="parties"
 							active={activeParties}
 						/>
-						<Link
-							href="/shop"
-							className={classNames(
-								pathname === "/shop"
-									? "underline font-black"
-									: "text-[#232323]",
-								"text-base font-semibold hover:text-black hover:underline"
-							)}
-						>
-							shop
-						</Link>
+						<PopoverMenu solutions={shop} title="shop" active={activeShop} />
 					</Popover.Group>
 					<div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
 						<Link

@@ -9,7 +9,7 @@ interface CarouselImageProps {
 
 const CarouselImage: FC<CarouselImageProps> = ({ url, i, index }) => {
 	return (
-		<div className="w-full h-full">
+		<div className="">
 			<Image
 				priority={true}
 				alt="Carousel image"
@@ -18,8 +18,8 @@ const CarouselImage: FC<CarouselImageProps> = ({ url, i, index }) => {
 				blurDataURL={url}
 				src={url}
 				width={1280}
-				height={800}
-				className={`carousel__slide absolute top-0 left-0 w-full h-full transition-all duration-300 ease-out 
+				height={400}
+				className={`carousel__slide absolute object-center transition-all duration-300 ease-out 
                 ${i === index ? "opacity-100" : "opacity-0"}
                 `}
 			/>

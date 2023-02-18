@@ -45,7 +45,7 @@ const About = () => {
 				</h1>
 
 				{/* Meet the Owners */}
-				<h2 className="text-xl font-bold mb-5">
+				<h2 className="text-2xl font-bold mb-5">
 					Having fun is part of the job!
 				</h2>
 				<p className="mb-5 ">
