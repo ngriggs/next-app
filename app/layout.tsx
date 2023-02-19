@@ -1,8 +1,7 @@
 import "./globals.css";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
-import { NavigationMenuDemo } from "@/app/components/mainNav";
-import { MobileNav } from "./components/mobileNav";
+import Footer2 from "./components/footer2";
 
 export default function RootLayout({
 	children,
@@ -21,6 +20,7 @@ export default function RootLayout({
 				</div>
 				<div className="">
 					<Footer />
+					{/* <Footer2 /> */}
 				</div>
 			</body>
 		</html>
