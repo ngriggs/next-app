@@ -12,52 +12,44 @@ export default async function HomePage() {
       <Carousel />
       <div className="sm:my-8" />
       <HeroPage />
-      <div className="sm:my-8" />
-      <div className="text-center">
-        <h1 className="font-summerVibesSolid font-normal text-4xl sm:text-5xl">
-          <span className="sm:mr-[300px]">get ready to play...</span>
-        </h1>
+      <div className="bg-giggles-red">
+        <div className="sm:my-8" />
+        <div className="text-center">
+          <h1 className="font-summerVibesSolid font-normal text-4xl sm:text-5xl">
+            <span className="sm:mr-[300px]">get ready to play...</span>
+          </h1>
+          <br />
+          <h1 className="font-summerVibesSolid font-normal text-4xl sm:text-5xl">
+            <span className="text-[#f7ae47] sm:ml-[300px]">giggles</span> is on
+            the way
+          </h1>
+        </div>
         <br />
-        <h1 className="font-summerVibesSolid font-normal text-4xl sm:text-5xl">
-          <span className="text-[#f7ae47] sm:ml-[300px]">giggles</span> is on
-          the way
-        </h1>
-      </div>
-      <br />
-      <div>
-        <p className="mt-2 mx-auto px-4 text-center max-w-[50rem] sm:text-[1.2rem]">
-          We are very excited to share that our brand of playful learning is
-          coming soon to Highwood, IL. Giggles Play is supportive and
-          stimulating space, designed to ignite your child's imagination,
-          inspire creativity, and foster a love of learning that lasts a
-          lifetime.
-          <br />
-          <br />
-          Our thoughtfully designed play areas and activities will provide
-          endless opportunities for exploration and discovery for children ages
-          0-6. We will offer open play sessions, classes, and private event
-          rentals.
-          <br />
-          <br />
-          We are looking forward to welcoming you and your littles ones to our
-          cozy place! While you wait, we invite you to discover what makes
-          Giggles such a special place by learning more about our mission and
-          our story.
-        </p>
-      </div>
-      <div className="space-x-3 flex place-content-center sm:mt-8">
-        <Button
-          label="our mission"
-          bgColor=""
-          hoverColor=""
-          styles="items-center font-normal"
-        />
-        <Button
-          label="our story"
-          bgColor=""
-          hoverColor=""
-          styles="items-center font-normal"
-        />
+        <div>
+          <p className="mt-2 mx-auto px-4 text-center max-w-[50rem] sm:text-[1.2rem]">
+            We are very excited to share that our brand of playful learning is
+            coming soon to Highwood, IL. Giggles Play is supportive and
+            stimulating space, designed to ignite your child's imagination,
+            inspire creativity, and foster a love of learning that lasts a
+            lifetime.
+            <br />
+            <br />
+            Our thoughtfully designed play areas and activities will provide
+            endless opportunities for exploration and discovery for children
+            ages 0-6. We will offer open play sessions, classes, and private
+            event rentals.
+            <br />
+            <br />
+            We are looking forward to welcoming you and your littles ones to our
+            cozy place! While you wait, we invite you to discover what makes
+            Giggles such a special place by learning more about our mission and
+            our story.
+          </p>
+        </div>
+        <div className="space-x-3 flex place-content-center sm:mt-8">
+          <Button className="rounded-3xl bg-giggles-yellow">our mission</Button>
+          <Button className="rounded-3xl bg-giggles-yellow">our story</Button>
+        </div>
       </div>
       <div className="sm:my-8 my-96" />
       <div className="bg-giggles-blue py-10 w-screen absolute left-0">
