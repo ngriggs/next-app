@@ -4,6 +4,7 @@ import Gallery2 from "./gallery/page";
 import OurStory from "./components/ourStory";
 import Blog4 from "./components/blogSnippet2";
 import Navbar from "./components/navbar";
+import { Button } from "./components/ui/button";
 
 export default async function HomePage() {
 	return (
