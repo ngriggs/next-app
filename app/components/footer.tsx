@@ -5,12 +5,12 @@ import Image from "next/image";
 const socialMedia = [
 	{
 		id: "social-media-1",
-		icon: "instagram.svg",
+		icon: "/instagram.svg",
 		link: "https://www.instagram.com/giggles.play/?fbclid=IwAR0-NhgItCvF9QTFJVUSnTPRaCS12Bv5HfOzghQa2SemmTWXGQpM_EwuGls",
 	},
 	{
 		id: "social-media-2",
-		icon: "facebook.svg",
+		icon: "/facebook.svg",
 		link: "https://www.facebook.com/profile.php?id=100089486487628",
 	},
 ];

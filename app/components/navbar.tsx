@@ -117,12 +117,12 @@ const shop = [
 const socialMedia = [
 	{
 		id: "social-media-1",
-		icon: "instagram.svg",
+		icon: "/instagram.svg",
 		link: "https://www.instagram.com/giggles.play/?fbclid=IwAR0-NhgItCvF9QTFJVUSnTPRaCS12Bv5HfOzghQa2SemmTWXGQpM_EwuGls",
 	},
 	{
 		id: "social-media-2",
-		icon: "facebook.svg",
+		icon: "/facebook.svg",
 		link: "https://www.facebook.com/profile.php?id=100089486487628",
 	},
 ];
@@ -161,7 +161,7 @@ function Navbar() {
 									onError={() => window.location.reload()}
 									alt="logo"
 									className="-ml-14 object-center max-w-[60%] h-20"
-									src="giggles_horizontal_logo.svg"
+									src="/giggles_horizontal_logo.svg"
 									priority={true}
 								/>
 							</Link>
