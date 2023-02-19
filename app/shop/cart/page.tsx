@@ -1,19 +1,4 @@
 import React from "react";
-// import "@shopify/shopify-api/adapters/node";
-// import { shopifyApi, LATEST_API_VERSION } from "@shopify/shopify-api";
-// import { restResources } from "@shopify/shopify-api/rest/admin/2023-01";
-
-// const shopify = shopifyApi({
-// 	apiKey: "App_API_key",
-// 	apiSecretKey: "Admin_API_Access_Token", // Note: this is the API access token, NOT the API Secret Key
-// 	apiVersion: LATEST_API_VERSION,
-// 	// isCustomStoreApp: true,                     // this MUST be set to true (default is false)
-// 	scopes: [],
-// 	isEmbeddedApp: false,
-// 	hostName: "my-shop.myshopify.com",
-// 	// Mount REST resources.
-// 	restResources,
-// });
 
 const Shop: React.FC = () => {
 	return (
