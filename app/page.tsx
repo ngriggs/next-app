@@ -4,6 +4,7 @@ import Gallery2 from "./gallery/page";
 import OurStory from "./components/ourStory";
 import Blog4 from "./components/blogSnippet2";
 import Navbar from "./components/navbar";
+import { Button } from "./components/ui/button";
 
 export default async function HomePage() {
   return (
@@ -25,9 +26,6 @@ export default async function HomePage() {
       <br />
       <div>
         <p className="mt-2 mx-auto px-4 text-center max-w-[50rem] sm:text-[1.2rem]">
-          Attention North Shore families!
-          <br />
-          <br />
           We are very excited to share that our brand of playful learning is
           coming soon to Highwood, IL. Giggles Play is supportive and
           stimulating space, designed to ignite your child's imagination,
@@ -47,8 +45,22 @@ export default async function HomePage() {
           our story.
         </p>
       </div>
-      <div className="my-4 sm:my-8" />
-      <div className="bg-giggles-blue py-10 w-screen absolute left-0 clip5">
+      <div className="space-x-3 flex place-content-center sm:mt-8">
+        <Button
+          label="our mission"
+          bgColor=""
+          hoverColor=""
+          styles="items-center font-normal"
+        />
+        <Button
+          label="our story"
+          bgColor=""
+          hoverColor=""
+          styles="items-center font-normal"
+        />
+      </div>
+      <div className="sm:my-8 my-96" />
+      <div className="bg-giggles-blue py-10 w-screen absolute left-0">
         <h1 className="font-summerVibesSolid font-normal text-4xl sm:text-5xl text-slate-50 text-center">
           stay connected
         </h1>
