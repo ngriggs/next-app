@@ -6,7 +6,7 @@ export default async function ArticleList() {
 	const postCollection = await getAllArticles();
 
 	return (
-		<div className="p-4 ">
+		<div className="p-4 min-h-[75vh]">
 			<h1 className="text-3xl font-summerVibesSolid font-normal text-center">
 				insights
 			</h1>
