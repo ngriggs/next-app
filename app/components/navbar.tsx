@@ -220,7 +220,7 @@ function Navbar() {
 			>
 				<Popover.Panel
 					focus
-					className="fixed w-screen top-[80px] gap-x-0 bottom-0 z-50  transform transition md:hidden"
+					className="fixed w-screen top-[80px] gap-x-0 bottom-0 z-50 transform transition md:hidden"
 				>
 					{({ close }) => (
 						<div className="top-0 h-screen overflow-y-auto left-0 bottom-0 px-[1.5rem] bg-white">
