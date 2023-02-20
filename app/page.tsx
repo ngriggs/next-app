@@ -3,6 +3,8 @@ import HeroPage from "./components/hero";
 import Gallery2 from "./gallery/page";
 import { Button } from "./components/ui/button";
 import Link from "next/link";
+import { Input } from "./components/ui/input";
+import { Icons } from "./components/icons";
 
 // test changes
 
@@ -101,6 +103,24 @@ export default async function HomePage() {
 						sign-up for our email newsletters and be the first to know when we
 						have news and updates
 					</p>
+					<form>
+						<div className="max-w-sm flex flex-row mx-auto mt-4">
+							{/* <Icons.email className="absolute fill-[#232323] w-[24px] h-[24px] my-auto" /> */}
+							<Input
+								type="email"
+								placeholder="Email"
+								className="bg-white rounded-l-full"
+								required
+							/>
+							<Button
+								type="submit"
+								className="rounded-r-full bg-[#232323]"
+								disabled
+							>
+								→
+							</Button>
+						</div>
+					</form>
 				</div>
 				<div className="bg-giggles-blue py-10 -mt-1 relative w-screen left-0 clip3 rotate-180" />
 				{/* to flip: transform -scale-x-100 */}
