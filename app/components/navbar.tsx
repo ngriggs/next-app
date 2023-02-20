@@ -145,7 +145,7 @@ function Navbar() {
 	return (
 		<Popover
 			as="nav"
-			className="fixed w-screen h-[80px] left-[calc(-50vw_+_50%)] -top-1 z-50 bg-white"
+			className="fixed w-screen h-[80px] left-[calc(-50vw_+_50%)] top-0 z-50 bg-white"
 		>
 			<div className="max-w-7xl mx-auto px-1 sm:px-0 ">
 				<div className="flex items-center justify-between md:justify-start md:space-x-10 px-0">
