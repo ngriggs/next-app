@@ -42,17 +42,14 @@ export default async function HomePage() {
       <div className="grid lg:h-[500px] place-content-center">
         <Carousel images={images} />
       </div>
-      <div className="sm:my-8" />
-      <HeroPage />
-      <div className="bg-giggles-yellow-light max-w-7xl m-4 pt-1 rounded-3xl">
+      <div className="sm:my-20" />
+      <div className="bg-giggles-yellow-light m-4 pt-4 rounded-xl">
         <div className="text-center mt-10">
           <h1 className="font-summerVibesSolid font-normal text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-5xl">
             <span className="sm:mr-[300px]">get ready to play...</span>
           </h1>
           <h1 className="font-summerVibesSolid font-normal text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-5xl sm:my-2">
-            <span className="text-giggles-yellow sm:ml-[300px] outline-title min-[375px]:text-3xl sm:text-4xl lg:text-5xl ">
-              giggles
-            </span>{" "}
+            <span className="text-giggles-yellow sm:ml-[300px]">giggles</span>{" "}
             is on the way
           </h1>
         </div>
@@ -77,14 +74,14 @@ export default async function HomePage() {
             our story.
           </p>
         </div>
-        <div className="space-x-3 flex place-content-center mt-4">
+        <div className="space-x-3 flex place-content-center mt-4 pb-8">
           <Link href="/giggles">
-            <Button className="rounded-3xl bg-giggles-yellow text-white font-bold text-lg hover:scale-105 hover:bg-giggles-yellow">
+            <Button className="rounded-xl bg-giggles-yellow text-white font-bold text-lg hover:scale-105 hover:bg-giggles-yellow">
               our mission
             </Button>
           </Link>
           <Link href="/team">
-            <Button className="rounded-3xl bg-giggles-yellow text-white font-bold text-lg hover:scale-105 hover:bg-giggles-yellow">
+            <Button className="rounded-xl bg-giggles-yellow text-white font-bold text-lg hover:scale-105 hover:bg-giggles-yellow">
               our story
             </Button>
           </Link>
@@ -94,7 +91,7 @@ export default async function HomePage() {
       <div className="relative grid w-screen left-[calc(-50vw_+_50%)]">
         <div className="bg-giggles-blue py-10 -mb-1 relative w-screen left-0 clip3" />
         <div className="bg-giggles-blue py-10 w-screen relative left-0">
-          <h1 className="font-summerVibesSolid font-normal text-4xl sm:text-5xl text-slate-50 text-center">
+          <h1 className="font-summerVibesSolid font-normal text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-5xl text-slate-50 text-center">
             stay connected
           </h1>
           <p className="text-slate-100 text-md px-5 mx-5 text-center sm:text-xl mt-1">
