@@ -2,41 +2,18 @@
 import React, { useState, useEffect, TouchEvent } from "react";
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/20/solid";
 import CarouselImage from "./carouselImage";
+import { AspectRatio } from "./ui/aspectRatio";
 
-function Carousel() {
+interface Image {
+	id: number;
+	url: string;
+	title: string;
+	description: string;
+}
+
+function Carousel({ images }: { images: Image[] }) {
 	const [index, setIndex] = useState(0);
 	const [touchPosition, setTouchPosition] = useState(0);
-
-	const images = [
-		{
-			id: 1,
-			url: "moodboard.min.svg",
-			title: "Education re-invented",
-			description:
-				"Teaching kids how to think for themselves and solve meaningful problems",
-		},
-		{
-			id: 2,
-			url: "card2.min.svg",
-			title: "Education re-invented",
-			description:
-				"Teaching kids how to think for themselves and solve meaningful problems",
-		},
-		{
-			id: 3,
-			url: "card3.min.svg",
-			title: "Education re-invented",
-			description:
-				"Teaching kids how to think for themselves and solve meaningful problems",
-		},
-		{
-			id: 4,
-			url: "card4.min.svg",
-			title: "Education re-invented",
-			description:
-				"Teaching kids how to think for themselves and solve meaningful problems",
-		},
-	];
 
 	useEffect(() => {
 		const intervalId = setInterval(() => {
@@ -89,13 +66,14 @@ function Carousel() {
 		<div
 			onTouchStart={handleTouchStart}
 			onTouchMove={handleTouchMove}
-			className={`relative rounded-b-lg mx-auto h-[calc(100vw_*_2_/_3)] xl:max-h-[40rem] xl:max-w-[calc(640px_*_3_/_2)] 2xl:max-h-[853.333px] 2xl:max-w-7xl overflow-auto touch-pan-x flex flex-wrap`}
+			className="relative grid w-screen left-[calc(-50vw_+_50%)]"
+			// className={`relative mx-auto h-[calc(100vw_*_2_/_3)] xl:max-h-[40rem] xl:max-w-[calc(640px_*_3_/_2)] 2xl:max-h-[853.333px] 2xl:max-w-7xl overflow-auto touch-pan-x flex flex-wrap`}
 		>
-			<div className="">
+			<AspectRatio ratio={3 / 2}>
 				{images.map(({ url }, i) => (
 					<CarouselImage key={i} url={url} i={i} index={index} />
 				))}
-			</div>
+			</AspectRatio>
 			<div className="carousel__indicator absolute z-30 bottom-0 space-x-4 w-full flex justify-center p-2 mb-1">
 				{images.map((_, i) => (
 					<button
