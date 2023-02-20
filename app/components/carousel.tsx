@@ -2,6 +2,7 @@
 import React, { useState, useEffect, TouchEvent } from "react";
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/20/solid";
 import CarouselImage from "./carouselImage";
+import { AspectRatio } from "./ui/aspectRatio";
 
 interface Image {
 	id: number;
@@ -65,14 +66,14 @@ function Carousel({ images }: { images: Image[] }) {
 		<div
 			onTouchStart={handleTouchStart}
 			onTouchMove={handleTouchMove}
-			className="relative grid w-screen left-[calc(-50vw_+_50%)]"
+			className="relative grid w-screen overflow-hidden"
 			// className={`relative mx-auto h-[calc(100vw_*_2_/_3)] xl:max-h-[40rem] xl:max-w-[calc(640px_*_3_/_2)] 2xl:max-h-[853.333px] 2xl:max-w-7xl overflow-auto touch-pan-x flex flex-wrap`}
 		>
-			<div className="">
+			<AspectRatio ratio={3 / 2}>
 				{images.map(({ url }, i) => (
 					<CarouselImage key={i} url={url} i={i} index={index} />
 				))}
-			</div>
+			</AspectRatio>
 			<div className="carousel__indicator absolute z-30 bottom-0 space-x-4 w-full flex justify-center p-2 mb-1">
 				{images.map((_, i) => (
 					<button
