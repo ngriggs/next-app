@@ -3,40 +3,16 @@ import React, { useState, useEffect, TouchEvent } from "react";
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/20/solid";
 import CarouselImage from "./carouselImage";
 
-function Carousel() {
+interface Image {
+	id: number;
+	url: string;
+	title: string;
+	description: string;
+}
+
+function Carousel({ images }: { images: Image[] }) {
 	const [index, setIndex] = useState(0);
 	const [touchPosition, setTouchPosition] = useState(0);
-
-	const images = [
-		{
-			id: 1,
-			url: "moodboard.min.svg",
-			title: "Education re-invented",
-			description:
-				"Teaching kids how to think for themselves and solve meaningful problems",
-		},
-		{
-			id: 2,
-			url: "card2.min.svg",
-			title: "Education re-invented",
-			description:
-				"Teaching kids how to think for themselves and solve meaningful problems",
-		},
-		{
-			id: 3,
-			url: "card3.min.svg",
-			title: "Education re-invented",
-			description:
-				"Teaching kids how to think for themselves and solve meaningful problems",
-		},
-		{
-			id: 4,
-			url: "card4.min.svg",
-			title: "Education re-invented",
-			description:
-				"Teaching kids how to think for themselves and solve meaningful problems",
-		},
-	];
 
 	useEffect(() => {
 		const intervalId = setInterval(() => {
