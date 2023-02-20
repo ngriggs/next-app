@@ -38,9 +38,7 @@ export default async function HomePage() {
 	];
 	return (
 		<div className="max-w-7xl mx-auto">
-			<div className="grid lg:h-[500px] place-content-center">
-				<Carousel images={images} />
-			</div>
+			<Carousel images={images} />
 			<div className="sm:my-8" />
 			<HeroPage />
 			<div className=" bg-giggles-yellow rounded-lg sm:max-w-5xl mx-auto py-5">

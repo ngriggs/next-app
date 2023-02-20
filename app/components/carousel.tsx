@@ -65,7 +65,7 @@ function Carousel({ images }: { images: Image[] }) {
 		<div
 			onTouchStart={handleTouchStart}
 			onTouchMove={handleTouchMove}
-			className="relative grid w-screen overflow-hidden"
+			className="relative grid w-screen left-[calc(-50vw_+_50%)]"
 			// className={`relative mx-auto h-[calc(100vw_*_2_/_3)] xl:max-h-[40rem] xl:max-w-[calc(640px_*_3_/_2)] 2xl:max-h-[853.333px] 2xl:max-w-7xl overflow-auto touch-pan-x flex flex-wrap`}
 		>
 			<div className="">
