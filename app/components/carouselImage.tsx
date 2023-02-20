@@ -18,7 +18,7 @@ const CarouselImage: FC<CarouselImageProps> = ({ url, i, index }) => {
 			src={url}
 			width={3000}
 			height={2000}
-			className={`carousel__slide absolute w-[100%] h-[100%] transition-all duration-300 ease-out
+			className={`carousel__slide absolute lg:-top-[calc(100vw_/_3_*_2_-_100vw_/_3_*_2_/_2_-_250px)] w-[100%] h-[100%] transition-all duration-300 ease-out
                 ${i === index ? "opacity-100" : "opacity-0"}
                 `}
 		/>
