@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/app/components/ui/button";
 import { Textarea } from "@/app/components/ui/textarea";
-import { motion } from "framer-motion";
 import { Checkbox } from "../components/ui/checkbox";
 
 export default function Giggles() {
@@ -35,18 +34,7 @@ export default function Giggles() {
 			/>
 			<div className="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
 				<div className="grid gap-5 row-gap-8 lg:grid-cols-2">
-					<motion.div
-						className="place-items-center"
-						viewport={{ once: true }}
-						initial={{ opacity: 0, x: -300 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						transition={{
-							type: "spring",
-							stiffness: 50,
-							duration: 0.15,
-							delay: 0.15,
-						}}
-					>
+					<div className="place-items-center">
 						<>
 							<Image
 								// src="https://cdn.discordapp.com/attachments/739252351793234040/1074161499125338172/sun.png"
@@ -57,7 +45,7 @@ export default function Giggles() {
 								height={1000}
 							/>
 						</>
-					</motion.div>
+					</div>
 					<div className="flex flex-col justify-center">
 						<div className="max-w-xl mb-6 self-center">
 							<h1 className="mb-2 font-summerVibesSolid font-normal text-4xl tracking-tight text-center sm:text-5xl sm:leading-none">
@@ -85,18 +73,7 @@ export default function Giggles() {
 							creativity, and confidence in children.
 						</p>
 					</div>
-					<motion.div
-						className="flex flex-row"
-						viewport={{ once: true }}
-						initial={{ opacity: 0, x: 300 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						transition={{
-							type: "spring",
-							stiffness: 50,
-							duration: 0.15,
-							delay: 0.15,
-						}}
-					>
+					<div className="flex flex-row">
 						<Image
 							// src="https://cdn.discordapp.com/attachments/739252351793234040/1074157667251138620/loft-website.png"
 							src="ourPlayfulSpace.svg"
@@ -105,23 +82,12 @@ export default function Giggles() {
 							width={1000}
 							height={1000}
 						/>
-					</motion.div>
+					</div>
 				</div>
 			</div>
 			<div className="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
 				<div className="grid gap-5 row-gap-8 lg:grid-cols-2">
-					<motion.div
-						className="place-items-center"
-						viewport={{ once: true }}
-						initial={{ opacity: 0, x: -300 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						transition={{
-							type: "spring",
-							stiffness: 50,
-							duration: 0.15,
-							delay: 0.15,
-						}}
-					>
+					<div className="place-items-center">
 						<Image
 							// src="https://cdn.discordapp.com/attachments/739252351793234040/1074161499125338172/sun.png"
 							src="buildingRelationships.svg"
@@ -130,7 +96,7 @@ export default function Giggles() {
 							width={1000}
 							height={1000}
 						/>
-					</motion.div>
+					</div>
 					<div className="flex flex-col justify-center">
 						<div className="max-w-xl mb-6 self-center">
 							<h1 className="mb-2 font-summerVibesSolid font-normal text-4xl tracking-tight text-center sm:text-5xl sm:leading-none">
