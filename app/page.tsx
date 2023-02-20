@@ -3,7 +3,6 @@ import HeroPage from "./components/hero";
 import Gallery2 from "./gallery/page";
 import Blog4 from "./components/blogSnippet2";
 import { Button } from "./components/ui/button";
-import Link from "next/link";
 
 export default async function HomePage() {
 	const images = [
