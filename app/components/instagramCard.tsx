@@ -23,7 +23,7 @@ const InstagramCard: React.FC<InstagramCardProps> = ({
 		<div key={id}>
 			<motion.div
 				key={id}
-				className="pb-1 overflow-hidden rounded-lg"
+				className="overflow-hidden rounded-lg"
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
 				viewport={{ once: true }}

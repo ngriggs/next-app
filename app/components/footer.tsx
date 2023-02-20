@@ -5,12 +5,12 @@ import Image from "next/image";
 const socialMedia = [
 	{
 		id: "social-media-1",
-		icon: "instagram.svg",
+		icon: "/instagram.svg",
 		link: "https://www.instagram.com/giggles.play/?fbclid=IwAR0-NhgItCvF9QTFJVUSnTPRaCS12Bv5HfOzghQa2SemmTWXGQpM_EwuGls",
 	},
 	{
 		id: "social-media-2",
-		icon: "facebook.svg",
+		icon: "/facebook.svg",
 		link: "https://www.facebook.com/profile.php?id=100089486487628",
 	},
 ];
@@ -40,7 +40,7 @@ const links = [
 
 const Footer = () => {
 	return (
-		<footer className="p-4 bg-gray-50 md:p-8 lg:p-10">
+		<footer className="p-4 bg-[#FAF5F1] md:p-8 lg:p-10 pt-8 clip5 sm:clip4">
 			<div className="mx-auto text-center">
 				<nav>
 					<Link href="/" className="flex justify-center items-center max-h-20">
@@ -55,10 +55,11 @@ const Footer = () => {
 					</Link>
 				</nav>
 
-				<p className="my-6 text-gray-500">
-					An indoor playspace and event venue where your{" "}
-					<span className="text-[#ec6a52] font-bold">giggles</span> are
-					guaranteed.
+				<p className="mt-2 mb-6 text-gray-500">
+					a place where{" "}
+					<span className="text-giggles-green font-extrabold">growth</span> and{" "}
+					<span className="text-giggles-yellow font-extrabold">giggles</span> go
+					hand in hand
 				</p>
 				<nav>
 					<ul className="flex flex-wrap justify-center items-center mb-6 text-gray-500">
@@ -104,7 +105,7 @@ const Footer = () => {
 					</ul>
 				</nav>
 
-				<div className="-mb-10 bg-gray-50">
+				<div className="-mb-5 bg-[#FAF5F1]">
 					<div className="mx-auto flex max-w-7xl flex-col gap-y-4 px-4 py-3 text-center text-gray-500 sm:flex-row sm:justify-between sm:text-left">
 						<div className="">© 2023 Giggles Play | All Rights Reserved</div>
 						<div className="flex flex-row justify-center md:mt-0 mt-6">

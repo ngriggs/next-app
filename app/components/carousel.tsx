@@ -89,10 +89,10 @@ function Carousel() {
 		<div
 			onTouchStart={handleTouchStart}
 			onTouchMove={handleTouchMove}
-			className="relative rounded-b-lg max-w-7xl mx-auto sm:h-[50rem] h-80 overflow-auto touch-pan-x flex flex-wrap"
+			className={`relative rounded-b-lg mx-auto h-[calc(100vw_*_2_/_3)] xl:max-h-[40rem] xl:max-w-[calc(640px_*_3_/_2)] 2xl:max-h-[853.333px] 2xl:max-w-7xl overflow-auto touch-pan-x flex flex-wrap`}
 		>
-			<div className="carousel relative w-full h-full overflow-hidden">
-				{images.map(({ url, title, description }, i) => (
+			<div className="">
+				{images.map(({ url }, i) => (
 					<CarouselImage key={i} url={url} i={i} index={index} />
 				))}
 			</div>
@@ -111,7 +111,7 @@ function Carousel() {
 				<div className="carousel__nav absolute align-middle z-20 left-0 top-0 w-full h-full flex justify-between px-1">
 					<button
 						onClick={prevSlide}
-						className="text-lg leading-none rounded-full p-1 transition-all duration-300 ease-out w-10!important"
+						className="text-lg leading-none rounded-full p-1 transition-all duration-300 ease-out"
 					>
 						<ChevronLeftIcon className="fill-white opacity-75 hover:opacity-100 h-7 w-16" />
 					</button>

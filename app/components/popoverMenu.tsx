@@ -31,7 +31,9 @@ export default function popoverMenu({
 					<>
 						<Popover.Button
 							className={classNames(
-								open || active ? "text-black underline" : "text-gray-500",
+								open || active
+									? "text-[#232323] font-black underline"
+									: "text-[#232323]",
 								"group inline-flex items-center rounded-md bg-white text-base font-semibold hover:text-black hover:underline"
 							)}
 						>
@@ -39,7 +41,7 @@ export default function popoverMenu({
 							{open ? (
 								<ChevronUpIcon
 									className={classNames(
-										open ? "text-gray-500" : "text-black stroke-2",
+										open ? "text-[#232323]" : "text-black stroke-2",
 										"ml-3 mt-[3px] h-4 w-4 group-hover:text-black"
 									)}
 									aria-hidden="true"
@@ -47,7 +49,7 @@ export default function popoverMenu({
 							) : (
 								<ChevronDownIcon
 									className={classNames(
-										open ? "text-black" : "text-gray-500  stroke-2",
+										open ? "text-[#232323]" : "text-[#232323]  stroke-2",
 										"ml-3 mt-[3px] h-4 w-4 group-hover:text-black"
 									)}
 									aria-hidden="true"
@@ -57,14 +59,14 @@ export default function popoverMenu({
 
 						<Transition
 							as={Fragment}
-							enter="transition ease-out duration-100"
-							enterFrom="opacity-0 translate-y-1"
-							enterTo="opacity-100 translate-y-0"
-							leave="transition ease-in duration-150"
-							leaveFrom="opacity-100 translate-y-0"
-							leaveTo="opacity-0 translate-y-1"
+							enter="transition duration-100 ease-out"
+							enterFrom="transform scale-95 opacity-0"
+							enterTo="transform scale-100 opacity-100"
+							leave="transition duration-75 ease-out"
+							leaveFrom="transform scale-100 opacity-100"
+							leaveTo="transform scale-95 opacity-0"
 						>
-							<Popover.Panel className="fixed mt-3 w-screen max-w-sm transform">
+							<Popover.Panel className="absolute mt-3 w-screen max-w-sm transform">
 								{({ close }) => (
 									<button
 										className="text-left"
