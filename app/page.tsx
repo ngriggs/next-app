@@ -7,24 +7,23 @@ import Link from "next/link";
 
 export default async function HomePage() {
   return (
-    <div className="max-w-7xl mx-auto">
-      <Carousel />
+    <div className="mx-auto">
+      <Carousel className="min-w-full" />
       <div className="sm:my-8" />
-      <HeroPage />
-      <div className=" bg-giggles-yellow rounded-lg sm:max-w-5xl mx-auto py-5">
-        <div className="sm:my-8" />
-        <div className="text-center">
-          <h1 className="font-summerVibesSolid font-normal text-4xl sm:text-5xl text-white">
+      <div className="bg-giggles-yellow-light max-w-7xl m-4 pt-1 rounded-3xl">
+        <div className="text-center mt-10">
+          <h1 className="font-summerVibesSolid font-normal text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-5xl">
             <span className="sm:mr-[300px]">get ready to play...</span>
           </h1>
-          <br />
-          <h1 className="font-summerVibesSolid font-normal text-4xl sm:text-5xl text-white">
-            <span className="sm:ml-[300px]">giggles</span> is on the way
+          <h1 className="font-summerVibesSolid font-normal text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-5xl sm:my-2">
+            <span className="text-giggles-yellow sm:ml-[300px] outline-title min-[375px]:text-3xl sm:text-4xl lg:text-5xl ">
+              giggles
+            </span>{" "}
+            is on the way
           </h1>
         </div>
-        <br />
-        <div>
-          <p className="mt-2 mx-auto px-4 text-center max-w-[50rem] sm:text-[1.2rem] text-medium text-white">
+        <div className="p-4 max-w-[50rem] mx-auto">
+          <p className="text-md sm:text-[1.2rem] text-center font-medium">
             We are very excited to share that our brand of playful learning is
             coming soon to Highwood, IL. Giggles Play is supportive and
             stimulating space, designed to ignite your child's imagination,
@@ -44,20 +43,24 @@ export default async function HomePage() {
             our story.
           </p>
         </div>
-        <div className="space-x-3 flex place-content-center py-8">
-          <Button className="rounded-3xl bg-white text-giggles-yellow font-bold text-lg">
-            our mission
-          </Button>
-          <Button className="rounded-3xl bg-white text-giggles-yellow font-bold text-lg">
-            our story
-          </Button>
+        <div className="space-x-3 flex place-content-center mt-4">
+          <Link href="/giggles">
+            <Button className="rounded-3xl bg-giggles-yellow text-white font-bold text-lg hover:scale-105 hover:bg-giggles-yellow">
+              our mission
+            </Button>
+          </Link>
+          <Link href="/team">
+            <Button className="rounded-3xl bg-giggles-yellow text-white font-bold text-lg hover:scale-105 hover:bg-giggles-yellow">
+              our story
+            </Button>
+          </Link>
         </div>
       </div>
-      <div className="my-[100px] sm:my-[100px]" />
+      <div className="mt-[100px] sm:my-[100px]" />
       <div className="relative grid w-screen left-[calc(-50vw_+_50%)]">
         <div className="bg-giggles-blue py-10 -mb-1 relative w-screen left-0 clip3" />
         <div className="bg-giggles-blue py-10 w-screen relative left-0">
-          <h1 className="font-summerVibesSolid font-normal text-4xl sm:text-5xl text-slate-50 text-center">
+          <h1 className="font-summerVibesSolid font-normal text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-5xl text-slate-50 text-center">
             stay connected
           </h1>
           <p className="text-slate-100 text-md px-5 mx-5 text-center sm:text-xl mt-1">
@@ -68,11 +71,6 @@ export default async function HomePage() {
         <div className="bg-giggles-blue py-10 -mt-1 relative w-screen left-0 clip3 rotate-180" />
         {/* to flip: transform -scale-x-100 */}
       </div>
-      <div className="my-[400px] sm:my-[400px]" />
-
-      {/* @ts-expect-error Server Component */}
-      <Blog4 />
-      <div className="sm:my-8" />
       {/* @ts-expect-error Server Component */}
       <Gallery2 />
     </div>
