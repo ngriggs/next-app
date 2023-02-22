@@ -70,8 +70,14 @@ function Carousel({ images }: { images: Image[] }) {
 			// className={`relative mx-auto h-[calc(100vw_*_2_/_3)] xl:max-h-[40rem] xl:max-w-[calc(640px_*_3_/_2)] 2xl:max-h-[853.333px] 2xl:max-w-7xl overflow-auto touch-pan-x flex flex-wrap`}
 		>
 			<AspectRatio ratio={3 / 2}>
-				{images.map(({ url }, i) => (
-					<CarouselImage key={i} url={url} i={i} index={index} />
+				{images.map(({ url, description }, i) => (
+					<CarouselImage
+						key={i}
+						url={url}
+						i={i}
+						index={index}
+						alt={description}
+					/>
 				))}
 			</AspectRatio>
 			<div className="carousel__indicator absolute z-30 bottom-0 space-x-4 w-full flex justify-center p-2 mb-1">

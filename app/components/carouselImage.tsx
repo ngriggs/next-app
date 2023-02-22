@@ -5,13 +5,14 @@ interface CarouselImageProps {
 	url: string;
 	i: number;
 	index: number;
+	alt: string;
 }
 
-const CarouselImage: FC<CarouselImageProps> = ({ url, i, index }) => {
+const CarouselImage: FC<CarouselImageProps> = ({ url, i, alt, index }) => {
 	return (
 		<Image
 			priority={true}
-			alt="Carousel image"
+			alt={alt}
 			onError={() => window.location.reload()}
 			placeholder={"blur"}
 			blurDataURL={url}
