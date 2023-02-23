@@ -1,249 +1,132 @@
-"use client";
-
 import * as React from "react";
 import Link from "next/link";
 
-import { cn } from "@/lib/utils";
 import { Icons } from "@/app/components/icons";
+import { Button } from "@/app/components/ui/button";
+
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { MainNavProps } from "../types/nav";
+import Image from "next/image";
 import {
-	NavigationMenu,
-	NavigationMenuContent,
-	NavigationMenuItem,
-	NavigationMenuLink,
-	NavigationMenuList,
-	NavigationMenuTrigger,
-	navigationMenuTriggerStyle,
-	NavigationMenuIndicator,
-	NavigationMenuViewport,
-} from "@/app/components/ui/navigationMenu";
+	Accordion,
+	AccordionContent,
+	AccordionItem,
+	AccordionTrigger,
+} from "@/app/components/ui/accordion";
+import { socialMedia } from "../config/site";
 
-import { useState } from "react";
-import { createPopper } from "@popperjs/core";
-
-const components: { title: string; href: string; description: string }[] = [
-	{
-		title: "Alert Dialog",
-		href: "/docs/primitives/alert-dialog",
-		description:
-			"A modal dialog that interrupts the user with important content and expects a response.",
-	},
-	{
-		title: "Hover Card",
-		href: "/docs/primitives/hover-card",
-		description:
-			"For sighted users to preview content available behind a link.",
-	},
-	{
-		title: "Progress",
-		href: "/docs/primitives/progress",
-		description:
-			"Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-	},
-	{
-		title: "Scroll-area",
-		href: "/docs/primitives/scroll-area",
-		description: "Visually or semantically separates content.",
-	},
-	{
-		title: "Tabs",
-		href: "/docs/primitives/tabs",
-		description:
-			"A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-	},
-	{
-		title: "Tooltip",
-		href: "/docs/primitives/tooltip",
-		description:
-			"A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-	},
-];
-
-export function NavigationMenuDemo() {
+export function MainNav({ items }: MainNavProps) {
 	return (
-		<NavigationMenu className="hidden sm:flex">
-			<NavigationMenuList style={{ display: "flex" }}>
-				<NavigationMenuItem>
-					<NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-					<NavigationMenuContent style={{ position: "absolute" }}>
-						<ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-							<li className="row-span-3">
-								<NavigationMenuLink asChild>
-									<a
-										className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-rose-500 to-indigo-700 p-6 no-underline outline-none focus:shadow-md"
-										href="/"
-									>
-										<Icons.logo className="h-6 w-6 text-white" />
-										<div className="mt-4 mb-2 text-lg font-medium text-white">
-											shadcn/ui
-										</div>
-										<p className="text-sm leading-tight text-white/90">
-											Beautifully designed components built with Radix UI and
-											Tailwind CSS.
-										</p>
-									</a>
-								</NavigationMenuLink>
-							</li>
-							<ListItem href="/docs" title="Introduction">
-								Re-usable components built using Radix UI and Tailwind CSS.
-							</ListItem>
-							<ListItem href="/docs/installation" title="Installation">
-								How to install dependencies and structure your app.
-							</ListItem>
-							<ListItem href="/docs/primitives/typography" title="Typography">
-								Styles for headings, paragraphs, lists...etc
-							</ListItem>
-						</ul>
-					</NavigationMenuContent>
-				</NavigationMenuItem>
-				<NavigationMenuItem>
-					<NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-					<NavigationMenuContent style={{ position: "absolute" }}>
-						<ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-							<li className="row-span-3">
-								<NavigationMenuLink asChild>
-									<a
-										className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-rose-500 to-indigo-700 p-6 no-underline outline-none focus:shadow-md"
-										href="/"
-									>
-										<Icons.logo className="h-6 w-6 text-white" />
-										<div className="mt-4 mb-2 text-lg font-medium text-white">
-											shadcn/ui
-										</div>
-										<p className="text-sm leading-tight text-white/90">
-											Beautifully designed components built with Radix UI and
-											Tailwind CSS.
-										</p>
-									</a>
-								</NavigationMenuLink>
-							</li>
-							<ListItem href="/docs" title="Introduction">
-								Re-usable components built using Radix UI and Tailwind CSS.
-							</ListItem>
-							<ListItem href="/docs/installation" title="Installation">
-								How to install dependencies and structure your app.
-							</ListItem>
-							<ListItem href="/docs/primitives/typography" title="Typography">
-								Styles for headings, paragraphs, lists...etc
-							</ListItem>
-						</ul>
-					</NavigationMenuContent>
-				</NavigationMenuItem>
-				<NavigationMenuItem>
-					<NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-					<NavigationMenuContent style={{ position: "absolute" }}>
-						<ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-							<li className="row-span-3">
-								<NavigationMenuLink asChild>
-									<a
-										className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-rose-500 to-indigo-700 p-6 no-underline outline-none focus:shadow-md"
-										href="/"
-									>
-										<Icons.logo className="h-6 w-6 text-white" />
-										<div className="mt-4 mb-2 text-lg font-medium text-white">
-											shadcn/ui
-										</div>
-										<p className="text-sm leading-tight text-white/90">
-											Beautifully designed components built with Radix UI and
-											Tailwind CSS.
-										</p>
-									</a>
-								</NavigationMenuLink>
-							</li>
-							<ListItem href="/docs" title="Introduction">
-								Re-usable components built using Radix UI and Tailwind CSS.
-							</ListItem>
-							<ListItem href="/docs/installation" title="Installation">
-								How to install dependencies and structure your app.
-							</ListItem>
-							<ListItem href="/docs/primitives/typography" title="Typography">
-								Styles for headings, paragraphs, lists...etc
-							</ListItem>
-						</ul>
-					</NavigationMenuContent>
-				</NavigationMenuItem>
-				<NavigationMenuItem>
-					<NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-					<NavigationMenuContent style={{ position: "absolute" }}>
-						<ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-							<li className="row-span-3">
-								<NavigationMenuLink asChild>
-									<a
-										className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-rose-500 to-indigo-700 p-6 no-underline outline-none focus:shadow-md"
-										href="/"
-									>
-										<Icons.logo className="h-6 w-6 text-white" />
-										<div className="mt-4 mb-2 text-lg font-medium text-white">
-											shadcn/ui
-										</div>
-										<p className="text-sm leading-tight text-white/90">
-											Beautifully designed components built with Radix UI and
-											Tailwind CSS.
-										</p>
-									</a>
-								</NavigationMenuLink>
-							</li>
-							<ListItem href="/docs" title="Introduction">
-								Re-usable components built using Radix UI and Tailwind CSS.
-							</ListItem>
-							<ListItem href="/docs/installation" title="Installation">
-								How to install dependencies and structure your app.
-							</ListItem>
-							<ListItem href="/docs/primitives/typography" title="Typography">
-								Styles for headings, paragraphs, lists...etc
-							</ListItem>
-						</ul>
-					</NavigationMenuContent>
-				</NavigationMenuItem>
-				<NavigationMenuItem>
-					<NavigationMenuTrigger>Components</NavigationMenuTrigger>
-					<NavigationMenuContent>
-						<ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-							{components.map((component) => (
-								<ListItem
-									key={component.title}
-									title={component.title}
-									href={component.href}
-								>
-									{component.description}
-								</ListItem>
-							))}
-						</ul>
-					</NavigationMenuContent>
-				</NavigationMenuItem>
-				<NavigationMenuItem>
-					<Link href="/docs" legacyBehavior passHref>
-						<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-							Documentation
-						</NavigationMenuLink>
+		<div className="flex gap-6 md:gap-0 h-[80px] fixed w-screen left-[calc(-50vw_+_50%)] top-0 z-50 bg-white font-bold">
+			<div className="flex flex-1 max-w-7xl mx-auto px-1 sm:px-0">
+				<div className="sm:flex sm:flex-1 my-auto">
+					<Link href="/" className="">
+						<Image
+							width={400}
+							height={200}
+							alt="logo"
+							className="-ml-[80px] md:-ml-0 lg:-ml-20 h-11 hover:scale-105"
+							src="/giggles_horizontal_logo.svg"
+							priority={true}
+						/>
 					</Link>
-				</NavigationMenuItem>
-			</NavigationMenuList>
-		</NavigationMenu>
+				</div>
+
+				{items?.length ? (
+					<nav className="hidden space-x-8 md:flex md:flex-1 my-auto justify-center ">
+						{items?.map((item, index) => (
+							<Popover key={index}>
+								<PopoverTrigger className="flex flex-row group">
+									{item.title}
+									<Icons.chevronDown
+										className="relative ml-2 h-5 w-5 stroke-1 my-auto transition duration-200 group-data-[state=open]:rotate-180"
+										aria-hidden="true"
+									/>
+								</PopoverTrigger>
+								<PopoverContent
+									side="bottom"
+									align="start"
+									alignOffset={-20}
+									className="shrink"
+								>
+									{item.subheadings?.map((sub) => (
+										<Link
+											key={sub.name}
+											href={sub.href}
+											target={sub.target}
+											className="-m-3 flex items-start rounded-lg p-3"
+										>
+											<ul className="ml-0">
+												<li className="text-base font-semibold text-gray-500 hover:text-black">
+													{sub.name}
+												</li>
+											</ul>
+										</Link>
+									))}
+								</PopoverContent>
+							</Popover>
+						))}
+					</nav>
+				) : null}
+				<div className="hidden md:flex md:flex-1 justify-end my-auto pr-7">
+					<Link href="/contact" target="_top">
+						<Button className="rounded-full">Get in touch</Button>
+					</Link>
+				</div>
+			</div>
+			<Popover modal>
+				<PopoverTrigger className="md:hidden group px-2">
+					<Icons.menu className="mr-2 h-6 w-6 group-data-[state=open]:hidden group-data-[state=open]:transform" />
+					<Icons.close className="hidden mr-2 h-6 w-6 group-data-[state=open]:flex group-data-[state=open]:transform" />
+				</PopoverTrigger>
+				<PopoverContent className="-mt-1 rounded-none border-none h-screen overflow-scroll">
+					<Accordion
+						type="single"
+						collapsible
+						className="w-screen pr-10 text-2xl"
+					>
+						{items?.map((item, index) => (
+							<AccordionItem
+								value={item.title}
+								key={item.title}
+								className="my-4"
+							>
+								<AccordionTrigger>{item.title}</AccordionTrigger>
+								<AccordionContent>
+									{item.subheadings?.map((sub) => (
+										<Link
+											key={sub.name}
+											href={sub.href}
+											target={sub.target}
+											className="-m-3 flex items-start rounded-lg p-3 pl-8 my-2 text-lg"
+										>
+											{sub.name}
+										</Link>
+									))}
+								</AccordionContent>
+							</AccordionItem>
+						))}
+					</Accordion>
+					<div className="flex justify-center my-auto py-7">
+						<Button className="rounded-full">Get in touch</Button>
+					</div>
+					<div className="flex flex-1 justify-center h-[20vh] mb-[120px] pb-20 items-end">
+						{socialMedia.map((social, index) => (
+							<Link key={social.id} href={social.link} target={"_blank"}>
+								<Image
+									src={social.icon}
+									alt={social.id}
+									height={21}
+									width={21}
+									className={`w-[34px] h-[34px] object-contain cursor-pointer hover:scale-105 ${
+										index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
+									}`}
+								/>
+							</Link>
+						))}
+					</div>
+				</PopoverContent>
+			</Popover>
+		</div>
 	);
 }
-
-const ListItem = React.forwardRef<
-	React.ElementRef<"a">,
-	React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-	return (
-		<li>
-			<NavigationMenuLink asChild>
-				<a
-					ref={ref}
-					className={cn(
-						"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 focus:bg-slate-100 dark:hover:bg-slate-700 dark:focus:bg-slate-700",
-						className
-					)}
-					{...props}
-				>
-					<div className="text-sm font-medium leading-none">{title}</div>
-					<p className="text-sm leading-snug text-slate-500 line-clamp-2 dark:text-slate-400">
-						{children}
-					</p>
-				</a>
-			</NavigationMenuLink>
-		</li>
-	);
-});
-ListItem.displayName = "ListItem";

@@ -4,7 +4,7 @@ import {
 	Check,
 	ChevronLeft,
 	ChevronRight,
-	Circle,
+	Menu,
 	ClipboardCheck,
 	Copy,
 	CreditCard,
@@ -27,6 +27,7 @@ import {
 	X,
 	MapPin,
 	Phone,
+	ChevronDown,
 	type Icon as LucideIcon,
 } from "lucide-react";
 
@@ -46,6 +47,8 @@ export const Icons = {
 			<circle cx="12" cy="12" r="10"></circle>
 		</svg>
 	),
+	chevronDown: ChevronDown,
+	menu: Menu,
 	close: X,
 	spinner: Loader2,
 	chevronLeft: ChevronLeft,

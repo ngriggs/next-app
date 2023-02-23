@@ -117,7 +117,7 @@ export default function Giggles() {
 						<h2 className="font-summerVibesSolid font-normal text-3xl mb-2 text-center">
 							lets get in touch
 						</h2>
-						<p className="mb-4">
+						<p className="mb-4 text-center">
 							Looking to get in touch with us? We'd love to hear from you! Here
 							are a few ways to reach out:
 						</p>
