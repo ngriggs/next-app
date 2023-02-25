@@ -41,7 +41,7 @@ export function MainNav({ items }: MainNavProps) {
 					<nav className="hidden space-x-8 md:flex md:flex-1 my-auto justify-center ">
 						{items?.map((item, index) => (
 							<Popover key={index}>
-								<PopoverTrigger className="flex flex-row group cursor-pointer">
+								<PopoverTrigger className="flex flex-row group cursor-pointer text-[#232323]">
 									{item.title}
 									<Icons.chevronDown
 										className="relative ml-2 h-5 w-5 stroke-1 my-auto transition duration-200 group-data-[state=open]:rotate-180"
@@ -76,7 +76,9 @@ export function MainNav({ items }: MainNavProps) {
 				) : null}
 				<div className="hidden md:flex md:flex-1 justify-end my-auto pr-7">
 					<Link href="/contact" target="_top">
-						<Button className="rounded-full">Get in touch</Button>
+						<Button className="rounded-full bg-giggles-red hover:bg-giggles-red-light">
+							Get in touch
+						</Button>
 					</Link>
 				</div>
 			</div>

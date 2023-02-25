@@ -36,7 +36,7 @@ export default async function HomePage() {
 		},
 	];
 	return (
-		<div className="max-w-7xl mx-auto">
+		<div className="max-w-7xl mx-auto text-[#232323]">
 			<div className="grid lg:h-[500px] 2xl:h-[900px] place-content-center">
 				<Carousel images={images} />
 			</div>
