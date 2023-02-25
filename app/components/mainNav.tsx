@@ -40,16 +40,16 @@ export function MainNav({ items }: MainNavProps) {
 				{items?.length ? (
 					<nav className="hidden space-x-8 md:flex md:flex-1 my-auto justify-center ">
 						{items?.map((item, index) => (
-							<HoverCard key={index} openDelay={300} closeDelay={300}>
-								<HoverCardTrigger className="flex flex-row group cursor-pointer">
+							<Popover key={index}>
+								<PopoverTrigger className="flex flex-row group cursor-pointer">
 									{item.title}
 									<Icons.chevronDown
 										className="relative ml-2 h-5 w-5 stroke-1 my-auto transition duration-200 group-data-[state=open]:rotate-180"
 										aria-hidden="true"
 									/>
-								</HoverCardTrigger>
+								</PopoverTrigger>
 
-								<HoverCardContent
+								<PopoverContent
 									side="bottom"
 									align="start"
 									alignOffset={-20}
@@ -69,8 +69,8 @@ export function MainNav({ items }: MainNavProps) {
 											</ul>
 										</Link>
 									))}
-								</HoverCardContent>
-							</HoverCard>
+								</PopoverContent>
+							</Popover>
 						))}
 					</nav>
 				) : null}
