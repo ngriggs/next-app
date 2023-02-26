@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -28,6 +29,7 @@ const InstagramCard: React.FC<InstagramCardProps> = ({
 						alt="instagram post"
 						width={600}
 						height={600}
+						onError={() => window.location.reload()}
 					/>
 				</Link>
 				{/* <h2 className="text-slate-600 mt-1 text-sm font-semibold">
