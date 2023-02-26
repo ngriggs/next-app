@@ -30,7 +30,7 @@ export function MainNav({ items }: MainNavProps) {
 							width={400}
 							height={200}
 							alt="logo"
-							className="ml-[-80px] h-11 hover:scale-105 md:ml-0 lg:ml-[-80px]"
+							className="ml-[-80px] h-11 hover:translate-y-[-1px] md:ml-0 lg:ml-[-80px]"
 							src="/giggles_horizontal_logo.svg"
 							priority={true}
 						/>
@@ -41,7 +41,7 @@ export function MainNav({ items }: MainNavProps) {
 					<nav className="my-auto hidden justify-center space-x-8 md:flex md:flex-1 ">
 						{items?.map((item, index) => (
 							<Popover key={index}>
-								<PopoverTrigger className="group flex cursor-pointer flex-row text-[#232323]">
+								<PopoverTrigger className="group flex cursor-pointer flex-row text-[#232323] hover:underline hover:underline-offset-[8px]">
 									{item.title}
 									<Icons.chevronDown
 										className="relative my-auto ml-2 h-5 w-5 stroke-1 transition duration-200 group-data-[state=open]:rotate-180"
@@ -53,7 +53,7 @@ export function MainNav({ items }: MainNavProps) {
 									side="bottom"
 									align="start"
 									alignOffset={-20}
-									className="shrink"
+									className="shrink text-[#232323]"
 								>
 									{item.subheadings?.map((sub) => (
 										<Link
@@ -63,7 +63,7 @@ export function MainNav({ items }: MainNavProps) {
 											className="-m-3 flex items-start rounded-lg p-3"
 										>
 											<ul className="ml-0">
-												<li className="text-base font-semibold text-gray-500 hover:text-black">
+												<li className="text-base font-medium hover:underline hover:underline-offset-2">
 													{sub.name}
 												</li>
 											</ul>
@@ -76,7 +76,7 @@ export function MainNav({ items }: MainNavProps) {
 				) : null}
 				<div className="my-auto hidden justify-end pr-7 md:flex md:flex-1">
 					<Link href="/contact" target="_top">
-						<Button className="rounded-full bg-giggles-red hover:bg-giggles-red-light">
+						<Button variant={"giggles"} className="rounded-full bg-giggles-red">
 							Get in touch
 						</Button>
 					</Link>

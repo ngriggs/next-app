@@ -1,5 +1,11 @@
 import { render } from "datocms-structured-text-to-html-string";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }: any) {
+	const article = await getArticle(params?.slug);
+	return { title: article.allArticles[0].title };
+}
 
 const getArticle = async (slug: String) => {
 	try {

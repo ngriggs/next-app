@@ -138,6 +138,7 @@ export const siteConfig: SiteConfig = {
 	},
 };
 
+// Social Media Links
 export const socialMedia = [
 	{
 		id: "social-media-1",
@@ -148,5 +149,51 @@ export const socialMedia = [
 		id: "social-media-2",
 		icon: "/facebook.svg",
 		link: "https://www.facebook.com/profile.php?id=100089486487628",
+	},
+];
+
+// Team Members
+export const team = [
+	{
+		name: "Jess",
+		title: "Manager and Owner",
+		url: "/jess.png",
+		imageClassName: "-bottom-[10em] -right-[5em]",
+		email: "jess@gigglesplay.com",
+	},
+	{
+		name: "Jess",
+		title: "Manager and Owner",
+		url: "/jess.png",
+		imageClassName: "-bottom-[10em] -right-[5em]",
+		email: "jess@gigglesplay.com",
+	},
+	{
+		name: "Jess",
+		title: "Manager and Owner",
+		url: "/jess.png",
+		imageClassName: "-bottom-[10em] -right-[5em]",
+		email: "jess@gigglesplay.com",
+	},
+	{
+		name: "Jess",
+		title: "Manager and Owner",
+		url: "/jess.png",
+		imageClassName: "-bottom-[10em] -right-[5em]",
+		email: "jess@gigglesplay.com",
+	},
+	{
+		name: "Noah",
+		title: "Manager and Owner",
+		url: "/noah.png",
+		imageClassName: "-bottom-[1em] -right-[4em]",
+		email: "noah@gigglesplay.com",
+	},
+	{
+		name: "Noah",
+		title: "Manager and Owner",
+		url: "/noah.png",
+		imageClassName: "-bottom-[1em] -right-[4em]",
+		email: "noah@gigglesplay.com",
 	},
 ];

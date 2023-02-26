@@ -105,10 +105,12 @@ const Footer = () => {
 					</ul>
 				</nav>
 
-				<div className="-mb-5 sm:-mb-10">
+				<div className="mb-[-20px] sm:-mb-10">
 					<div className="mx-auto flex max-w-7xl flex-col gap-y-4 px-4 py-3 text-center text-gray-500 sm:flex-row sm:justify-between sm:text-left">
-						<div className="">© 2023 Giggles Play | All Rights Reserved</div>
-						<div className="mt-6 flex flex-row justify-center md:mt-0">
+						<div className="flex-1">
+							© 2023 Giggles Play | All Rights Reserved
+						</div>
+						<div className="mt-6 mr-6 flex flex-1 justify-center md:mt-0">
 							{socialMedia.map((social, index) => (
 								<Link key={social.id} href={social.link} target={"_blank"}>
 									<Image
@@ -116,18 +118,18 @@ const Footer = () => {
 										alt={social.id}
 										height={21}
 										width={21}
-										className={`h-[21px] w-[21px] cursor-pointer object-contain hover:scale-105 ${
+										className={`h-[21px] w-[21px] cursor-pointer object-contain hover:translate-y-[-1px] ${
 											index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
 										}`}
 									/>
 								</Link>
 							))}
 						</div>
-						<div className="">
+						<div className="flex flex-1 justify-end">
 							<Link className="hover:underline" href="/privacy">
 								Privacy Policy
 							</Link>
-							<span> | </span>
+							<span>&nbsp;|&nbsp;</span>
 							<Link className="hover:underline" href="/tos">
 								Terms of Service
 							</Link>

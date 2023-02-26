@@ -38,12 +38,12 @@ const hero1 = () => {
 			</div>
 			<div className="mt-4 flex place-content-center space-x-3 pb-8">
 				<Link href="/giggles">
-					<Button className="rounded-3xl bg-giggles-yellow text-lg font-bold text-white hover:scale-105 hover:bg-giggles-yellow">
+					<Button variant={"giggles"} className="bg-giggles-yellow text-lg">
 						our mission
 					</Button>
 				</Link>
 				<Link href="/team">
-					<Button className="rounded-3xl bg-giggles-yellow text-lg font-bold text-white hover:scale-105 hover:bg-giggles-yellow">
+					<Button variant={"giggles"} className="bg-giggles-yellow text-lg">
 						our story
 					</Button>
 				</Link>

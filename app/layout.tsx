@@ -22,7 +22,9 @@ export default function RootLayout({
 			<body className="mx-auto w-[100%] overflow-x-clip overscroll-contain font-quicksand">
 				<div className="mx-auto max-w-7xl font-medium">
 					<MainNav items={siteConfig.mainNav} />
-					<div className="mt-[80px] text-[#232323]">{children}</div>
+					<div className="mt-[80px] flex min-h-[85vh] flex-grow flex-col text-[#232323]">
+						{children}
+					</div>
 				</div>
 				<div className="">
 					<Footer />

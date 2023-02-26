@@ -32,8 +32,8 @@ export default function Giggles() {
 				height={1000}
 				className="top-[-16px] w-full rounded-b-lg"
 			/>
-			<div className="mx-auto px-4 py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
-				<div className=" grid gap-5 lg:grid-cols-2">
+			<div className="mx-auto my-8 px-4 sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+				<div className="grid gap-x-36 gap-y-4 lg:grid-cols-2">
 					<div className="place-items-center">
 						<>
 							<Image
@@ -62,7 +62,7 @@ export default function Giggles() {
 				</div>
 			</div>
 			<div className="mx-auto px-4 py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
-				<div className=" grid gap-5 lg:grid-cols-2">
+				<div className="grid gap-x-36 gap-y-4 lg:grid-cols-2">
 					<div className="order-last mb-6 max-w-xl self-center lg:-order-1">
 						<h1 className="mb-2 text-center font-summerVibesSolid text-4xl font-normal sm:text-5xl sm:leading-none">
 							our <span className="text-giggles-blue">space</span>
@@ -86,7 +86,7 @@ export default function Giggles() {
 				</div>
 			</div>
 			<div className="mx-auto px-4 py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
-				<div className=" grid gap-5 lg:grid-cols-2">
+				<div className="grid gap-x-36 gap-y-4 lg:grid-cols-2">
 					<div className="place-items-center">
 						<Image
 							// src="https://cdn.discordapp.com/attachments/739252351793234040/1074161499125338172/sun.png"
@@ -148,7 +148,7 @@ export default function Giggles() {
 							loading="lazy"
 						/>
 					</div>
-					<div className="relative mx-auto mt-4 mb-10 w-[100%] sm:flex sm:w-[30%] sm:flex-col md:mt-0 lg:absolute lg:top-9 lg:right-9">
+					<div className="relative mx-auto mt-4 mb-10 w-[100%] sm:flex sm:w-[40%] sm:flex-col md:mt-0 lg:absolute lg:top-9 lg:right-9">
 						<form
 							onSubmit={handleSubmit}
 							className="rounded-lg bg-white p-10 shadow-xl "

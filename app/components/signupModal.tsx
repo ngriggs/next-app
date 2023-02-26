@@ -31,7 +31,9 @@ export default function MyModal() {
 	return (
 		<Suspense>
 			<div className="mx-auto">
-				<Button onClick={openModal}>join our newsletter</Button>
+				<Button className="my-8" variant={"giggles"} onClick={openModal}>
+					join our newsletter
+				</Button>
 			</div>
 			<Transition appear show={isOpen} as={Fragment}>
 				<Dialog as="div" className="relative z-50" onClose={closeModal}>
