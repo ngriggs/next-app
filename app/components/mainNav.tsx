@@ -25,7 +25,7 @@ export function MainNav({ items }: MainNavProps) {
 		<div className="fixed left-[calc(-50vw_+_50%)] top-0 z-50 flex h-[80px] w-screen gap-6 bg-white font-bold md:gap-0">
 			<div className="mx-auto flex max-w-7xl flex-1 px-1 sm:px-0">
 				<div className="my-auto sm:flex sm:flex-1">
-					<Link href="/" className="">
+					<Link href="/" className="hover:cursor-pointer">
 						<Image
 							width={400}
 							height={200}
