@@ -22,7 +22,7 @@ const InstagramCard: React.FC<InstagramCardProps> = ({
 		<div key={id}>
 			<div key={id} className="overflow-hidden rounded-lg">
 				<Link href={postImageUrl} target="_blank">
-					<Image
+					<img
 						decoding="async"
 						className="aspect-square rounded-lg object-cover transition duration-100 hover:scale-110"
 						src={profileImageUrl}
