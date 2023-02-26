@@ -38,7 +38,7 @@ export default async function Gallery2() {
 					with #gigglesplay or tag @giggles.play for a chance to be seen here!
 				</p>
 				<div className="mx-auto mt-10 mb-5 grid max-w-7xl grid-cols-1 gap-5 px-6 sm:gap-4 md:grid-cols-2 xl:grid-cols-4 ">
-					{data.data.map((image: Image, index) => (
+					{data?.data.map((image: Image, index) => (
 						<InstagramCard
 							key={image.id}
 							id={index}
