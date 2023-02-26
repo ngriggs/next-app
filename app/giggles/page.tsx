@@ -6,12 +6,6 @@ import { useState } from "react";
 import { Button } from "@/app/components/ui/button";
 import { Textarea } from "@/app/components/ui/textarea";
 import { Checkbox } from "../components/ui/checkbox";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-	title: "About Giggles Play",
-	description: "Welcome to Giggles",
-};
 
 export default function Giggles() {
 	const [fullName, setFullName] = useState("");
