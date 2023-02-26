@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Button from "../components/button";
+import { Button } from "@/app/components/ui/button";
 
 const WaiverForm = () => {
 	const [fullName, setFullName] = useState("");
@@ -8,9 +8,7 @@ const WaiverForm = () => {
 	const [signature, setSignature] = useState("");
 
 	const handleSubmit = (event?: React.FormEvent<HTMLFormElement>) => {
-		if (event) {
-			event.preventDefault();
-		}
+		event?.preventDefault();
 
 		// Submit form data to server
 		console.log("Full Name:", fullName);
@@ -19,11 +17,11 @@ const WaiverForm = () => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit} className="bg-white p-10 rounded-lg">
-			<h1 className="text-2xl font-bold mb-5">Sign Waiver</h1>
+		<form onSubmit={handleSubmit} className="rounded-lg bg-white p-10">
+			<h1 className="mb-5 text-2xl font-bold">Sign Waiver</h1>
 
 			{/* Full Name */}
-			<label htmlFor="fullName" className="block font-bold mb-2">
+			<label htmlFor="fullName" className="mb-2 block font-bold">
 				Full Name
 			</label>
 			<input
@@ -31,11 +29,11 @@ const WaiverForm = () => {
 				id="fullName"
 				value={fullName}
 				onChange={(e) => setFullName(e.target.value)}
-				className="border border-gray-400 p-2 w-full mb-5"
+				className="mb-5 w-full border border-gray-400 p-2"
 			/>
 
 			{/* Email */}
-			<label htmlFor="email" className="block font-bold mb-2">
+			<label htmlFor="email" className="mb-2 block font-bold">
 				Email
 			</label>
 			<input
@@ -43,28 +41,22 @@ const WaiverForm = () => {
 				id="email"
 				value={email}
 				onChange={(e) => setEmail(e.target.value)}
-				className="border border-gray-400 p-2 w-full mb-5"
+				className="mb-5 w-full border border-gray-400 p-2"
 			/>
 
 			{/* Signature */}
-			<label htmlFor="signature" className="block font-bold mb-2">
+			<label htmlFor="signature" className="mb-2 block font-bold">
 				Signature
 			</label>
 			<textarea
 				id="signature"
 				value={signature}
 				onChange={(e) => setSignature(e.target.value)}
-				className="border border-gray-400 p-2 w-full mb-5"
+				className="mb-5 w-full border border-gray-400 p-2"
 			/>
 
 			{/* Submit Button */}
-			<Button
-				label="Submit"
-				bgColor="#ec6a52"
-				hoverColor=""
-				styles="text-white font-medium py-2 px-4 rounded-lg shadow-sm"
-				onClick={handleSubmit}
-			/>
+			<Button type="submit">Submit</Button>
 		</form>
 	);
 };

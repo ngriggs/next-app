@@ -19,10 +19,10 @@ export default function RootLayout({
 }) {
 	return (
 		<html>
-			<body className="font-quicksand w-[100%] mx-auto overflow-x-clip overscroll-contain">
-				<div className="max-w-7xl mx-auto font-medium">
+			<body className="mx-auto w-[100%] overflow-x-clip overscroll-contain font-quicksand">
+				<div className="mx-auto max-w-7xl font-medium">
 					<MainNav items={siteConfig.mainNav} />
-					<div className="text-[#232323] mt-[80px]">{children}</div>
+					<div className="mt-[80px] text-[#232323]">{children}</div>
 				</div>
 				<div className="">
 					<Footer />

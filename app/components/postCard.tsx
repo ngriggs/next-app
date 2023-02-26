@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 type Props = {
@@ -13,9 +14,15 @@ type Props = {
 const PostCard: React.FC<Props> = ({ title, created, image, description }) => {
 	const date = new Date(created);
 	return (
-		<article className="h-104 rounded-lg shadow transition hover:shadow-lg">
-			<img alt={title} src={image} className="h-56 w-full object-cover" />
-			<div className="bg-white p-4 sm:p-6 h-52 overflow-y-hidden">
+		<article className="rounded-lg shadow transition hover:shadow-lg">
+			<Image
+				alt={title}
+				src={image}
+				width={1000}
+				height={1000}
+				className="h-56 w-full object-cover"
+			/>
+			<div className="h-52 overflow-y-hidden bg-white p-4 sm:p-6">
 				<time dateTime={created} className="block text-xs text-gray-500">
 					{date.toDateString()}
 				</time>

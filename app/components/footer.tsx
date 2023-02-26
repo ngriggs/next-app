@@ -40,10 +40,10 @@ const links = [
 
 const Footer = () => {
 	return (
-		<footer className="p-4 bg-[#FAF5F1] md:p-8 lg:p-10 pt-8 clip5 sm:clip4">
+		<footer className="clip5 sm:clip4 bg-[#FAF5F1] p-4 pt-8 md:p-8 lg:p-10">
 			<div className="mx-auto text-center">
 				<nav>
-					<Link href="/" className="flex justify-center items-center max-h-20">
+					<Link href="/" className="flex max-h-20 items-center justify-center">
 						<Image
 							className="hover:scale-105"
 							width={144}
@@ -57,12 +57,12 @@ const Footer = () => {
 
 				<p className="mt-2 mb-6 text-gray-500">
 					a place where{" "}
-					<span className="text-giggles-green font-extrabold">growth</span> and{" "}
-					<span className="text-giggles-yellow font-extrabold">giggles</span> go
+					<span className="font-extrabold text-giggles-green">growth</span> and{" "}
+					<span className="font-extrabold text-giggles-yellow">giggles</span> go
 					hand in hand
 				</p>
 				<nav>
-					<ul className="flex flex-wrap justify-center items-center mb-6 text-gray-500">
+					<ul className="mb-6 flex flex-wrap items-center justify-center text-gray-500">
 						<li>
 							<Link href="/about" className="mr-4 hover:underline md:mr-6 ">
 								About
@@ -108,7 +108,7 @@ const Footer = () => {
 				<div className="-mb-5 sm:-mb-10">
 					<div className="mx-auto flex max-w-7xl flex-col gap-y-4 px-4 py-3 text-center text-gray-500 sm:flex-row sm:justify-between sm:text-left">
 						<div className="">© 2023 Giggles Play | All Rights Reserved</div>
-						<div className="flex flex-row justify-center md:mt-0 mt-6">
+						<div className="mt-6 flex flex-row justify-center md:mt-0">
 							{socialMedia.map((social, index) => (
 								<Link key={social.id} href={social.link} target={"_blank"}>
 									<Image
@@ -116,7 +116,7 @@ const Footer = () => {
 										alt={social.id}
 										height={21}
 										width={21}
-										className={`w-[21px] h-[21px] object-contain cursor-pointer hover:scale-105 ${
+										className={`h-[21px] w-[21px] cursor-pointer object-contain hover:scale-105 ${
 											index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
 										}`}
 									/>

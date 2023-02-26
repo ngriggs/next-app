@@ -32,7 +32,7 @@ const events: Event[] = [
 const CommunityEvents: React.FC = () => {
 	return (
 		<div className="container mx-auto p-10">
-			<h2 className="text-lg font-bold mb-5">Upcoming Events</h2>
+			<h2 className="mb-5 text-lg font-bold">Upcoming Events</h2>
 			{events.map((event) => (
 				<Event
 					key={event.name}
@@ -44,7 +44,7 @@ const CommunityEvents: React.FC = () => {
 			))}
 
 			<div className="mt-10 text-center">
-				<button className="bg-indigo-600 text-white px-5 py-3 rounded-lg hover:bg-indigo-700">
+				<button className="rounded-lg bg-indigo-600 px-5 py-3 text-white hover:bg-indigo-700">
 					Join an Event
 				</button>
 			</div>

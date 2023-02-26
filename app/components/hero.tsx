@@ -3,10 +3,10 @@ import SignUpModal from "./signupModal";
 
 const HeroPage: React.FC = () => {
 	return (
-		<div className="bg-cover bg-center h-1/2 text-center">
-			<div className="flex flex-col items-center justify-center h-full text-[#232323] p-4 py-20">
-				<p className="text-xl mt-4 font-extrabold">
-					Bring joy and imagination to your child's playtime
+		<div className="h-1/2 bg-cover bg-center text-center">
+			<div className="flex h-full flex-col items-center justify-center p-4 py-20 text-[#232323]">
+				<p className="mt-4 text-xl font-extrabold">
+					Bring joy and imagination to your child&apos;s playtime
 				</p>
 				<SignUpModal />
 			</div>

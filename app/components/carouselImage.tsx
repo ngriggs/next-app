@@ -19,7 +19,7 @@ const CarouselImage: FC<CarouselImageProps> = ({ url, i, alt, index }) => {
 			src={url}
 			width={3000}
 			height={2000}
-			className={`carousel__slide absolute lg:-top-[calc(100vw_/_3_*_2_-_100vw_/_3_*_2_/_2_-_250px)] 2xl:-top-[calc(100vw_/_3_*_2_-_100vw_/_3_*_2_/_2_-_450px)] w-[100%] h-[100%] transition-all duration-300 ease-out
+			className={`absolute h-[100%] w-[100%] transition-all duration-300 ease-out lg:top-[calc(calc(100vw_/_3_*_2_-_100vw_/_3_*_2_/_2_-_250px)_*_-1)] 2xl:top-[calc(calc(100vw_/_3_*_2_-_100vw_/_3_*_2_/_2_-_450px)_*_-1)]
                 ${i === index ? "opacity-100" : "opacity-0"}
                 `}
 		/>

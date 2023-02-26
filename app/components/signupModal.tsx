@@ -3,7 +3,8 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState, useEffect, Suspense } from "react";
 import NewsLetterSignUpForm from "./subscribeForm";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import Button from "./button";
+import { Button } from "@/app/components/ui/button";
+import Image from "next/image";
 
 export default function MyModal() {
 	let [isOpen, setIsOpen] = useState(false);
@@ -30,13 +31,7 @@ export default function MyModal() {
 	return (
 		<Suspense>
 			<div className="mx-auto">
-				<Button
-					label="join our newsletter"
-					bgColor="[#ec6a52]"
-					styles="m-4 font-normal"
-					hoverColor=""
-					onClick={openModal}
-				/>
+				<Button onClick={openModal}>join our newsletter</Button>
 			</div>
 			<Transition appear show={isOpen} as={Fragment}>
 				<Dialog as="div" className="relative z-50" onClose={closeModal}>
@@ -49,7 +44,7 @@ export default function MyModal() {
 						leaveFrom="opacity-100"
 						leaveTo="opacity-0"
 					>
-						<div className="fixed inset-0 bg-black bg-opacity-25" />
+						<div className="fixed inset-0 bg-black/25" />
 					</Transition.Child>
 					<div className="fixed inset-0 bg-black/30" aria-hidden="true" />
 					<div className="fixed inset-0 overflow-y-auto">
@@ -63,38 +58,40 @@ export default function MyModal() {
 								leaveFrom="opacity-100 scale-100"
 								leaveTo="opacity-0 scale-95"
 							>
-								<Dialog.Panel className="w-full max-w-[800px] max-h-[300vw] transform overflow-hidden rounded-2xl bg-white shadow-xl transition-all">
+								<Dialog.Panel className="max-h-[300vw] w-full max-w-[800px] overflow-hidden rounded-2xl bg-white shadow-xl transition-all">
 									<button
 										onClick={closeModal}
-										className="absolute z-60 top-2 right-2"
+										className="absolute top-2 right-2 z-50"
 									>
 										<XMarkIcon className="h-6 w-6" />
 									</button>
-									<div className="flex flex-col sm:flex-row bg-white rounded-lg shadow-xl">
-										<div className="max-w-full h-1/2 overflow-hidden sm:w-1/2 sm:max-h-full">
-											<img
-												className="object-cover aspect-square sm:aspect-auto sm:h-full"
+									<div className="flex flex-col rounded-lg bg-white shadow-xl sm:flex-row">
+										<div className="h-1/2 max-w-full overflow-hidden sm:max-h-full sm:w-1/2">
+											<Image
+												width={1000}
+												height={1000}
+												className="aspect-square object-cover sm:aspect-auto sm:h-full"
 												src="newsletter-modal.svg"
 												alt="Newsletter modal image"
 											/>
 										</div>
-										<div className="w-full sm:w-1/2 px-6 sm:py-6 py-12 text-center align-middle my-auto">
+										<div className="my-auto w-full px-6 py-12 text-center align-middle sm:w-1/2 sm:py-6">
 											<Dialog.Title
 												as="h3"
-												className="font-summerVibesSolid text-5xl pb-6 leading-6 text-[#ec6a52]"
+												className="pb-6 font-summerVibesSolid text-5xl leading-6 text-[#ec6a52]"
 											>
 												subscribe
 											</Dialog.Title>
 											<div className="mt-2">
-												<p className="text-[#232323] text-lg">
+												<p className="text-lg text-[#232323]">
 													Join the Giggles Play family and stay in the loop!
 													Sign up for our newsletter to receive updates on new
 													play areas, special events, and exclusive offers. Let
 													the fun and giggles begin with just a few clicks.
-													Don't wait, sign up now!
+													Don&apos;t wait, sign up now!
 												</p>
 											</div>
-											<div className="w-3/4 mx-auto">
+											<div className="mx-auto w-3/4">
 												<div className="mt-4">
 													<NewsLetterSignUpForm onClick={closeModal} />
 												</div>

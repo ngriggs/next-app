@@ -80,30 +80,30 @@ function Carousel({ images }: { images: Image[] }) {
 					/>
 				))}
 			</AspectRatio>
-			<div className="carousel__indicator absolute z-30 bottom-0 space-x-4 w-full flex justify-center p-2 mb-1">
+			<div className="absolute bottom-0 z-30 mb-1 flex w-full justify-center space-x-4 p-2">
 				{images.map((_, i) => (
 					<button
 						key={i}
 						onClick={() => setIndex(i)}
-						className={`rounded-full p-[7px] transition-all duration-300 ease-out bg-none ${
-							i === index ? "ring ring-white" : "opacity-100 bg-white"
+						className={`rounded-full bg-none p-[7px] transition-all duration-300 ease-out ${
+							i === index ? "ring ring-white" : "bg-white opacity-100"
 						}`}
 					></button>
 				))}
 			</div>
 			<div>
-				<div className="carousel__nav absolute align-middle z-20 left-0 top-0 w-full h-full flex justify-between px-1">
+				<div className="absolute left-0 top-0 z-20 flex h-full w-full justify-between px-1 align-middle">
 					<button
 						onClick={prevSlide}
-						className="text-lg leading-none rounded-full p-1 transition-all duration-300 ease-out"
+						className="rounded-full p-1 text-lg leading-none transition-all duration-300 ease-out"
 					>
-						<ChevronLeftIcon className="fill-white opacity-75 hover:opacity-100 h-7 w-16" />
+						<ChevronLeftIcon className="h-7 w-16 fill-white opacity-75 hover:opacity-100" />
 					</button>
 					<button
 						onClick={nextSlide}
-						className="leading-none rounded-full p-1 transition-all duration-300 ease-out"
+						className="rounded-full p-1 leading-none transition-all duration-300 ease-out"
 					>
-						<ChevronRightIcon className="fill-white opacity-75 hover:opacity-100 h-7 w-16" />
+						<ChevronRightIcon className="h-7 w-16 fill-white opacity-75 hover:opacity-100" />
 					</button>
 				</div>
 			</div>

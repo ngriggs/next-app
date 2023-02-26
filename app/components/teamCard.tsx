@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Icons } from "./icons";
 
 const url =
@@ -7,23 +8,26 @@ export default function teamCard({ ...props }) {
 	console.log(props);
 	return (
 		<div
-			className={`group relative grid grid-cols-1 bg-red-300 rounded-lg shadow-lg w-[100%] max-w-[350px] h-[400px] overflow-hidden `}
+			className={`group relative grid h-[400px] w-[100%] max-w-[350px] grid-cols-1 overflow-hidden rounded-lg bg-red-300 shadow-lg `}
 		>
-			<img
+			<Image
 				src={props.url}
-				className={`${props.imageClassName} absolute max-w-xs rounded-t-lg -bottom-10 -right-10 -rotate-[8deg] group-hover:rotate-0 transition duration-300`}
+				alt={props.name}
+				width={1000}
+				height={1000}
+				className={`${props.imageClassName} absolute -bottom-10 -right-10 max-w-xs rotate-[-8deg] rounded-t-lg transition duration-300 group-hover:rotate-0`}
 			/>
 			<div className="relative p-4">
 				<div className="">
 					<h2 className="text-xl">{props.name}</h2>
 					<h2 className="text-lg">{props.title}</h2>
 				</div>
-				<div className="absolute flex flex-row space-x-3 my-3 bottom-0">
+				<div className="absolute bottom-0 my-3 flex flex-row space-x-3">
 					<button>
-						<Icons.linkedin className="w-[36px] h-[36px]" />
+						<Icons.linkedin className="h-[36px] w-[36px]" />
 					</button>
 					<button>
-						<div className="flex bg-[#0E76A8] rounded-full w-[36px] h-[36px]">
+						<div className="flex h-[36px] w-[36px] rounded-full bg-[#0E76A8]">
 							<Icons.email className="fill-white  p-[5px]" />
 						</div>
 					</button>

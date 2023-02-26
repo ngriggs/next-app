@@ -22,15 +22,15 @@ import {
 
 export function MainNav({ items }: MainNavProps) {
 	return (
-		<div className="flex gap-6 md:gap-0 h-[80px] fixed w-screen left-[calc(-50vw_+_50%)] top-0 z-50 bg-white font-bold">
-			<div className="flex flex-1 max-w-7xl mx-auto px-1 sm:px-0">
-				<div className="sm:flex sm:flex-1 my-auto">
+		<div className="fixed left-[calc(-50vw_+_50%)] top-0 z-50 flex h-[80px] w-screen gap-6 bg-white font-bold md:gap-0">
+			<div className="mx-auto flex max-w-7xl flex-1 px-1 sm:px-0">
+				<div className="my-auto sm:flex sm:flex-1">
 					<Link href="/" className="">
 						<Image
 							width={400}
 							height={200}
 							alt="logo"
-							className="-ml-[80px] md:-ml-0 lg:-ml-20 h-11 hover:scale-105"
+							className="ml-[-80px] h-11 hover:scale-105 md:ml-0 lg:ml-[-80px]"
 							src="/giggles_horizontal_logo.svg"
 							priority={true}
 						/>
@@ -38,13 +38,13 @@ export function MainNav({ items }: MainNavProps) {
 				</div>
 
 				{items?.length ? (
-					<nav className="hidden space-x-8 md:flex md:flex-1 my-auto justify-center ">
+					<nav className="my-auto hidden justify-center space-x-8 md:flex md:flex-1 ">
 						{items?.map((item, index) => (
 							<Popover key={index}>
-								<PopoverTrigger className="flex flex-row group cursor-pointer text-[#232323]">
+								<PopoverTrigger className="group flex cursor-pointer flex-row text-[#232323]">
 									{item.title}
 									<Icons.chevronDown
-										className="relative ml-2 h-5 w-5 stroke-1 my-auto transition duration-200 group-data-[state=open]:rotate-180"
+										className="relative my-auto ml-2 h-5 w-5 stroke-1 transition duration-200 group-data-[state=open]:rotate-180"
 										aria-hidden="true"
 									/>
 								</PopoverTrigger>
@@ -74,7 +74,7 @@ export function MainNav({ items }: MainNavProps) {
 						))}
 					</nav>
 				) : null}
-				<div className="hidden md:flex md:flex-1 justify-end my-auto pr-7">
+				<div className="my-auto hidden justify-end pr-7 md:flex md:flex-1">
 					<Link href="/contact" target="_top">
 						<Button className="rounded-full bg-giggles-red hover:bg-giggles-red-light">
 							Get in touch
@@ -83,11 +83,11 @@ export function MainNav({ items }: MainNavProps) {
 				</div>
 			</div>
 			<Popover modal>
-				<PopoverTrigger className="md:hidden group px-2">
+				<PopoverTrigger className="group px-2 md:hidden">
 					<Icons.menu className="mr-2 h-6 w-6 group-data-[state=open]:hidden group-data-[state=open]:transform" />
-					<Icons.close className="hidden mr-2 h-6 w-6 group-data-[state=open]:flex group-data-[state=open]:transform" />
+					<Icons.close className="mr-2 hidden h-6 w-6 group-data-[state=open]:flex group-data-[state=open]:transform" />
 				</PopoverTrigger>
-				<PopoverContent className="-mt-1 rounded-none border-none h-screen overflow-scroll">
+				<PopoverContent className="-mt-1 h-screen overflow-scroll rounded-none border-none">
 					<Accordion
 						type="single"
 						collapsible
@@ -106,7 +106,7 @@ export function MainNav({ items }: MainNavProps) {
 											key={sub.name}
 											href={sub.href}
 											target={sub.target}
-											className="-m-3 flex items-start rounded-lg p-3 pl-8 my-2 text-lg"
+											className="-m-3 my-2 flex items-start rounded-lg p-3 pl-8 text-lg"
 										>
 											{sub.name}
 										</Link>
@@ -115,10 +115,10 @@ export function MainNav({ items }: MainNavProps) {
 							</AccordionItem>
 						))}
 					</Accordion>
-					<div className="flex justify-center my-auto py-7">
+					<div className="my-auto flex justify-center py-7">
 						<Button className="rounded-full">Get in touch</Button>
 					</div>
-					<div className="flex flex-1 justify-center h-[20vh] mb-[120px] pb-20 items-end">
+					<div className="mb-[120px] flex h-[20vh] flex-1 items-end justify-center pb-20">
 						{socialMedia.map((social, index) => (
 							<Link key={social.id} href={social.link} target={"_blank"}>
 								<Image
@@ -126,7 +126,7 @@ export function MainNav({ items }: MainNavProps) {
 									alt={social.id}
 									height={21}
 									width={21}
-									className={`w-[34px] h-[34px] object-contain cursor-pointer hover:scale-105 ${
+									className={`h-[34px] w-[34px] cursor-pointer object-contain hover:scale-105 ${
 										index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
 									}`}
 								/>

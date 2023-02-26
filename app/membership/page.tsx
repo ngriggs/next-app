@@ -6,10 +6,10 @@ const Membership = () => {
 			<Head>
 				<title>Membership</title>
 			</Head>
-			<h1 className="text-2xl font-bold mb-5">Membership</h1>
+			<h1 className="mb-5 text-2xl font-bold">Membership</h1>
 
 			{/* Monthly Memberships */}
-			<h2 className="text-xl font-bold mb-5">Monthly Memberships</h2>
+			<h2 className="mb-5 text-xl font-bold">Monthly Memberships</h2>
 			<p className="mb-5 text-gray-700">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum
 				vel velit blandit efficitur. Sed dapibus semper sapien, id consectetur
@@ -21,7 +21,7 @@ const Membership = () => {
 			</p>
 
 			{/* Annual Memberships */}
-			<h2 className="text-xl font-bold mb-5">Annual Memberships</h2>
+			<h2 className="mb-5 text-xl font-bold">Annual Memberships</h2>
 			<p className="mb-5 text-gray-700">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum
 				vel velit blandit efficitur. Sed dapibus semper sapien, id consectetur
@@ -33,8 +33,8 @@ const Membership = () => {
 			</p>
 
 			{/* Call to Action */}
-			<h2 className="text-xl font-bold mb-5">Sign Up for Membership</h2>
-			<button className="bg-indigo-500 text-white py-2 px-4 rounded">
+			<h2 className="mb-5 text-xl font-bold">Sign Up for Membership</h2>
+			<button className="rounded bg-indigo-500 py-2 px-4 text-white">
 				Sign Up
 			</button>
 		</div>

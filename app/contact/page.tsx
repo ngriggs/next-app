@@ -14,12 +14,12 @@ const ContactUs = () => {
 			</section>
 			<div className="my-8" />
 			<section>
-				<div className="relative mx-auto py-10 px-4 w-full max-w-7xl bg-[#FAF5F1]">
+				<div className="relative mx-auto w-full max-w-7xl bg-[#FAF5F1] py-10 px-4">
 					<div className="mx-auto max-w-5xl">
 						{/* :DOTS BACKGROUND */}
 						<div>
 							{/* ::Dots 1 */}
-							<span className="absolute top-0 left-0 hidden md:block opacity-20">
+							<span className="absolute top-0 left-0 hidden opacity-20 md:block">
 								<svg
 									width={260}
 									height={600}
@@ -95,29 +95,29 @@ const ContactUs = () => {
 							<h2 className="text-center text-5xl font-light">Contact Us</h2>
 
 							{/* ::Some Text */}
-							<p className="mx-auto py-5 max-w-3xl text-center text-base ">
+							<p className="mx-auto max-w-3xl py-5 text-center text-base ">
 								Atque sint nemo vero sequi veniam, numquam fugiat aperiam
 								doloremque, itaque officia exercitationem! Excepturi deleniti
 								accusantium minus quibusdam dolores doloremque natus fugit!
 							</p>
 
 							{/* ::Infos Container */}
-							<div className="flex flex-wrap justify-between items-center text-base">
+							<div className="flex flex-wrap items-center justify-between text-base">
 								{/* :::Address */}
 								<div className="m-2.5 inline-flex items-center">
-									<MapPinIcon className="mr-2 w-6 h-6" />
+									<MapPinIcon className="mr-2 h-6 w-6" />
 									<p className=" font-semibold">
 										328 Green Bay Road, Highwood, IL 60040
 									</p>
 								</div>
 								{/* :::Phone */}
 								<div className="m-2.5 inline-flex items-center">
-									<DevicePhoneMobileIcon className="mr-2 w-6 h-6 " />
+									<DevicePhoneMobileIcon className="mr-2 h-6 w-6 " />
 									<p className=" font-semibold">357-233-9644</p>
 								</div>
 								{/* :::Address */}
 								<div className="m-2.5 inline-flex items-center">
-									<EnvelopeIcon className="mr-2 w-6 h-6 " />
+									<EnvelopeIcon className="mr-2 h-6 w-6 " />
 									<p className=" font-semibold">my-email@fancymail.com</p>
 								</div>
 							</div>

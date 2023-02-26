@@ -32,7 +32,7 @@ export default function popoverMenu({
 						<Popover.Button
 							className={classNames(
 								open || active
-									? "text-[#232323] font-black underline"
+									? "font-black text-[#232323] underline"
 									: "text-[#232323]",
 								"group inline-flex items-center rounded-md bg-white text-base font-semibold hover:text-black hover:underline"
 							)}
@@ -41,7 +41,7 @@ export default function popoverMenu({
 							{open ? (
 								<ChevronUpIcon
 									className={classNames(
-										open ? "text-[#232323]" : "text-black stroke-2",
+										open ? "text-[#232323]" : "stroke-2 text-black",
 										"ml-3 mt-[3px] h-4 w-4 group-hover:text-black"
 									)}
 									aria-hidden="true"
@@ -49,7 +49,7 @@ export default function popoverMenu({
 							) : (
 								<ChevronDownIcon
 									className={classNames(
-										open ? "text-[#232323]" : "text-[#232323]  stroke-2",
+										open ? "text-[#232323]" : "stroke-2  text-[#232323]",
 										"ml-3 mt-[3px] h-4 w-4 group-hover:text-black"
 									)}
 									aria-hidden="true"
@@ -66,7 +66,7 @@ export default function popoverMenu({
 							leaveFrom="transform scale-100 opacity-100"
 							leaveTo="transform scale-95 opacity-0"
 						>
-							<Popover.Panel className="absolute mt-3 w-screen max-w-sm transform">
+							<Popover.Panel className="absolute mt-3 w-screen max-w-sm">
 								{({ close }) => (
 									<button
 										className="text-left"

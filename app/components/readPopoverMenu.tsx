@@ -34,14 +34,14 @@ export default function popoverMenu({
 							<Popover.Button
 								className={classNames(
 									open ? "text-gray-900" : "text-gray-500",
-									"group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#99bdbb] focus:ring-offset-2 hover:underline"
+									"group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 hover:underline focus:outline-none focus:ring-2 focus:ring-[#99bdbb] focus:ring-offset-2"
 								)}
 							>
 								<span>{title}</span>
 								{open ? (
 									<ChevronUpIcon
 										className={classNames(
-											open ? "text-gray-600" : "text-gray-500 stroke-2",
+											open ? "text-gray-600" : "stroke-2 text-gray-500",
 											"ml-[1px] mt-[3px] h-4 w-4 group-hover:text-gray-700"
 										)}
 										aria-hidden="true"
@@ -49,7 +49,7 @@ export default function popoverMenu({
 								) : (
 									<ChevronDownIcon
 										className={classNames(
-											open ? "text-gray-600" : "text-gray-500 stroke-2",
+											open ? "text-gray-600" : "stroke-2 text-gray-500",
 											"ml-[1px] mt-[3px] h-4 w-4 group-hover:text-gray-700"
 										)}
 										aria-hidden="true"
@@ -66,7 +66,7 @@ export default function popoverMenu({
 								leaveFrom="opacity-100 translate-y-0"
 								leaveTo="opacity-0 translate-y-1"
 							>
-								<Popover.Panel className="absolute left-0 mt-3 w-screen max-w-sm transform">
+								<Popover.Panel className="absolute left-0 mt-3 w-screen max-w-sm">
 									{({ close }) => (
 										<button
 											className="text-left"
@@ -74,7 +74,7 @@ export default function popoverMenu({
 												await close();
 											}}
 										>
-											<div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+											<div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black/5">
 												<div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
 													{solutions.map((item) => (
 														<Link

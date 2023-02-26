@@ -56,7 +56,7 @@ const Example = () => {
 	};
 
 	return (
-		<div className="mx-auto max-w-7xl w-[100vw] h-[100vh] overflow-hidden p-0 m-0 flex justify-center align-middle">
+		<div className="m-0 mx-auto flex h-[100vh] w-[100vw] max-w-7xl justify-center overflow-hidden p-0 align-middle">
 			<AnimatePresence initial={false} custom={direction}>
 				<motion.img
 					key={page}
@@ -85,10 +85,10 @@ const Example = () => {
 					className="absolute max-w-[100vw]"
 				/>
 			</AnimatePresence>
-			<div className="next" onClick={() => paginate(1)}>
+			<div className="" onClick={() => paginate(1)}>
 				{"‣"}
 			</div>
-			<div className="prev" onClick={() => paginate(-1)}>
+			<div className="" onClick={() => paginate(-1)}>
 				{"‣"}
 			</div>
 		</div>

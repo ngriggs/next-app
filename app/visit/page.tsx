@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import Button from "../components/button";
+import { Button } from "@/app/components/ui/button";
 
 const Visit = () => {
 	return (
@@ -8,10 +8,10 @@ const Visit = () => {
 			<Head>
 				<title key="title">Visit Us</title>
 			</Head>
-			<h1 className="text-2xl text-[#232323] font-bold mb-5">Visit Us</h1>
+			<h1 className="mb-5 text-2xl font-bold text-[#232323]">Visit Us</h1>
 
 			{/* Admission Hours */}
-			<h2 className="text-xl font-bold mb-5">Admission Hours</h2>
+			<h2 className="mb-5 text-xl font-bold">Admission Hours</h2>
 			<p className="mb-5 text-[#232323]">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum
 				vel velit blandit efficitur. Sed dapibus semper sapien, id consectetur
@@ -19,7 +19,7 @@ const Visit = () => {
 			</p>
 
 			{/* Frequently Asked Questions */}
-			<h2 className="text-xl font-bold mb-5">Frequently Asked Questions</h2>
+			<h2 className="mb-5 text-xl font-bold">Frequently Asked Questions</h2>
 			<p className="mb-5 text-[#232323]">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum
 				vel velit blandit efficitur. Sed dapibus semper sapien, id consectetur
@@ -27,19 +27,14 @@ const Visit = () => {
 			</p>
 
 			{/* Call to Action */}
-			<h2 className="text-xl font-bold mb-5">Sign a Waiver</h2>
+			<h2 className="mb-5 text-xl font-bold">Sign a Waiver</h2>
 			<p className="mb-5 text-[#232323]">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum
 				vel velit blandit efficitur. Sed dapibus semper sapien, id consectetur
 				odio consectetur eu.
 			</p>
 			<Link href="/waiver">
-				<Button
-					label="Sign Waiver"
-					bgColor=""
-					hoverColor=""
-					styles="text-white font-medium py-2 px-4 rounded-lg shadow-sm"
-				/>
+				<Button>Sign Waiver</Button>
 			</Link>
 		</div>
 	);

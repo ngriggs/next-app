@@ -27,15 +27,11 @@ const Question = ({ question, answer }: QuestionProps) => {
 		<div className="mb-10">
 			<button
 				onClick={() => setIsOpen(!isOpen)}
-				className="w-full text-left bg-white py-3 px-4 font-bold text-indigo-600 border-b-2 border-indigo-600"
+				className="w-full border-b-2 border-indigo-600 bg-white py-3 px-4 text-left font-bold text-indigo-600"
 			>
 				{question}
 				<span className="float-right">
-					{isOpen ? (
-						<i className="fas fa-minus-square"></i>
-					) : (
-						<i className="fas fa-plus-square"></i>
-					)}
+					{isOpen ? <i className=""></i> : <i className=""></i>}
 				</span>
 			</button>
 			{isOpen && (
@@ -86,8 +82,8 @@ const PartyEvents = () => {
 
 	return (
 		<div className="p-10">
-			<h1 className="text-2xl font-bold mb-5">Party Events</h1>
-			<h2 className="text-lg font-bold mt-10 mb-5">Party FAQ</h2>
+			<h1 className="mb-5 text-2xl font-bold">Party Events</h1>
+			<h2 className="mt-10 mb-5 text-lg font-bold">Party FAQ</h2>
 			{questions.map((question) => (
 				<Question
 					key={question.question}
@@ -97,7 +93,7 @@ const PartyEvents = () => {
 			))}
 
 			<div className="mt-10 text-center">
-				<button className="bg-indigo-600 text-white px-5 py-3 rounded-lg hover:bg-indigo-700">
+				<button className="rounded-lg bg-indigo-600 px-5 py-3 text-white hover:bg-indigo-700">
 					Book a Party
 				</button>
 			</div>

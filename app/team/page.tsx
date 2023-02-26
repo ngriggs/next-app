@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import Button from "../components/button";
+import { Button } from "@/app/components/ui/button";
 import TeamCard from "../components/teamCard";
 
 const url =
@@ -10,25 +10,25 @@ const info = [
 	{
 		name: "Jess",
 		title: "Manager and Owner",
-		url: "jess.png",
+		url: "/jess.png",
 		imageClassName: "-bottom-[10em] -right-[5em]",
 	},
 	{
 		name: "Jess",
 		title: "Manager and Owner",
-		url: "jess.png",
+		url: "/jess.png",
 		imageClassName: "-bottom-[10em] -right-[5em]",
 	},
 	{
 		name: "Noah",
 		title: "Manager and Owner",
-		url: "noah.png",
+		url: "/noah.png",
 		imageClassName: "-bottom-[1em] -right-[4em]",
 	},
 	{
 		name: "Noah",
 		title: "Manager and Owner",
-		url: "noah.png",
+		url: "/noah.png",
 		imageClassName: "-bottom-[1em] -right-[4em]",
 	},
 ];
@@ -40,12 +40,12 @@ const About = () => {
 				<Head>
 					<title>About Us</title>
 				</Head>
-				<h1 className="mb-2 font-summerVibesSolid font-normal text-4xl tracking-tight text-center sm:text-5xl sm:leading-none">
+				<h1 className="mb-2 text-center font-summerVibesSolid text-4xl font-normal tracking-tight sm:text-5xl sm:leading-none">
 					meet the team
 				</h1>
 
 				{/* Meet the Owners */}
-				<h2 className="text-2xl font-bold mb-5">
+				<h2 className="mb-5 text-2xl font-bold">
 					Having fun is part of the job!
 				</h2>
 				<p className="mb-5 ">
@@ -55,7 +55,7 @@ const About = () => {
 				</p>
 
 				{/* Our Story */}
-				<h2 className="text-xl font-bold mb-5">Our Story</h2>
+				<h2 className="mb-5 text-xl font-bold">Our Story</h2>
 				<p className="mb-5 ">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum
 					vel velit blandit efficitur. Sed dapibus semper sapien, id consectetur
@@ -63,24 +63,19 @@ const About = () => {
 				</p>
 
 				{/* Call to Action */}
-				<h2 className="text-xl font-bold mb-5">Get in Touch</h2>
+				<h2 className="mb-5 text-xl font-bold">Get in Touch</h2>
 				<p className="mb-5 ">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum
 					vel velit blandit efficitur. Sed dapibus semper sapien, id consectetur
 					odio consectetur eu.
 				</p>
 				<Link href="/contact">
-					<Button
-						label="Contact Us"
-						bgColor="#ec6a52"
-						hoverColor=""
-						styles="shadow-sm font-medium"
-					/>
+					<Button>Contact Us</Button>
 				</Link>
 			</div>
-			<div className="grid grid-cols-fluid gap-4 justify-items-center m-4">
+			<div className="m-4 grid grid-cols-fluid justify-items-center gap-4">
 				{info.map((info) => (
-					<TeamCard {...info} />
+					<TeamCard key={info.name} {...info} />
 				))}
 			</div>
 		</>

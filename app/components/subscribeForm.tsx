@@ -30,12 +30,12 @@ const NewsLetterSignUpForm: React.FC<ChildProps> = ({ onClick }) => {
 
 	return (
 		<form onSubmit={subscribeUser} className="flex flex-col space-y-3">
-			<div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"></div>
+			<div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"></div>
 			<div className="flex flex-row">
 				<div className="absolute pl-4 pt-3">
 					<svg
 						aria-hidden="true"
-						className="w-5 h-5"
+						className="h-5 w-5"
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 135.35 83.12"
 						fill="#f7ae47"
@@ -51,12 +51,12 @@ const NewsLetterSignUpForm: React.FC<ChildProps> = ({ onClick }) => {
 					type="email"
 					name="email"
 					id="email"
-					className="bg-white border border-[#fadfb4] focus:border-[#f7ae47] text-[#232323] placeholder:text-[#232323] text-sm rounded-l-3xl block w-full p-2.5 pl-10  focus:outline-none"
+					className="block w-full rounded-l-3xl border border-[#fadfb4] bg-white p-2.5 pl-10 text-sm text-[#232323] placeholder:text-[#232323] focus:border-[#f7ae47]  focus:outline-none"
 					placeholder="email"
 					ref={inputRef}
 					required
 				/>
-				<button className="bg-[#f7ae47] border-[#f7ae47] border py-2 px-4 rounded-r-3xl text-white">
+				<button className="rounded-r-3xl border border-[#f7ae47] bg-[#f7ae47] py-2 px-4 text-white">
 					→
 				</button>
 			</div>

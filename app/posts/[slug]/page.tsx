@@ -53,7 +53,7 @@ export default async function ArticlePage({ params }: any) {
 
 		return (
 			<div className="px-6 pt-6 pb-12">
-				<article className="prose prose-stone prose-img:rounded-xl prose-headings:font-black prose-p:font-medium mx-auto lg:prose-lg">
+				<article className="prose prose-stone mx-auto lg:prose-lg prose-headings:font-black prose-p:font-medium prose-img:rounded-xl">
 					<div className="text-center text-4xl">
 						{article.allArticles[0].title}
 					</div>

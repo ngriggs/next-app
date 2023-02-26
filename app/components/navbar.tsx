@@ -1,6 +1,7 @@
 "use client";
 import React, { Fragment } from "react";
 import { Popover, Transition, Disclosure } from "@headlessui/react";
+// @ts-ignore
 import { usePathname } from "next/navigation";
 import {
 	Bars3Icon,
@@ -14,7 +15,7 @@ import {
 import Link from "next/dist/client/link";
 import PopoverMenu from "./popoverMenu";
 import Image from "next/image";
-import Button from "./button";
+import { Button } from "@/app/components/ui/button";
 const about = [
 	{
 		name: "giggles",
@@ -145,37 +146,37 @@ function Navbar() {
 	return (
 		<Popover
 			as="nav"
-			className="fixed w-screen h-[80px] left-[calc(-50vw_+_50%)] top-0 z-50 bg-white"
+			className="fixed left-[calc(-50vw_+_50%)] top-0 z-50 h-[80px] w-screen bg-white"
 		>
-			<div className="max-w-7xl mx-auto px-1 sm:px-0 ">
-				<div className="flex items-center justify-between md:justify-start md:space-x-10 px-0">
+			<div className="mx-auto max-w-7xl px-1 sm:px-0 ">
+				<div className="flex items-center justify-between px-0 md:justify-start md:space-x-10">
 					<div className="flex justify-start lg:w-0 lg:flex-1">
 						<nav>
 							<Link
 								href="/"
-								className="flex justify-center items-center hover:scale-105"
+								className="flex items-center justify-center hover:scale-105"
 							>
 								<Image
 									width={300}
 									height={300}
 									onError={() => window.location.reload()}
 									alt="logo"
-									className="-ml-14 object-center max-w-[60%] h-20"
+									className="-ml-14 h-20 max-w-[60%] object-center"
 									src="/giggles_horizontal_logo.svg"
 									priority={true}
 								/>
 							</Link>
 						</nav>
 					</div>
-					<div className="-my-2 -mr-2 z-50 md:hidden">
-						<Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 mr-5 text-gray-400 hover:bg-gray-100 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset">
+					<div className="z-50 -my-2 -mr-2 md:hidden">
+						<Popover.Button className="mr-5 inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset">
 							<span className="sr-only">Open menu</span>
 							<Bars3Icon
 								className="h-6 w-6 ui-open:hidden  ui-open:transform"
 								aria-hidden="true"
 							/>
 							<XMarkIcon
-								className="h-6 w-6 hidden ui-open:flex ui-open:transform"
+								className="hidden h-6 w-6 ui-open:flex ui-open:transform"
 								aria-hidden="true"
 							/>
 						</Popover.Button>
@@ -196,14 +197,9 @@ function Navbar() {
 						<Link
 							href="https://giggles-play.square.site/"
 							target={"_blank"}
-							className="ml-8 mr-4 inline-flex items-center justify-center whitespace-nowrapborder border-transparent  px-4 py-2 text-base"
+							className="whitespace-nowrapborder ml-8 mr-4 inline-flex items-center justify-center border-transparent  px-4 py-2 text-base"
 						>
-							<Button
-								label="Book Now"
-								bgColor="[#ec6a52]"
-								hoverColor=""
-								styles="shadow-sm font-medium"
-							/>
+							<Button>Book Now</Button>
 						</Link>
 					</div>
 				</div>
@@ -220,10 +216,10 @@ function Navbar() {
 			>
 				<Popover.Panel
 					focus
-					className="fixed w-screen top-[80px] gap-x-0 bottom-0 z-50 transform transition md:hidden"
+					className="fixed top-[80px] bottom-0 z-50 w-screen transform gap-x-0 transition md:hidden"
 				>
 					{({ close }) => (
-						<div className="top-0 h-screen overflow-y-auto left-0 bottom-0 px-[1.5rem] bg-white">
+						<div className="top-0 left-0 bottom-0 h-screen overflow-y-auto bg-white px-[1.5rem]">
 							{/* <button
 									onClick={async () => {
 										close();
@@ -240,11 +236,11 @@ function Navbar() {
 										/>
 									</Link>
 								</button> */}
-							<div className="py-[1.5rem] space-y-[1.5rem] w-full flex flex-col">
+							<div className="flex w-full flex-col space-y-[1.5rem] py-[1.5rem]">
 								<Disclosure as="div" className="">
 									{({ open }) => (
 										<>
-											<Disclosure.Button className="py-2 flex w-full justify-between">
+											<Disclosure.Button className="flex w-full justify-between py-2">
 												<span className="text-base font-semibold">about</span>
 												<ChevronDownIcon
 													className={`${
@@ -276,7 +272,7 @@ function Navbar() {
 								<Disclosure as="div" className="">
 									{({ open }) => (
 										<>
-											<Disclosure.Button className="py-2 flex w-full justify-between">
+											<Disclosure.Button className="flex w-full justify-between py-2">
 												<span className="text-base font-semibold">play</span>
 												<ChevronDownIcon
 													className={`${
@@ -308,7 +304,7 @@ function Navbar() {
 								<Disclosure as="div" className="">
 									{({ open }) => (
 										<>
-											<Disclosure.Button className="py-2 flex w-full justify-between">
+											<Disclosure.Button className="flex w-full justify-between py-2">
 												<span className="text-base font-semibold">parties</span>
 												<ChevronDownIcon
 													className={`${
@@ -342,7 +338,7 @@ function Navbar() {
 										close();
 									}}
 								>
-									<Link href="/shop" className="py-2 flex items-start">
+									<Link href="/shop" className="flex items-start py-2">
 										<span className="text-base font-semibold">shop</span>
 									</Link>
 								</button>
@@ -354,14 +350,9 @@ function Navbar() {
 									<Link
 										href="https://giggles-play.square.site/"
 										target={"_blank"}
-										className="ml-8 mr-4 inline-flex items-center justify-center whitespace-nowrapborder border-transparent  px-4 py-2 text-base"
+										className="whitespace-nowrapborder ml-8 mr-4 inline-flex items-center justify-center border-transparent  px-4 py-2 text-base"
 									>
-										<Button
-											label="Book Now"
-											bgColor="[#ec6a52]"
-											hoverColor=""
-											styles="shadow-sm font-medium"
-										/>
+										<Button>Book Now</Button>
 									</Link>
 								</button>
 								<button
@@ -377,7 +368,7 @@ function Navbar() {
 												alt={social.id}
 												height={21}
 												width={21}
-												className={`w-[34px] h-[34px] object-contain cursor-pointer hover:scale-105 ${
+												className={`h-[34px] w-[34px] cursor-pointer object-contain hover:scale-105 ${
 													index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
 												}`}
 											/>

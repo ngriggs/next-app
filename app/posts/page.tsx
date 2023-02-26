@@ -6,8 +6,8 @@ export default async function ArticleList() {
 	const postCollection = await getAllArticles();
 
 	return (
-		<div className="p-4 min-h-[75vh]">
-			<h1 className="text-3xl font-summerVibesSolid font-normal text-center">
+		<div className="min-h-[75vh] p-4">
+			<h1 className="text-center font-summerVibesSolid text-3xl font-normal">
 				insights
 			</h1>
 			<div className="my-8" />
@@ -16,7 +16,7 @@ export default async function ArticleList() {
 					return (
 						<div
 							key={edge.id}
-							className="my-4 rounded-xl p-3 hover:scale-105 duration-300"
+							className="my-4 rounded-xl p-3 duration-300 hover:scale-105"
 						>
 							<Post article={edge} />
 						</div>

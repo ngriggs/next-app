@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type Props = {
 	id: string;
 	title: string;
@@ -16,14 +18,20 @@ const BlogCard: React.FC<Props> = ({
 }) => {
 	const date = new Date(created);
 	return (
-		<article className="overflow-hidden max-h-96 rounded-lg shadow transition hover:shadow-lg">
-			<img alt={title} src={image} className="h-56 w-full object-cover" />
+		<article className="max-h-96 overflow-hidden rounded-lg shadow transition hover:shadow-lg">
+			<Image
+				alt={title}
+				src={image}
+				width={1000}
+				height={1000}
+				className="h-56 w-full object-cover"
+			/>
 			<div className="bg-white p-4 sm:p-6">
 				<time dateTime={created} className="block text-xs text-gray-500">
 					{date.toDateString()}
 				</time>
 				<h3 className="mt-0.5 text-lg text-gray-900">{title}</h3>
-				<p className="mt-2 text-sm leading-relaxed text-ellipsis text-gray-500 line-clamp-3">
+				<p className="mt-2 text-ellipsis text-sm leading-relaxed text-gray-500 line-clamp-3">
 					{content}
 				</p>
 			</div>
