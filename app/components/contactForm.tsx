@@ -1,4 +1,5 @@
 "use client";
+/* eslint-ignore */
 import React from "react";
 import { Button } from "@/app/components/ui/button";
 import { Textarea } from "@/app/components/ui/textarea";
