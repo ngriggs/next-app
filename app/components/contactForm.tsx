@@ -1,5 +1,5 @@
 "use client";
-/* eslint-disable rules-of-hooks */
+/* eslint-disable react-hooks/rules-of-hooks */
 import React from "react";
 import { Button } from "@/app/components/ui/button";
 import { Textarea } from "@/app/components/ui/textarea";
