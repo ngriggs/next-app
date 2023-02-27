@@ -18,7 +18,7 @@ const ContactUs = () => {
 						Have you got a question for us?
 					</h2>
 					<p className="justify-self-center text-base ">
-						Questions or special inquiries? Fill out a form and we'll be in
+						Questions or special inquiries? Fill out a form and we&apos;ll be in
 						touch as soon as possible
 					</p>
 				</div>
