@@ -37,9 +37,9 @@ export const siteConfig: SiteConfig = {
 					icon: "CalendarDaysIcon",
 				},
 				{
-					name: "news",
+					name: "insights",
 					description: "Send us any feedback or inquiries",
-					href: "/news",
+					href: "/insights",
 					target: "_top",
 					icon: "CursorArrowRaysIcon",
 				},
@@ -195,5 +195,34 @@ export const team = [
 		url: "/noah.png",
 		imageClassName: "-bottom-[1em] -right-[4em]",
 		email: "noah@gigglesplay.com",
+	},
+];
+
+// Frequently Asked Questions
+export const questions = [
+	{
+		question: "What is your refund policy?",
+		answer: "We have a XX-day refund policy for all of our products.",
+	},
+	{
+		question: "Do you offer warranties on your products?",
+		answer: "Yes, we offer a X-year warranty on all of our products.",
+	},
+	{
+		question: "How long does shipping take?",
+		answer: "Shipping typically takes 3-5 business days.",
+	},
+	{
+		question: "Can I bring my own decorations?",
+		answer: "Yes, you are welcome to bring your own decorations.",
+	},
+	{
+		question: "Is there a limit on the number of guests I can invite?",
+		answer: "There is a maximum capacity of 50 guests for our party events.",
+	},
+	{
+		question: "Do you provide catering services?",
+		answer:
+			"TBD, we may provide catering services as part of our premium package or as a separate option.",
 	},
 ];

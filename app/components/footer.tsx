@@ -64,7 +64,7 @@ const Footer = () => {
 				<nav>
 					<ul className="mb-6 flex flex-wrap items-center justify-center text-gray-500">
 						<li>
-							<Link href="/about" className="mr-4 hover:underline md:mr-6 ">
+							<Link href="/giggles" className="mr-4 hover:underline md:mr-6 ">
 								About
 							</Link>
 						</li>
@@ -83,7 +83,7 @@ const Footer = () => {
 							</Link>
 						</li>
 						<li>
-							<Link href="/news" className="mr-4 hover:underline md:mr-6">
+							<Link href="/insights" className="mr-4 hover:underline md:mr-6">
 								News
 							</Link>
 						</li>
@@ -125,7 +125,7 @@ const Footer = () => {
 								</Link>
 							))}
 						</div>
-						<div className="flex flex-1 justify-end">
+						<div className="flex flex-1 justify-center sm:justify-end">
 							<Link className="hover:underline" href="/privacy">
 								Privacy Policy
 							</Link>

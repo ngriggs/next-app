@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Button } from "../components/ui/button";
 
 const Membership = () => {
 	return (
@@ -34,9 +35,7 @@ const Membership = () => {
 
 			{/* Call to Action */}
 			<h2 className="mb-5 text-xl font-bold">Sign Up for Membership</h2>
-			<button className="rounded bg-indigo-500 py-2 px-4 text-white">
-				Sign Up
-			</button>
+			<Button variant={"giggles"}>Sign Up</Button>
 		</div>
 	);
 };

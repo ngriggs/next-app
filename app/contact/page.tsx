@@ -1,4 +1,7 @@
+"use client";
 import React from "react";
+import ContactForm from "../components/contactForm";
+
 import {
 	DevicePhoneMobileIcon,
 	MapPinIcon,
@@ -8,8 +11,23 @@ import Pricing from "../components/pricing";
 
 const ContactUs = () => {
 	return (
-		<div>
-			<section>
+		<div className="flex flex-col pt-2">
+			<section className="grid grid-cols-12 gap-4">
+				<div className="col-start-1 col-end-7 grid content-center text-center">
+					<h2 className="justify-self-center text-2xl ">
+						Have you got a question for us?
+					</h2>
+					<p className="justify-self-center text-base ">
+						Questions or special inquiries? Fill out a form and we'll be in
+						touch as soon as possible
+					</p>
+				</div>
+				<div className="col-start-7 col-end-13">
+					<ContactForm />
+				</div>
+				<div className="col-span-12"></div>
+			</section>
+			<section className="mt-8">
 				<Pricing />
 			</section>
 			<div className="my-8" />
@@ -19,7 +37,7 @@ const ContactUs = () => {
 						{/* :DOTS BACKGROUND */}
 						<div>
 							{/* ::Dots 1 */}
-							<span className="absolute top-0 left-0 hidden opacity-20 md:block">
+							<span className="absolute top-0 left-0 hidden opacity-5 md:block">
 								<svg
 									width={260}
 									height={600}
@@ -52,7 +70,7 @@ const ContactUs = () => {
 								</svg>
 							</span>
 							{/* ::Dots 2 */}
-							<span className="absolute bottom-0 right-0 opacity-20">
+							<span className="absolute bottom-0 right-0 opacity-5">
 								<svg
 									width={300}
 									height={300}
@@ -96,29 +114,36 @@ const ContactUs = () => {
 
 							{/* ::Some Text */}
 							<p className="mx-auto max-w-3xl py-5 text-center text-base ">
-								Atque sint nemo vero sequi veniam, numquam fugiat aperiam
-								doloremque, itaque officia exercitationem! Excepturi deleniti
-								accusantium minus quibusdam dolores doloremque natus fugit!
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</p>
 
 							{/* ::Infos Container */}
-							<div className="flex flex-wrap items-center justify-between text-base">
+							<div className="flex flex-row items-center justify-between text-base">
 								{/* :::Address */}
-								<div className="m-2.5 inline-flex items-center">
+								<div className="m-2.5 inline-flex flex-1 items-center">
 									<MapPinIcon className="mr-2 h-6 w-6" />
 									<p className=" font-semibold">
-										328 Green Bay Road, Highwood, IL 60040
+										328 Green Bay Road,
+										<br /> Highwood, IL 60040
 									</p>
 								</div>
 								{/* :::Phone */}
-								<div className="m-2.5 inline-flex items-center">
+								<div className="m-2.5 inline-flex flex-1 items-center">
 									<DevicePhoneMobileIcon className="mr-2 h-6 w-6 " />
-									<p className=" font-semibold">357-233-9644</p>
+									<a href="tel:555-555-5555" className="font-semibold">
+										555-555-5555
+									</a>
 								</div>
 								{/* :::Address */}
-								<div className="m-2.5 inline-flex items-center">
+								<div className="m-2.5 inline-flex flex-1 items-center">
 									<EnvelopeIcon className="mr-2 h-6 w-6 " />
-									<p className=" font-semibold">my-email@fancymail.com</p>
+									<a
+										href="mailto:info@gigglesplay.com"
+										className="font-semibold"
+									>
+										info@gigglesplay.com
+									</a>
 								</div>
 							</div>
 						</div>

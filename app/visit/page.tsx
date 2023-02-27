@@ -34,7 +34,7 @@ const Visit = () => {
 				odio consectetur eu.
 			</p>
 			<Link href="/waiver">
-				<Button>Sign Waiver</Button>
+				<Button variant={"giggles"}>Sign Waiver</Button>
 			</Link>
 		</div>
 	);

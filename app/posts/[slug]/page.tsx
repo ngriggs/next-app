@@ -1,6 +1,8 @@
 import { render } from "datocms-structured-text-to-html-string";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { Button } from "@/app/components/ui/button";
+import Link from "next/link";
 
 export async function generateMetadata({ params }: any) {
 	const article = await getArticle(params?.slug);
@@ -77,6 +79,11 @@ export default async function ArticlePage({ params }: any) {
 						}}
 					/>
 				</article>
+				<div className="flex place-content-center">
+					<Button variant={"giggles"}>
+						<Link href="/posts">All Posts</Link>
+					</Button>
+				</div>
 			</div>
 		);
 	}

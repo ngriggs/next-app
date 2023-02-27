@@ -1,5 +1,7 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
+import { Button } from "../components/ui/button";
 
 interface PackageProps {
 	name: string;
@@ -93,9 +95,9 @@ const PartyEvents = () => {
 			))}
 
 			<div className="mt-10 text-center">
-				<button className="rounded-lg bg-indigo-600 px-5 py-3 text-white hover:bg-indigo-700">
-					Book a Party
-				</button>
+				<Link href="/contact" target={"_top"}>
+					<Button variant={"giggles"}>Book a Party</Button>
+				</Link>
 			</div>
 		</div>
 	);

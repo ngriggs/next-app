@@ -34,9 +34,9 @@ const about = [
 		icon: CalendarDaysIcon,
 	},
 	{
-		name: "news",
+		name: "insights",
 		description: "Send us any feedback or inquiries",
-		href: "/news",
+		href: "/insights",
 		target: "_top",
 		icon: CursorArrowRaysIcon,
 	},

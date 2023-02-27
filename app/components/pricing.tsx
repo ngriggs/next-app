@@ -46,27 +46,6 @@ const Pricing = () => {
 					</div>
 				</div>
 			</div>
-
-			<div className="my-8 flex flex-col items-center space-y-4 bg-none">
-				<div className="clip-your-needful-style aspect-[3/1] w-full">
-					<img
-						className="h-full w-full object-cover"
-						src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80"
-					/>
-				</div>
-				<div className="clip2 aspect-[3/1] w-full">
-					<img
-						className="h-full w-full object-cover"
-						src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80"
-					/>
-				</div>
-				<div className="clip3 aspect-[3/1] w-full">
-					<img
-						className="h-full w-full object-cover"
-						src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80"
-					/>
-				</div>
-			</div>
 		</section>
 	);
 };
