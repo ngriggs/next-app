@@ -23,6 +23,7 @@
 		"@radix-ui/react-navigation-menu": "^1.1.1",
 		"@radix-ui/react-popover": "^1.0.3",
 		"@radix-ui/react-select": "^1.2.0",
+		"@radix-ui/react-tabs": "^1.0.2",
 		"@shopify/shopify-api": "^6.1.0",
 		"@tailwindcss/line-clamp": "^0.4.2",
 		"@types/node": "18.11.18",
