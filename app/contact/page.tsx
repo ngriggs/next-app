@@ -12,8 +12,8 @@ import Pricing from "../components/pricing";
 const ContactUs = () => {
 	return (
 		<div className="flex flex-col pt-2">
-			<section className="grid grid-cols-12 gap-4">
-				<div className="col-start-1 col-end-7 grid content-center text-center">
+			<section className="grid grid-cols-12 grid-rows-2 gap-4 md:grid-rows-1">
+				<div className="col-span-12 grid content-center text-center md:col-start-1 md:col-end-7">
 					<h2 className="justify-self-center text-2xl ">
 						Have you got a question for us?
 					</h2>
@@ -22,7 +22,7 @@ const ContactUs = () => {
 						touch as soon as possible
 					</p>
 				</div>
-				<div className="col-start-7 col-end-13">
+				<div className="col-span-12 row-span-1 md:col-start-7 md:col-end-13">
 					<ContactForm />
 				</div>
 				<div className="col-span-12"></div>
