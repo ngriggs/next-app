@@ -192,7 +192,10 @@ const PricingCard = ({ ...props }) => {
 				{/* Features */}
 				<ul className="my-12 flex flex-col">
 					{props.contents.map((feature: any) => (
-						<li className={`mb-4 inline-flex ${feature.lineThrough}`}>
+						<li
+							key={feature.price}
+							className={`mb-4 inline-flex ${feature.lineThrough}`}
+						>
 							{feature.check}
 							{feature.description}
 						</li>
