@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
+import Pricing1 from "../components/pricing1";
 import { Button } from "../components/ui/button";
 
 interface PackageProps {
@@ -66,31 +67,18 @@ const PartyEvents = () => {
 		},
 	];
 
-	const questions: QuestionProps[] = [
-		{
-			question: "Can I bring my own decorations?",
-			answer: "Yes, you are welcome to bring your own decorations.",
-		},
-		{
-			question: "Is there a limit on the number of guests I can invite?",
-			answer: "There is a maximum capacity of 50 guests for our party events.",
-		},
-		{
-			question: "Do you provide catering services?",
-			answer:
-				"Yes, we provide catering services as part of our premium package or as a separate option.",
-		},
-	];
-
 	return (
 		<div className="p-10">
+			<Pricing1 />
+
 			<h1 className="mb-5 text-2xl font-bold">Party Events</h1>
 			<h2 className="mt-10 mb-5 text-lg font-bold">Party FAQ</h2>
-			{questions.map((question) => (
-				<Question
-					key={question.question}
-					question={question.question}
-					answer={question.answer}
+			{packages.map((pkg) => (
+				<Package
+					key={pkg.description}
+					name={pkg.name}
+					description={pkg.description}
+					price={pkg.price}
 				/>
 			))}
 
