@@ -1,4 +1,5 @@
 import { NavItem } from "@/app/types/nav";
+import { Icons } from "../components/icons";
 
 interface SiteConfig {
 	name: string;
@@ -224,5 +225,262 @@ export const questions = [
 		question: "Do you provide catering services?",
 		answer:
 			"TBD, we may provide catering services as part of our premium package or as a separate option.",
+	},
+];
+
+export const discounts = [
+	{
+		title: "Bestie",
+		description: "Annual Discount",
+		price: "$99",
+		per: "family",
+		features: [
+			{ feature: "6 Guest Passes per year" },
+			{ feature: "Special daily pass pricing" },
+			{ feature: "Special monthly membership pricing" },
+			{ feature: "10% off party pricing", caveat: "(excluding add-ons)" },
+			{ feature: "10% off classes & workshops" },
+			{ feature: "Early access to classes & events" },
+			{ feature: "Special members-only hours" },
+			{ feature: "Special members-only events" },
+		],
+	},
+	{
+		title: "Basic Bestie",
+		description: "Daily Pass + Annual Discount",
+		price: "$13",
+		per: "child",
+		crossedOut: "$18",
+		features: [
+			{ feature: "Play for the day" },
+			{ feature: "Re-entry" },
+			{ feature: "Discounts for siblings", caveat: "($8/sibling)" },
+		],
+	},
+	{
+		title: "Buddy Plus",
+		description: "Monthly + Annual Discount",
+		price: "$50",
+		per: "child",
+		crossedOut: "$65",
+		features: [
+			{ feature: "Unlimited visits" },
+			{ feature: "1 Friend Pass per month" },
+			{ feature: "Discount for siblings", caveat: "($30/sibling)" },
+			{ feature: "Special members-only hours" },
+			{ feature: "Special members-only events" },
+		],
+	},
+];
+export const memberships = [
+	{
+		title: "Buddy",
+		description: "Monthly",
+		price: "$65",
+		per: "child",
+		features: [
+			{ feature: "Unlimited visits" },
+			{ feature: "1 Guest Pass per month" },
+			{ feature: "Discount for siblings", caveat: "($43/sibling)" },
+			{ feature: "Special members-only hours" },
+			{ feature: "Special members-only events" },
+		],
+	},
+	{
+		title: "Bestie",
+		description: "Annual Discount",
+		price: "$99",
+		per: "family",
+		features: [
+			{ feature: "6 Guest Passes per year" },
+			{ feature: "Special daily pass pricing" },
+			{ feature: "Special monthly membership pricing" },
+			{ feature: "10% off party pricing", caveat: "(excluding add-ons)" },
+			{ feature: "10% off classes & workshops" },
+			{ feature: "Early access to classes & events" },
+			{ feature: "Special members-only hours" },
+			{ feature: "Special members-only events" },
+		],
+	},
+];
+export const passes = [
+	{
+		title: "Basic",
+		description: "Daily Pass",
+		price: "$18",
+		per: "child",
+		features: [
+			{ feature: "Play for the day" },
+			{ feature: "Re-entry" },
+			{ feature: "Discount for siblings", caveat: "($12/sibling)" },
+		],
+	},
+	{
+		title: "Basic Bestie",
+		description: "Daily Pass + Annual Discount",
+		price: "$13",
+		crossedOut: "$18",
+		per: "child",
+		features: [
+			{ feature: "Play for the day" },
+			{ feature: "Re-entry" },
+			{ feature: "Discount for siblings", caveat: "($8/sibling)" },
+		],
+	},
+	{
+		title: "Friend",
+		variant: "popular",
+		price: "$162",
+		per: "child",
+		crossedOut: "$180",
+		features: [
+			{ feature: "10 visits" },
+			{ feature: "Re-entry" },
+			{ feature: "Discount for siblings", caveat: "($108/sibling)" },
+		],
+	},
+];
+
+export const cards = [
+	{
+		price: "Price 0",
+		contents: [
+			{
+				check: <Icons.customCheck1 />,
+				description: "Donec at tristique.",
+			},
+			{
+				check: <Icons.customCheck1 />,
+				description: "Nullam sed aliquam eros, ac.",
+			},
+			{
+				check: <Icons.customCheck1 />,
+				description: "Maecenas dignissim convallis sem vel.",
+			},
+			{
+				check: <Icons.customX1 />,
+				description: "In rhoncus.",
+				lineThrough: "line-through",
+			},
+			{
+				check: <Icons.customX1 />,
+				description: "Etiam vulputate eleifend.",
+				lineThrough: "line-through",
+			},
+			{
+				check: <Icons.customX1 />,
+				description: "Lorem ipsum dolor.",
+				lineThrough: "line-through",
+			},
+		],
+	},
+	{
+		price: "Price 1",
+		contents: [
+			{
+				check: <Icons.customCheck1 />,
+				description: "Donec at tristique.",
+			},
+			{
+				check: <Icons.customCheck1 />,
+				description: "Nullam sed aliquam eros, ac.",
+			},
+			{
+				check: <Icons.customCheck1 />,
+				description: "Maecenas dignissim convallis sem vel.",
+			},
+			{
+				check: <Icons.customX1 />,
+				description: "In rhoncus.",
+				lineThrough: "line-through",
+			},
+			{
+				check: <Icons.customX1 />,
+				description: "Etiam vulputate eleifend.",
+				lineThrough: "line-through",
+			},
+			{
+				check: <Icons.customX1 />,
+				description: "Lorem ipsum dolor.",
+				lineThrough: "line-through",
+			},
+		],
+	},
+	{
+		price: "Price 2",
+		contents: [
+			{
+				check: <Icons.customCheck1 />,
+				description: "Donec at tristique.",
+			},
+			{
+				check: <Icons.customCheck1 />,
+				description: "Nullam sed aliquam eros, ac.",
+			},
+			{
+				check: <Icons.customCheck1 />,
+				description: "Maecenas dignissim convallis sem vel.",
+			},
+			{
+				check: <Icons.customX1 />,
+				description: "In rhoncus.",
+				lineThrough: "line-through",
+			},
+			{
+				check: <Icons.customX1 />,
+				description: "Etiam vulputate eleifend.",
+				lineThrough: "line-through",
+			},
+			{
+				check: <Icons.customX1 />,
+				description: "Lorem ipsum dolor.",
+				lineThrough: "line-through",
+			},
+		],
+	},
+	{
+		price: "Price 3",
+		contents: [
+			{
+				check: <Icons.customCheck1 />,
+				description: "Donec at tristique.",
+			},
+			{
+				check: <Icons.customCheck1 />,
+				description: "Nullam sed aliquam eros, ac.",
+			},
+			{
+				check: <Icons.customCheck1 />,
+				description: "Maecenas dignissim convallis sem vel.",
+			},
+			{
+				check: <Icons.customX1 />,
+				description: "In rhoncus.",
+				lineThrough: "line-through",
+			},
+			{
+				check: <Icons.customX1 />,
+				description: "Etiam vulputate eleifend.",
+				lineThrough: "line-through",
+			},
+			{
+				check: <Icons.customX1 />,
+				description: "Lorem ipsum dolor.",
+				lineThrough: "line-through",
+			},
+		],
+	},
+	{
+		price: "Price 4",
+		contents: [
+			{
+				check: <Icons.customCheck1 />,
+				description: "Maecenas dignissim convallis sem vel.",
+			},
+			{
+				check: <Icons.customCheck1 />,
+				description: "Donec at tristique.",
+			},
+		],
 	},
 ];
