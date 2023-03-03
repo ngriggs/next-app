@@ -3,6 +3,7 @@ import HeroPage from "./components/hero";
 import Gallery2 from "./gallery/page";
 import Hero1 from "./components/hero1";
 import StayConnected from "./components/stayConnected";
+import Loading from "./loading";
 
 export default async function HomePage() {
 	const images = [
@@ -48,6 +49,7 @@ export default async function HomePage() {
 			<div className="sm:my-8" />
 			{/* @ts-expect-error Server Component */}
 			<Gallery2 />
+			<Loading />
 		</div>
 	);
 }
