@@ -10,7 +10,9 @@ const admission = [
     title: "Infant*",
     description: "6 months and younger",
     price: "free",
-    image: <Icons.infantIcon className="h-[45px] w-[45px] fill-white" />,
+    image: (
+      <Icons.infantIcon className=" h-[45px] w-[45px] fill-giggles-blue" />
+    ),
   },
   {
     bgColor: "bg-giggles-yellow",
@@ -18,7 +20,7 @@ const admission = [
     description: "6 months and older",
     price: "$18",
     image: (
-      <Icons.childIcon className="h-[45px] w-[45px] -scale-x-100 fill-white" />
+      <Icons.childIcon className="h-[45px] w-[45px] -scale-x-100 fill-giggles-yellow" />
     ),
   },
   {
@@ -26,14 +28,16 @@ const admission = [
     title: "Sibling",
     description: "rate applies after one paid child",
     price: "$12",
-    image: <Icons.siblingIcon className="h-[50px] w-[50px] fill-white" />,
+    image: (
+      <Icons.siblingIcon className="h-[50px] w-[50px] fill-giggles-green" />
+    ),
   },
   {
     bgColor: "bg-giggles-red",
     title: "Adult without paid child",
     description: "13 and older",
     price: "$10",
-    image: <Icons.adultIcon className="h-[45px] w-[45px] fill-white" />,
+    image: <Icons.adultIcon className="h-[45px] w-[45px] fill-giggles-red" />,
   },
 ];
 
@@ -87,7 +91,7 @@ const Visit = () => {
             >
               <div className="my-auto ">
                 <div
-                  className={`grid h-16 w-16 flex-1 place-content-center rounded-full ${category.bgColor}`}
+                  className={`grid h-16 w-16 flex-1 place-content-center rounded-full`}
                 >
                   {category.image}
                 </div>
