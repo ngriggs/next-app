@@ -124,7 +124,7 @@ const Pricing2 = () => {
 							key={index}
 							className={`${
 								card.variant ? "bg-giggles-blue" : ""
-							} mx-auto grid h-fit max-w-[calc(1150px_/_3)] transform rounded-lg px-6 py-4 transition-colors duration-200 hover:bg-giggles-blue-light dark:hover:bg-gray-700`}
+							} mx-auto grid h-fit max-w-[calc(1150px_/_3)] transform rounded-lg px-6 py-4 transition-colors duration-200 hover:bg-giggles-blue-100 dark:hover:bg-gray-700`}
 						>
 							{card.variant ? (
 								<div className="absolute right-4 top-4 rounded-xl bg-slate-400 px-2 py-1">

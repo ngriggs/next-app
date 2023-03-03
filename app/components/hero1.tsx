@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const hero1 = () => {
 	return (
-		<div className="relative left-[calc(-50vw_+_50%)] w-screen bg-giggles-yellow-light py-4">
+		<div className="relative left-[calc(-50vw_+_50%)] w-screen bg-giggles-yellow-100 py-4">
 			<div className="mt-10 text-center">
 				<h1 className="font-summerVibesSolid text-2xl font-normal min-[375px]:text-3xl sm:text-4xl lg:text-5xl">
 					<span className="sm:mr-[300px]">get ready to play...</span>
