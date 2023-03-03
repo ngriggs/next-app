@@ -49,7 +49,6 @@ export default async function HomePage() {
 			<div className="sm:my-8" />
 			{/* @ts-expect-error Server Component */}
 			<Gallery2 />
-			<Loading />
 		</div>
 	);
 }
