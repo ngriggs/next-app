@@ -10,7 +10,6 @@ import { Carousel } from "@mantine/carousel";
 import Pricing2 from "../components/pricing2";
 import { Icons } from "../components/icons";
 import { discounts } from "../config/site";
-import { CarouselSlide } from "@mantine/carousel/lib/CarouselSlide/CarouselSlide";
 
 const Membership = () => {
   return (
@@ -30,8 +29,8 @@ const Membership = () => {
         loop
         align="start"
         className="mt-10 w-11/12"
-        withIndicators={false}
-        withControls={false}
+        withIndicators={true}
+        withControls={true}
       >
         {discounts.map((card, index) => (
           <Carousel.Slide key={index} className="">
