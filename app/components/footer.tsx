@@ -40,7 +40,7 @@ const links = [
 
 const Footer = () => {
   return (
-    <footer className="clip5 sm:clip4 bg-giggles-navy-100 p-4 pt-8 md:p-8 lg:p-10">
+    <footer className="clip5 sm:clip4 bg-giggles-yellow-100 p-4 pt-8 md:p-8 lg:p-10">
       <div className="mx-auto text-center">
         <nav>
           <Link href="/" className="flex max-h-20 items-center justify-center">
