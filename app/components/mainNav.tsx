@@ -94,14 +94,16 @@ export function MainNav({ items }: MainNavProps) {
                 key={item.title}
                 className="my-4"
               >
-                <AccordionTrigger>{item.title}</AccordionTrigger>
+                <AccordionTrigger className="text-xl font-medium">
+                  {item.title}
+                </AccordionTrigger>
                 <AccordionContent>
                   {item.subheadings?.map((sub) => (
                     <Link
                       key={sub.name}
                       href={sub.href}
                       target={sub.target}
-                      className="-m-3 my-2 flex items-start rounded-lg p-3 pl-8 text-lg"
+                      className="-m-3 my-2 flex items-start rounded-lg p-3 pl-8 text-lg font-normal"
                     >
                       {sub.name}
                     </Link>
@@ -111,7 +113,9 @@ export function MainNav({ items }: MainNavProps) {
             ))}
           </Accordion>
           <div className="my-auto flex justify-center py-7">
-            <Button className="rounded-full">Get in touch</Button>
+            <Button variant={"giggles"} className="rounded-full">
+              Get in touch
+            </Button>
           </div>
           <div className="mb-[120px] flex h-[20vh] flex-1 items-end justify-center pb-20">
             {socialMedia.map((social, index) => (
