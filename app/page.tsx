@@ -4,6 +4,7 @@ import Gallery2 from "./gallery/page";
 import Hero1 from "./components/hero1";
 import StayConnected from "./components/stayConnected";
 import Loading from "./loading";
+import AdmissionCard from "./components/admissionCard";
 
 export default async function HomePage() {
   const images = [
@@ -38,11 +39,15 @@ export default async function HomePage() {
   ];
   return (
     <div className="mx-auto max-w-7xl text-[#232323]">
-      <div className="grid place-content-center lg:h-[500px] 2xl:h-[900px]">
+      <div className="grid place-content-center lg:h-[500px] 2xl:h-[700px]">
         <Carousel images={images} />
       </div>
       <div className="sm:my-20" />
-      <HeroPage />
+      {/* <HeroPage /> */}
+      <div className="relative left-[calc(-50vw_+_50%)] grid w-screen">
+        <AdmissionCard />
+      </div>
+      {/* Need something here to break up the space perhaps the team? Maybe we need something about the different party themes */}
       <Hero1 />
       <div className="my-[100px] sm:my-[100px]" />
       <StayConnected />
