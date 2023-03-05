@@ -93,7 +93,7 @@ function Carousel({ images }: { images: Image[] }) {
 
 			{/* A tagline and a description of the space */}
 
-			<div className="absolute left-0 top-10 z-30 m-4 my-auto w-1/2 bg-giggles-navy/40 p-4">
+			{/* <div className="absolute left-0 top-10 z-30 m-4 my-auto w-1/2 bg-giggles-navy/40 p-4">
 				<h2 className="text-3xl font-extrabold text-white">
 					Growing Little Minds, One Giggle at a Time: Giggles Play
 				</h2>
@@ -103,7 +103,7 @@ function Carousel({ images }: { images: Image[] }) {
 					imagination through play. We offer classes, workshops, and birthday
 					parties to support every child's growth and development.
 				</p>
-			</div>
+			</div> */}
 
 			<div>
 				<div className="absolute left-0 top-0 z-20 flex h-full w-full justify-between px-1 align-middle">
