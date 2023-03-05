@@ -5,6 +5,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 export default function Loading() {
 	const [progress, setProgress] = useState(13);
+
 	useEffect(() => {
 		const timer = setTimeout(() => setProgress(100), 50);
 		return () => clearTimeout(timer);
