@@ -101,7 +101,7 @@ function Carousel({ images }: { images: Image[] }) {
 					Giggles Play is a Reggio Emilia-inspired indoor playground for
 					children under 7. Our space encourages exploration, creativity, and
 					imagination through play. We offer classes, workshops, and birthday
-					parties to support every child's growth and development.
+					parties to support every child&apos;s growth and development.
 				</p>
 			</div> */}
 
