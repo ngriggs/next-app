@@ -5,16 +5,16 @@ import { Button } from "./ui/button";
 const about1 = () => {
   return (
     <div className="med:flex-row relative left-[calc(-50vw_+_50%)] flex h-[800px] w-screen flex-col">
-      <div className="my-[100px] grid w-[40%] place-content-center rounded-r-full bg-giggles-yellow-100">
+      <div className="my-10 grid w-[90%] flex-1 place-content-center rounded-r-full bg-giggles-yellow-100 sm:w-[40%]">
         <Image
           src="/gigglesLogo.svg"
           alt=""
           width={414}
           height={414}
-          className=""
+          className="p-10"
         />
       </div>
-      <div className="my-auto flex-1">
+      <div className="my-auto flex-1 p-4">
         <div className="grid place-content-center ">
           <p className="text-giggles-yellow">ABOUT</p>
           <h1 className="font-summerVibesSolid text-6xl">
