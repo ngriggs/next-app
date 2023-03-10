@@ -42,18 +42,19 @@ const Footer = () => {
   return (
     <footer className="clip5 sm:clip4 bg-giggles-yellow-100 p-4 pt-8 md:p-8 lg:p-10">
       <div className="mx-auto text-center">
-        <nav>
-          <Link href="/" className="flex max-h-20 items-center justify-center">
-            <Image
-              className="hover:scale-105"
-              width={144}
-              height={144}
-              alt="logo"
-              src="/giggles.svg"
-              priority={false}
-            />
-          </Link>
-        </nav>
+        <Link
+          href="/"
+          className="mx-auto flex max-h-20 w-[144px] items-center justify-center"
+        >
+          <Image
+            className="hover:scale-105"
+            width={144}
+            height={144}
+            alt="logo"
+            src="/giggles.svg"
+            priority={false}
+          />
+        </Link>
 
         <p className="mt-2 mb-6 text-gray-500">
           a place where{" "}

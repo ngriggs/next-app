@@ -25,7 +25,7 @@ const stats1 = () => {
   return (
     <div className="flex h-[300px] max-w-7xl flex-col p-4 md:flex-row">
       {stats.map((stat) => (
-        <div key={stat.title} className="my-auto flex flex-row">
+        <div key={stat.title} className="my-auto ml-10 flex flex-row">
           <div className="my-auto">
             <p className={`text-6xl ${stat.color}`}>{stat.stat}</p>
           </div>

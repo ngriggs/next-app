@@ -30,13 +30,17 @@ export default async function Gallery2({ ...props }) {
   return (
     <Suspense fallback={<Loading />}>
       <div className="px-4 py-20">
-        <h1 className="text-center font-summerVibesSolid text-2xl font-normal min-[375px]:text-3xl sm:text-4xl lg:text-5xl ">
-          giggles on the gram
-        </h1>
-        <p className="mx-auto mt-2 max-w-2xl text-center text-slate-600 sm:text-xl">
-          Check out our latest Instagram posts! Share your moments at Giggles
-          with #gigglesplay or tag @giggles.play for a chance to be seen here!
-        </p>
+        <div className="my-auto py-2">
+          <p className="py-2 uppercase text-giggles-yellow">instagram</p>
+          <h2 className="py-2 font-summerVibesSolid text-4xl font-normal sm:text-6xl">
+            giggles on the gram
+          </h2>
+          <p className="py-2 text-gray-600 sm:text-xl">
+            Check out our latest Instagram posts! Share your moments at Giggles
+            with #gigglesplay or tag @giggles.play for a chance to be seen here!
+          </p>
+        </div>
+
         <div className="mx-auto mt-10 mb-5 grid max-w-7xl grid-cols-1 gap-5 px-6 sm:gap-4 md:grid-cols-2 xl:grid-cols-4 ">
           {data?.data.slice(0, props.slice).map((image: Image, index) => (
             <InstagramCard

@@ -3,20 +3,19 @@ import { admission } from "../config/site";
 
 const pricing3 = () => {
   return (
-    <div className="flex h-[800px] flex-col md:flex-row">
-      <div className="my-auto flex-1">
-        <p className="text-center">
-          <span className="font-summerVibesSolid text-5xl font-normal">
-            basic admission
-          </span>
-          <br />
-          <span className="text-gray-600">
-            Adult supervision is required at all times. Please read about our
-            rules and policies.
-          </span>
+    <div className="my-8 flex flex-col md:flex-row">
+      <div className="my-auto p-2 sm:flex-1">
+        <p className="p-2 uppercase text-giggles-yellow">admission</p>
+        <h2 className="p-2 font-summerVibesSolid text-4xl font-normal sm:text-6xl">
+          basic admission
+        </h2>
+        <p className="p-2 text-gray-600 sm:text-xl">
+          Adult supervision is required at all times. Please read about our
+          rules and policies.
         </p>
       </div>
-      <div className="my-auto flex-1 space-y-4">
+      <div className="my-4" />
+      <div className="my-auto mx-auto space-y-4 sm:flex-1">
         {admission.map((category, index) => (
           <div
             key={index}
