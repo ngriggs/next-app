@@ -12,7 +12,9 @@ const hero2 = () => {
 
       <div className="my-auto flex-1 flex-col justify-start">
         <div className="grid place-content-center p-4">
-          <p className="z-20 p-2 text-giggles-yellow">GIGGLES PLAY</p>
+          <p className="z-20 p-2 tracking-[2px] text-giggles-yellow">
+            GIGGLES PLAY
+          </p>
           <h1 className="z-20 p-2 font-summerVibesSolid text-5xl lg:text-7xl">
             where growth <br /> and giggles <br /> go hand in hand
           </h1>

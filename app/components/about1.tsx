@@ -16,17 +16,18 @@ const about1 = () => {
       </div>
       <div className="my-auto flex-1 p-4">
         <div className="grid place-content-center ">
-          <p className="p-2 text-giggles-yellow">ABOUT</p>
-          <h1 className="p-2 font-summerVibesSolid text-4xl sm:text-6xl">
+          <p className="p-2 tracking-[3px] text-giggles-yellow">ABOUT</p>
+          <h1 className="p-2 font-summerVibesSolid text-[56px] tracking-[-2px] sm:text-6xl">
             hi, we&apos;re giggles.
           </h1>
-          <p className="p-2 text-xl">
-            An indoor play space and gathering place coming soon to Highwood,
-            IL.
+          <p className="font-display-light p-2 font-quicksand text-xl font-light leading-[32px]">
+            An indoor play space and gathering place
+            <br />
+            coming soon to Highwood, IL.
           </p>
           <Button
             variant={"giggles"}
-            className="mt-4 w-[170px] border-[1px] border-solid border-giggles-yellow bg-white text-giggles-yellow"
+            className="mt-4 h-[48px] w-[138px] border-[1px] border-solid border-giggles-yellow bg-white font-bold text-giggles-yellow"
           >
             OUR MISSION
           </Button>

@@ -26,6 +26,7 @@
 
 @font-face {
   font-family: "Quicksand";
+  font-weight: 300 400 500 600 700;
   src: url("../public/fonts/Quicksand-VariableFont_wght.ttf");
 }
 @layer utilities {
