@@ -1,5 +1,3 @@
-import { Suspense } from "react";
-import Loading from "../loading";
 import InstagramCard from "../components/instagramCard";
 
 interface Image {
@@ -17,7 +15,7 @@ interface ResponseData {
 
 async function getImages(): Promise<ResponseData> {
   const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
-  const data = await fetch(url);
+  const data = await fetch(url, { cache: "no-store" });
   if (!data.ok) {
     throw new Error("Failed to fetch data");
   }
@@ -28,7 +26,7 @@ export default async function Gallery2({ ...props }) {
   const data = await getImages();
 
   return (
-    <Suspense fallback={<Loading />}>
+    <>
       <div className="px-4 py-20">
         <div className="my-auto py-2">
           <p className="py-2 uppercase text-giggles-yellow">instagram</p>
@@ -54,6 +52,6 @@ export default async function Gallery2({ ...props }) {
           ))}
         </div>
       </div>
-    </Suspense>
+    </>
   );
 }
