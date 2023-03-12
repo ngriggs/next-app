@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 const hero2 = () => {
 	return (
 		<div className="relative left-[calc(-50vw_+_50%)] flex w-screen flex-col overflow-hidden bg-giggles-yellow-100 lg:flex-row">
-			<div className="relataive absolute -top-[calc(10rem_+_10%)] -right-[calc(10rem_-_3%)] z-10 h-[900px] w-[900px] rounded-full bg-giggles-yellow-300 sm:h-[900px] sm:w-[900px]">
+			<div className="relataive absolute -right-[calc(50rem_+_10%)] -top-[calc(20rem_+_10%)] z-10 h-[1179px] w-[1179px] rounded-full bg-giggles-yellow-300 sm:-top-[calc(10rem_+_90%)] sm:-right-[calc(10rem_+_15%)] sm:h-[1571px] sm:w-[1571px]">
 				<div className="absolute top-[37%] left-[-1%] z-30 h-14 w-14 rounded-full bg-giggles-blue"></div>
 				<div className="absolute top-[55%] left-[-2%] z-30 h-14 w-14 rounded-full bg-giggles-navy"></div>
 				<div className="absolute bottom-[20%] left-[5%] z-30 h-14 w-14 rounded-full bg-giggles-green"></div>
